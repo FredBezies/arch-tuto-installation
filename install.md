@@ -34,6 +34,9 @@ Voici donc l’écran qui nous permet de démarrer. Comme vous pouvez le voir, o
 
 ![Illustration 1: écran de démarrage en mode Bios, uniquement en 64 bits (depuis mars 2017)](pictures/001.png)
 
+*Illustration 1: écran de démarrage en mode Bios, uniquement en 64 bits (depuis mars 2017)*
+
+
 La première chose à faire, c’est d’avoir le clavier français :
 
 ```loadkeys fr```
@@ -43,6 +46,8 @@ Pour le partitionnement, si vous avez peur de faire des bêtises, il est plus pr
 Avec cfdisk, sur l’écran de démarrage suivant, on choisit l’option « dos » pour le « label type » à appliquer.
 
 ![Illustration 2: premier démarrage de cfdisk](pictures/002.png)
+
+*Illustration 2: premier démarrage de cfdisk*
 
 Pour le partitionnement en question :
 
@@ -57,6 +62,8 @@ Pour le partitionnement en question :
 Il ne faut pas oublier de définir la partition attribuée à /boot comme démarrable (bootable). Ce qui donne l’écran suivant dans cfdisk.
 
 ![Illustration 3: cfdisk en action](pictures/003.png)
+
+*Illustration 3: cfdisk en action*
 
 Pour le formatage des partitions, il suffit d’entrer les commandes suivantes :
 
@@ -89,6 +96,7 @@ On peut passer ensuite à l’installation de la base.
 Voici donc l’écran qui nous permet de démarrer en mode UEFI, supporté uniquement pour la version 64 bits.
 
 ![Illustration 4: démarrage en mode UEFI](pictures/004.png)
+*Illustration 4: démarrage en mode UEFI*
 
 Comme pour la section concernant le partitionnement en mode Bios, si vous craignez de faire des bêtises, vous pouvez utiliser gParted en mode liveCD : <http://gparted.org/>
 
@@ -104,6 +112,7 @@ Il faut se souvenir qu’il faut **obligatoirement** une table de partition GPT 
 **Note :** pour la partition /boot, il faut qu’elle soit étiquetée en EF00 à sa création. Pour le swap, c’est la référence 8200.
 
 ![Illustration 5: cgdisk en action pour un partitionnement avec un UEFI](pictures/005.png)
+*Illustration 5: cgdisk en action pour un partitionnement avec un UEFI*
 
 Le partitionnement à appliquer ? C’est le suivant :
 
@@ -131,7 +140,7 @@ mount /dev/sda4 /mnt/home
 
 On peut passer à l’installation de la base.
 
-### Installation de la base de notre Archlinux :
+#### Installation de la base de notre Archlinux :
 
 Après avoir procédé au partitionnement et à l’attribution des partitions, on peut attaquer les choses sérieuses, à savoir récupérer la base de notre installation. mais avant toute chose, choisissons le miroir le plus rapide.
 
@@ -140,6 +149,8 @@ Après avoir procédé au partitionnement et à l’attribution des partitions, 
 Avec l’outil nano nous allons modifier le fichier /etc/pacman.d/mirrorlist pour ne garder qu’un seul miroir. Le plus proche géographiquement et aussi le plus rapide possible. Pour une personne vivant en France, c’est **de préférence** mir.archlinux.fr et / ou archlinux.polymorf.fr.
 
 ![Illustration 6: la liste des miroirs disponibles.](pictures/006.png)
+
+*Illustration 6: la liste des miroirs disponibles.*
 
 J’ai utilisé le raccourci clavier suivant : **ALT+R**. On entre dans un premier temps « Server » (sans les guillemets). On presse la touche entrée. On saisit « \#Server » (sans les guillemets) pour commenter tous les serveurs.
 
@@ -275,7 +286,9 @@ mkdir /boot/EFI/boot
 cp /boot/EFI/arch\_grub/grubx64.efi /boot/EFI/boot/bootx64.efi
 ```
 
-![Illustration 7 : Génération du noyau linux 4.11.3 début juin 2017](007.png)
+![Illustration 7 : Génération du noyau linux 4.11.3 début juin 2017](pictures/007.png)
+
+*Illustration 7 : Génération du noyau linux 4.11.3 début juin 2017*
 
 Bien entendu, aucune erreur ne doit apparaître. On donne un mot de passe au compte root :
 
@@ -361,6 +374,8 @@ Les outils en place, on lance alsamixer avec la commande du même nom, pour conf
 
 ![Illustration 8: alsamixer en action](008.png)
 
+*Illustration 8: alsamixer en action*
+
 Une fois l’ensemble configuré, pour le conserver tel quel, il suffit d’entrer :
 
 ```
@@ -398,8 +413,7 @@ Pour Nvidia, c’est un casse-tête au niveau des pilotes propriétaires. Le plu
  |---------------------|--------------------|------------------------------------------------------|                                     
  | AMD                 | xf86-video-ati     |  Catalyst (disponible sur AUR, le dépôt utilisateur) |
  | Intel               | xf86-video-intel   |                                                      |
- | Nvidia              | xf86-video-nouveau | Nvidia (cf le wiki d'archlinux) pour la version à    |
- |                     |                    | installer en fonction de la carte graphique          |
+ | Nvidia              | xf86-video-nouveau | Nvidia (cf le wiki d'archlinux) pour la version à installer en fonction de la carte graphique          |
 
 Dans le cas d’une machine virtuelle, j’ai utilisé le paquet **xf86-video-vesa**. On passe ensuite à l’installation des polices. Voici la ligne de commande pour les principales.
 
@@ -425,6 +439,8 @@ pacman -S virtualbox-guest-utils
 ```
 
 ![Illustration 9: Choix du paquet à installer concernant virtualbox-guest-utils](pictures/009.png)
+
+*Illustration 9: Choix du paquet à installer concernant virtualbox-guest-utils*
 
 Le premier nécessite le paquet linux-headers (ou linux-lts-headers), le deuxième propose les modules noyaux déjà précompilés. **On choisit donc la deuxième option.**
 
@@ -541,6 +557,8 @@ Au démarrage suivant, GDM nous accueille, et nous pouvons nous connecter.
 
 ![Illustration 10: GDM 3.24.2 avec les sessions Wayland et Gnome sur Xorg](pictures/010.png)
 
+*Illustration 10: GDM 3.24.2 avec les sessions Wayland et Gnome sur Xorg*
+
 III) Finalisons l’installation de Gnome.
 ----------------------------------------
 
@@ -556,15 +574,23 @@ Il faut penser à vérifier que le clavier est correctement configuré. Ce qui s
 
 ![Illustration 11: Gnome 3.24.2 en vue activités](pictures/011.png)
 
+*Illustration 11: Gnome 3.24.2 en vue activités*
+
 On va personnaliser le bureau Gnome en lui ajoutant la date complète et les boutons pour minimiser et maximiser les fenêtres avec Gnome Tweak Tool.
 
 ![Illustration 12: Gnome Tweak Tool en action.](pictures/012.png)
+
+*Illustration 12: Gnome Tweak Tool en action.*
 
 Pour finir des captures d’écran du mode « Gnome Shell » et « Gnome Classique ».
 
 ![Illustration 13: Gnome Shell 3.24.2 et « LibreOffice-fresh »](pictures/013.png)
 
+*Illustration 13: Gnome Shell 3.24.2 et « LibreOffice-fresh »*
+
 ![Illustration 14: Gnome classique 3.24.2 en action]((pictures/014.png)
+
+*Illustration 14: Gnome classique 3.24.2 en action*
 
 Voila, le guide est maintenant fini. Cependant, je n’ai pas abordé l’installation d’un pare-feu. C’est quelque chose de plus technique.
 
@@ -607,9 +633,13 @@ sudo systemctl enable sddm
 
 ![Illustration 15: Plasma 5.9.x (vue de dossiers) – KDE Frameworks 5.34.0](pictures/015.png)
 
+*Illustration 15: Plasma 5.9.x (vue de dossiers) – KDE Frameworks 5.34.0*
+
 **Petit bonus** : un aperçu de Plasma 5.10 qui sera disponible sur les dépôts stables courant juin 2017. Au 1^er^ juin 2017, il faut activer les dépôts testing et community testing. Je vous conseille de patienter l’officialisation du port…
 
 ![Illustration 16: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.34.0](pictures/016.jpg)
+
+*Illustration 16: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.34.0* 
 
 V) Addendum 2 : installer Xfce
 ------------------------------
@@ -660,6 +690,8 @@ sudo systemctl enable lightdm
 
 ![Illustration 17: Xfce 4.12.0 en action.](pictures/017.jpg)
 
+*Illustration 17: Xfce 4.12.0 en action.*
+
 VI) Addendum 3 : installer Mate-Desktop
 ---------------------------------------
 
@@ -701,4 +733,5 @@ sudo systemctl enable lightdm
 ```
 ![Illustration 18: Mate Desktop 1.18.0](pictures/018.jpg)
 
+*Illustration 18: Mate Desktop 1.18.0*
   
