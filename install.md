@@ -1,4 +1,5 @@
-**Petit guide d’installation d’Archlinux avec Gnome 3.24.x / Plasma 5.9.x et 5.10.x / Xfce / Mate-Desktop**
+Petit guide d’installation d’Archlinux avec Gnome 3.24.x / Plasma 5.9.x et 5.10.x / Xfce / Mate-Desktop
+=======================================================================================================
 
 Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.24 et suivant, Plasma 5.9.x et 5.10.x (courant juin 2017), Xfce et Mate-Desktop. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
 
@@ -10,14 +11,14 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 **NOTE 3 :** Pour Budgie Desktop et Cinnamon, je vous conseille de vous reporter au tutoriel d’avril 2017 : <http://frederic.bezies.free.fr/blog/?p=15985>
 
-**NOTE 4 :** Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1er mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [https://www.archlinux32.org/]
+**NOTE 4 :** Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1er mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [Archlinux32](https://www.archlinux32.org/).
 
 Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En juin 2017, c’est la 2017.06.01.
 
-Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit et André Ray pour leurs conseils et remarques. Ce document est proposé sous licence CC-BY-SA 4.0. ([http://creativecommons.org/licenses/by-sa/][][4][http://creativecommons.org/licenses/by-sa/][.0/][http://creativecommons.org/licenses/by-sa/])
+Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit et André Ray pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
 
-Installons notre base
----------------------
+I) Installons notre base
+------------------------
 
 Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2017.06.01-x86\_64.iso, mise en ligne début juin 2017.
 
@@ -302,7 +303,7 @@ systemctl enable NetworkManager
 
 **NOTE 3 :** si vous voulez utiliser des réseaux wifi directement avec NetworkManager et son applet, le paquet gnome-keyring est indispensable. Merci à Vincent Manillier pour l’info.
 
-Dernier réglage, **optionnel **si on veut avoir accès à l’outil yaourt, il faut ajouter ceci au fichier /etc/pacman.conf à la fin. Une fois yaourt installé, on peut enlever **sans aucun risque** les lignes en question.
+Dernier réglage, **optionnel** si on veut avoir accès à l’outil yaourt, il faut ajouter ceci au fichier /etc/pacman.conf à la fin. Une fois yaourt installé, on peut enlever **sans aucun risque** les lignes en question.
 
 ```
 [archlinuxfr]
@@ -328,8 +329,8 @@ reboot
 
 Voilà, on peut redémarrer. On va passer à la suite, largement moins ennuyeuse !
 
-Installons maintenant l’environnement graphique !
--------------------------------------------------
+II) Installons maintenant l’environnement graphique !
+-----------------------------------------------------
 
 Nous attaquons donc la partie la plus intéressante, l’installation de l’environnement graphique. Il y a des étapes communes à tous les environnements. Un peu plus loin est indiquée la partie concernant **uniquement** Gnome.
 
@@ -540,8 +541,8 @@ Au démarrage suivant, GDM nous accueille, et nous pouvons nous connecter.
 
 ![Illustration 10: GDM 3.24.2 avec les sessions Wayland et Gnome sur Xorg](pictures/010.png)
 
-Finalisons l’installation de Gnome.
------------------------------------
+III) Finalisons l’installation de Gnome.
+----------------------------------------
 
 **Note :** à partir de maintenant, nous sommes connectés en tant qu’utilisateur classique.
 
@@ -571,8 +572,8 @@ J’ai surtout voulu faire un **guide rapide**, histoire de montrer qu’en une 
 
 Bonne découverte !
 
-Addendum 1 : installer Plasma 5.9.x / 5.10.x
---------------------------------------------
+IV) Addendum 1 : installer Plasma 5.9.x / 5.10.x
+------------------------------------------------
 
 **Note :** commandes à entrer en tant qu’utilisateur classique. Si vous n’avez pas yaourt, sudo pacman -S sera à utiliser. Kde-l10n-fr étant à remplacer par votre locale. Dans les précédentes versions, il y avait k3b, mais il a été intégré dans les kde-applications à partir de la version 17.04.
 
@@ -608,10 +609,10 @@ sudo systemctl enable sddm
 
 **Petit bonus** : un aperçu de Plasma 5.10 qui sera disponible sur les dépôts stables courant juin 2017. Au 1^er^ juin 2017, il faut activer les dépôts testing et community testing. Je vous conseille de patienter l’officialisation du port…
 
-![Illustration 16: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.34.0](pictures/016.png)
+![Illustration 16: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.34.0](pictures/016.jpg)
 
-Addendum 2 : installer Xfce
----------------------------
+V) Addendum 2 : installer Xfce
+------------------------------
 
 **Note :** commandes à entrer en tant qu’utilisateur classique. Si vous n’avez pas yaourt, sudo pacman -S sera à utiliser.
 
@@ -657,10 +658,10 @@ sudo systemctl enable lightdm
 
 **Note 5 :** pour avoir des plus jolies icônes, on peut installer le paquet AUR elementary-xfce-icons ou encore les mint-x-icons. mais après, c’est à vous de voir !
 
-![Illustration 17: Xfce 4.12.0 en action.](pictures/017.png)
+![Illustration 17: Xfce 4.12.0 en action.](pictures/017.jpg)
 
-Addendum 3 : installer Mate-Desktop
------------------------------------
+VI) Addendum 3 : installer Mate-Desktop
+---------------------------------------
 
 **Note :** commandes à entrer en tant qu’utilisateur classique. Si vous n’avez pas yaourt, sudo pacman -S sera à utiliser.
 
@@ -698,6 +699,6 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable accounts-daemon
 sudo systemctl enable lightdm
 ```
-![Illustration 18: Mate Desktop 1.18.0](pictures/018.png)
+![Illustration 18: Mate Desktop 1.18.0](pictures/018.jpg)
 
   
