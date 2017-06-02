@@ -40,11 +40,7 @@ Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent
 Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit et André Ray
 pour leurs conseils et remarques. Ce document est proposé sous licence
 CC-BY-SA 4.0.
-([http://creativecommons.org/licenses/by-sa/](http://creativecommons.org/licenses/by-sa/3.0/)[4](http://creativecommons.org/licenses/by-sa/3.0/)[.0/](http://creativecommons.org/licenses/by-sa/3.0/))
-
-Ce tutoriel a été rédigé sous LibreOffice 5.3.3, avec VirtualBox 5.1.22,
-le tout avec une distribution Archlinux et Calibre pour la conversion au
-format ePub et mobi.
+([http://creativecommons.org/licenses/by-sa/](http://creativecommons.org/licenses/by-sa/4.0/)[4](http://creativecommons.org/licenses/by-sa/4.0/)[.0/](http://creativecommons.org/licenses/by-sa/4.0/))
 
 Installons notre base
 ---------------------
