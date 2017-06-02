@@ -588,7 +588,7 @@ Pour finir des captures d’écran du mode « Gnome Shell » et « Gnome Clas
 
 *Illustration 13: Gnome Shell 3.24.2 et « LibreOffice-fresh »*
 
-![Illustration 14: Gnome classique 3.24.2 en action]((pictures/014.png)
+![Illustration 14: Gnome classique 3.24.2 en action](pictures/014.png)
 
 *Illustration 14: Gnome classique 3.24.2 en action*
 
@@ -635,7 +635,7 @@ sudo systemctl enable sddm
 
 *Illustration 15: Plasma 5.9.x (vue de dossiers) – KDE Frameworks 5.34.0*
 
-**Petit bonus** : un aperçu de Plasma 5.10 qui sera disponible sur les dépôts stables courant juin 2017. Au 1^er^ juin 2017, il faut activer les dépôts testing et community testing. Je vous conseille de patienter l’officialisation du port…
+**Petit bonus** : un aperçu de Plasma 5.10 qui sera disponible sur les dépôts stables courant juin 2017. Au 1er juin 2017, il faut activer les dépôts testing et community testing. Je vous conseille de patienter l’officialisation du port…
 
 ![Illustration 16: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.34.0](pictures/016.jpg)
 
