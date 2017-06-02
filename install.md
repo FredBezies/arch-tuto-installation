@@ -615,16 +615,17 @@ Addendum 2 : installer Xfce
 
 **Note :** commandes à entrer en tant qu’utilisateur classique. Si vous n’avez pas yaourt, sudo pacman -S sera à utiliser.
 
-**Note 2** : si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
+**Note 2 :** si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
 
-**Note 3** : courant janvier 2017, gstreamer-0.10 a été déprécié, après 4 ans sans la moindre mise à jour par les développeurs, et par conséquent, le greffon audio de Xfce est désormais celui de Pulseaudio, d’où le rajout de pavucontrol dans la liste des paquets.
+**Note 3 :** courant janvier 2017, gstreamer-0.10 a été déprécié, après 4 ans sans la moindre mise à jour par les développeurs, et par conséquent, le greffon audio de Xfce est désormais celui de Pulseaudio, d’où le rajout de pavucontrol dans la liste des paquets.
 
-**Note 4 **: VLC a été remplacé par SMPlayer pour des raisons pratiques. VLC reviendra quand il sortira en version 3.0 officielle et finale.
+**Note 4 : ** VLC a été remplacé par SMPlayer pour des raisons pratiques. VLC reviendra quand il sortira en version 3.0 officielle et finale.
 
 Pour installer Xfce, il faut entrer :
 
 ```
-yaourt -S xfce4 xfce4-goodies gvfs smplayer quodlibet python2-pyinotify lightdm-gtk-greeter midori xarchiver claws-mail galculator evince ffmpegthumbnailer xscreensaver pavucontrol pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer **→ (pour installer le support des imprimantes)**```
+yaourt -S xfce4 xfce4-goodies gvfs smplayer quodlibet python2-pyinotify lightdm-gtk-greeter midori xarchiver claws-mail galculator evince ffmpegthumbnailer xscreensaver pavucontrol pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer **→ (pour installer le support des imprimantes)**
+```
 
 SMPlayer et Quodlibet ? Pour la vidéo et l’audio. Midori ? Pour la navigation internet. Pour les périphériques amovibles, gvfs est obligatoire. Claws-mail ou Mozilla Thunderbird (avec le paquet thunderbird-i18n-fr) pour le courrier. Lightdm étant pris, car plus rapide à installer. Le paquet python2-pyinotify est nécessaire pour activer le greffon de mise à jour automatique de la musicothèque sous Quodlibet.
 
@@ -654,7 +655,7 @@ Et si tout se passe bien, on peut utiliser :
 sudo systemctl enable lightdm
 ```
 
-**Note 5 : ** pour avoir des plus jolies icônes, on peut installer le paquet AUR elementary-xfce-icons ou encore les mint-x-icons. mais après, c’est à vous de voir !
+**Note 5 :** pour avoir des plus jolies icônes, on peut installer le paquet AUR elementary-xfce-icons ou encore les mint-x-icons. mais après, c’est à vous de voir !
 
 ![Illustration 17: Xfce 4.12.0 en action.](pictures/017.png)
 
@@ -697,6 +698,6 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable accounts-daemon
 sudo systemctl enable lightdm
 ```
-![Illustration 18: Mate Desktop 1.18.0]((pictures/018.png)
+![Illustration 18: Mate Desktop 1.18.0](pictures/018.png)
 
   
