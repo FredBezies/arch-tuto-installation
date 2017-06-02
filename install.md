@@ -423,7 +423,7 @@ pacman -S xf86-video-vesa
 pacman -S virtualbox-guest-utils
 ```
 
-![Illustration 9: Choix du paquet à installer concernant virtualbox-guest-utils](009.png)
+![Illustration 9: Choix du paquet à installer concernant virtualbox-guest-utils](pictures/009.png)
 
 Le premier nécessite le paquet linux-headers (ou linux-lts-headers), le deuxième propose les modules noyaux déjà précompilés. **On choisit donc la deuxième option.**
 
@@ -538,7 +538,7 @@ Sinon, il suffit de se référer à l’addenda correspondant à l’environneme
 
 Au démarrage suivant, GDM nous accueille, et nous pouvons nous connecter.
 
-![Illustration 10: GDM 3.24.2 avec les sessions Wayland et Gnome sur Xorg]
+![Illustration 10: GDM 3.24.2 avec les sessions Wayland et Gnome sur Xorg](pictures/010.png)
 
 Finalisons l’installation de Gnome.
 -----------------------------------
@@ -553,17 +553,17 @@ yaourt -S xsane unoconv
 
 Il faut penser à vérifier que le clavier est correctement configuré. Ce qui se fait dans menu système unifié, options de configuration.
 
-![Illustration 11: Gnome 3.24.2 en vue activités]
+![Illustration 11: Gnome 3.24.2 en vue activités](pictures/011.png)
 
 On va personnaliser le bureau Gnome en lui ajoutant la date complète et les boutons pour minimiser et maximiser les fenêtres avec Gnome Tweak Tool.
 
-![Illustration 12: Gnome Tweak Tool en action.]
+![Illustration 12: Gnome Tweak Tool en action.](pictures/012.png)
 
 Pour finir des captures d’écran du mode « Gnome Shell » et « Gnome Classique ».
 
-![Illustration 13: Gnome Shell 3.24.2 et « LibreOffice-fresh »]
+![Illustration 13: Gnome Shell 3.24.2 et « LibreOffice-fresh »](pictures/013.png)
 
-![Illustration 14: Gnome classique 3.24.2 en action]
+![Illustration 14: Gnome classique 3.24.2 en action]((pictures/014.png)
 
 Voila, le guide est maintenant fini. Cependant, je n’ai pas abordé l’installation d’un pare-feu. C’est quelque chose de plus technique.
 
@@ -604,11 +604,11 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable sddm
 ```
 
-![Illustration 15: Plasma 5.9.x (vue de dossiers) – KDE Frameworks 5.34.0 ]
+![Illustration 15: Plasma 5.9.x (vue de dossiers) – KDE Frameworks 5.34.0](pictures/015.png)
 
 **Petit bonus** : un aperçu de Plasma 5.10 qui sera disponible sur les dépôts stables courant juin 2017. Au 1^er^ juin 2017, il faut activer les dépôts testing et community testing. Je vous conseille de patienter l’officialisation du port…
 
-![Illustration 16: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.34.0]
+![Illustration 16: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.34.0](pictures/016.png)
 
 Addendum 2 : installer Xfce
 ---------------------------
@@ -656,7 +656,7 @@ sudo systemctl enable lightdm
 
 **Note 5 : ** pour avoir des plus jolies icônes, on peut installer le paquet AUR elementary-xfce-icons ou encore les mint-x-icons. mais après, c’est à vous de voir !
 
-![Illustration 17: Xfce 4.12.0 en action.]
+![Illustration 17: Xfce 4.12.0 en action.](pictures/017.png)
 
 Addendum 3 : installer Mate-Desktop
 -----------------------------------
@@ -697,6 +697,6 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable accounts-daemon
 sudo systemctl enable lightdm
 ```
-![Illustration 18: Mate Desktop 1.18.0]
+![Illustration 18: Mate Desktop 1.18.0]((pictures/018.png)
 
   
