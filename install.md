@@ -72,14 +72,11 @@ Il n’y a plus grande différence, sauf au niveau de certains logiciels
 typiquement 32 bits, mais j’expliquerai plus bas comment faire cohabiter
 32 et 64 bits.
 
-![Illustration 1: écran de démarrage en mode Bios, uniquement en 64 bits
-(depuis mars
-2017)](Pictures/1000000000000280000001E027E33FE8D49E9451.png){width="16.932cm"
-height="12.698cm"}
+
 
 La première chose à faire, c’est d’avoir le clavier français :
 
-loadkeys fr
+````loadkeys fr````
 
 Pour le partitionnement, si vous avez peur de faire des bêtises, il est
 plus prudent de passer par un LiveCD comme gParted disponible à
@@ -112,28 +109,22 @@ height="10.582cm"}
 Pour le formatage des partitions, il suffit d’entrer les commandes
 suivantes :
 
-mkfs.ext2 /dev/sda1
-
-mkfs.ext4 /dev/sda3
-
-mkfs.ext4 /dev/sda4
+````mkfs.ext2 /dev/sda1````
+````mkfs.ext4 /dev/sda3````
+````mkfs.ext4 /dev/sda4````
 
 Sans oublier la partition de swap :
 
-mkswap /dev/sda2
-
-swapon /dev/sda2
+````mkswap /dev/sda2````
+````swapon /dev/sda2````
 
 On va ensuite créer les points de montage et y associer les partitions
 qui correspondent.
 
-mount /dev/sda3 /mnt
-
-mkdir /mnt/{boot,home}
-
-mount /dev/sda1 /mnt/boot
-
-mount /dev/sda4 /mnt/home
+````mount /dev/sda3 /mnt````
+````mkdir /mnt/{boot,home}````
+````mount /dev/sda1 /mnt/boot````
+````mount /dev/sda4 /mnt/home````
 
 On peut passer ensuite à l’installation de la base.
 
@@ -171,27 +162,21 @@ height="13.409cm"}
 
 Le partitionnement à appliquer ? C’est le suivant :
 
-mkfs.ext4 /dev/sda1
-
-mkfs.fat -F32 /dev/sda2
-
-mkfs.ext4 /dev/sda4
+````mkfs.ext4 /dev/sda1````
+````mkfs.fat -F32 /dev/sda2````
+````mkfs.ext4 /dev/sda4````
 
 Sans oublier la partition de swap :
 
-mkswap /dev/sda3
-
-swapon /dev/sda3
+````mkswap /dev/sda3````
+````swapon /dev/sda3````
 
 Et pour les points de montage :
 
-mount /dev/sda1 /mnt
-
-mkdir /mnt/{boot,home}
-
-mount /dev/sda2 /mnt/boot
-
-mount /dev/sda4 /mnt/home
+````mount /dev/sda1 /mnt````
+````mkdir /mnt/{boot,home}````
+````mount /dev/sda2 /mnt/boot````
+````mount /dev/sda4 /mnt/home````
 
 On peut passer à l’installation de la base.
 
