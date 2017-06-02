@@ -10,7 +10,7 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 **NOTE 3 :** Pour Budgie Desktop et Cinnamon, je vous conseille de vous reporter au tutoriel d’avril 2017 : <http://frederic.bezies.free.fr/blog/?p=15985>
 
-**NOTE 4 :** Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1^er^ mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [https://www.archlinux32.org/]
+**NOTE 4 :** Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1er mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [https://www.archlinux32.org/]
 
 Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En juin 2017, c’est la 2017.06.01.
 
@@ -298,7 +298,7 @@ systemctl enable NetworkManager
 
 **NOTE 1 :** si vous n’utilisez pas NetworkManager, je vous renvoie à cette page du wiki anglophone d'Archlinux, qui vous aidera dans cette tâche : <https://wiki.archlinux.org/index.php/Netctl>
 
-**NOTE 2 : ** netctl et networkmanager rentrent en conflit et **ne doivent pas** être utilisé en même temps. D’ailleurs, netctl et wicd entre aussi en conflit. Une règle simple : un seul gestionnaire de connexion réseau à la fois !
+**NOTE 2 :** netctl et networkmanager rentrent en conflit et **ne doivent pas** être utilisé en même temps. D’ailleurs, netctl et wicd entre aussi en conflit. Une règle simple : un seul gestionnaire de connexion réseau à la fois !
 
 **NOTE 3 :** si vous voulez utiliser des réseaux wifi directement avec NetworkManager et son applet, le paquet gnome-keyring est indispensable. Merci à Vincent Manillier pour l’info.
 
@@ -339,25 +339,32 @@ Ainsi que ntp (synchronisation de l’heure en réseau) et cronie (pour les tâc
 
 Une fois yaourt installé (si on le désire), on peut enlever le dépôt archlinux du fichier /etc/pacman.conf car yaourt est disponible sur AUR.
 
+```
 pacman -Syy
-
 pacman -S yaourt ntp cronie
+```
 
-**Note **: si on veut avoir les logs en clair en cas de problème, il faut modifier avec nano (ou vim) le fichier /etc/systemd/journald.conf en remplaçant la ligne :
+**Note :** si on veut avoir les logs en clair en cas de problème, il faut modifier avec nano (ou vim) le fichier /etc/systemd/journald.conf en remplaçant la ligne :
 
-\#ForwardToSyslog=no
+```
+#ForwardToSyslog=no
+```
 
 par :
 
+```
 ForwardToSyslog=yes
+```
 
 Les outils en place, on lance alsamixer avec la commande du même nom, pour configurer le niveau sonore :
 
-![Illustration 8: alsamixer en action]
+![Illustration 8: alsamixer en action](008.png)
 
 Une fois l’ensemble configuré, pour le conserver tel quel, il suffit d’entrer :
 
+```
 alsactl store
+```
 
 Nous sommes dans le multimédia ? Restons-y.
 
@@ -365,7 +372,9 @@ On va installer l’ensemble des greffons gstreamer qui nous donneront accès au
 
 Pour l’exécution de la ligne suivante, il est demandé de choisir un support pour OpenGL. Pour le moment, on choisit MesaGL. La modification correspondant à votre matériel sera faite lors de l’installation de Xorg. Ainsi que la version « libx264 » proposé en premier choix. Merci à Adrien de Linuxtricks pour m’avoir aidé à réduire la longueur de la ligne de commande :)
 
+```
 pacman -S gst-plugins-{base,good,bad,ugly} gst-libav
+```
 
 gst-libav ? Il prend en charge tout ce qui est x264 et apparenté.
 
@@ -373,7 +382,9 @@ Passons à l’installation de Xorg. Le paquet xf86-input-evdev est obsolète de
 
 **Note :** il n’y a pas d’espace entre le – et le { vers la fin de la commande suivante.
 
+```
 pacman -S xorg-{server,xinit,apps} xf86-input-{mouse,keyboard} xdg-user-dirs
+```
 
 Si on utilise un ordinateur portable avec un pavé tactile, il faut rajouter le paquet xf86-input-synaptics ou **de préférence** xf86-input-libinput.
 
@@ -381,40 +392,48 @@ Il faut ensuite choisir le pilote pour le circuit vidéo. Voici les principaux p
 
 Pour Nvidia, c’est un casse-tête au niveau des pilotes propriétaires. Le plus simple est de se référer au wiki d'Archlinux : <https://wiki.archlinux.org/index.php/NVIDIA>
 
-  --------------------- -------------------- -----------------------------------------------------------------------------------------------
-  Circuits graphiques   Pilotes libres       Pilotes non libres (si existant)
-  AMD                   xf86-video-ati       Catalyst (disponible sur AUR, le dépôt utilisateur)
-  Intel                 xf86-video-intel     
-  Nvidia                xf86-video-nouveau   Nvidia (cf le wiki d'archlinux) pour la version à installer en fonction de la carte graphique
-  --------------------- -------------------- -----------------------------------------------------------------------------------------------
+ 
+ | Circuits graphiques | Pilotes libres     | Pilotes non libres (si existant)                     |
+ |---------------------|--------------------|------------------------------------------------------|                                     
+ | AMD                 | xf86-video-ati     |  Catalyst (disponible sur AUR, le dépôt utilisateur) |
+ | Intel               | xf86-video-intel   |                                                      |
+ | Nvidia              | xf86-video-nouveau | Nvidia (cf le wiki d'archlinux) pour la version à    |
+ |                     |                    | installer en fonction de la carte graphique          |
 
 Dans le cas d’une machine virtuelle, j’ai utilisé le paquet **xf86-video-vesa**. On passe ensuite à l’installation des polices. Voici la ligne de commande pour les principales.
 
+```
 pacman -S ttf-{bitstream-vera,liberation,freefont,dejavu}
+```
 
 **Note 2 :** pour les polices Microsoft, le paquet ttf-ms-fonts, elles sont sur le dépôt AUR, donc il faut utiliser yaourt pour les récupérer et les installer.
 
 Cependant, depuis l’arrivée de Pacman 4.2, il est impossible de construire un paquet avec l’option --asroot. Donc vous devrez lancer la commande ci-dessous en tant qu’utilisateur simple.
 
+```
 yaourt -S ttf-ms-fonts
+```
 
 Si vous faites une installation dans VirtualBox, il faut deux paquets. En plus de xf86-video-vesa, il faut le paquet virtualbox-guest-utils. Cependant, il y a deux choix qui arrive pour ce paquet.
 
 Ce qui donne :
 
+```
 pacman -S xf86-video-vesa
-
 pacman -S virtualbox-guest-utils
+```
 
-![Illustration 9: Choix du paquet à installer concernant virtualbox-guest-utils]
+![Illustration 9: Choix du paquet à installer concernant virtualbox-guest-utils](009.png)
 
 Le premier nécessite le paquet linux-headers (ou linux-lts-headers), le deuxième propose les modules noyaux déjà précompilés. **On choisit donc la deuxième option.**
 
-**Note 3 **: si vous avez décidé d’installer le noyau lts, il faut installer les paquets linux-lts-headers et virtualbox-guest-dkms. Il n’y a plus de modules précompilés pour le noyau linux-lts
+**Note 3 :** si vous avez décidé d’installer le noyau lts, il faut installer les paquets linux-lts-headers et virtualbox-guest-dkms. Il n’y a plus de modules précompilés pour le noyau linux-lts
 
 La prise en charge des modules noyau se fait avec la commande systemctl suivante :
 
+```
 systemctl enable vboxservice
+```
 
 **Note :** si vous installez un jour VirtualBox sur une machine réelle je vous renvoie à cette page du wiki francophone : <https://wiki.archlinux.fr/VirtualBox>
 
@@ -422,79 +441,94 @@ On va rajouter quelques outils, histoire de ne pas voir un environnement vide au
 
 On commence par tout ce qui est graphique : gimp, cups (gestion de l’imprimante) et hplip (si vous avez une imprimante scanner Hewlett Packard). Le paquet python-pyqt5 est indispensable pour l’interface graphique de HPLIP :
 
+```
 pacman -S cups gimp gimp-help-fr hplip python-pyqt5
+```
 
 La série des paquets foomatic permet d’avoir le maximum de pilotes pour l’imprimante. Pour être tranquille avec son imprimante :
 
+```
 pacman -S foomatic-{db,db-ppds,db-gutenprint-ppds,db-nonfree,db-nonfree-ppds} gutenprint
+```
 
 Depuis la fin juillet 2014, il y a deux versions qui sont supportés par Archlinux pour LibreOffice, en conformité avec ce que propose la Document Foundation. Pour la version **stable** et les utilisateurs **prudents**, on utilise la ligne de commande :
 
+```
 pacman -S libreoffice-still-fr
+```
 
 Pour les utilisateurs plus **aventureux**, qui veulent la version récente :
 
+```
 pacman -S libreoffice-fresh-fr
-
+```
 On rajoute ensuite Mozilla Firefox en français :
 
+```
 pacman -S firefox-i18n-fr
+```
 
 Vous préférez Chromium ?
 
+```
 pacman -S chromium
+```
 
 On crée un utilisateur avec la commande suivante, qui sera indispensable pour appliquer un des addenda si vous ne voulez pas utiliser Gnome.
 
-useradd -m -g wheel -c 'Nom complet de l’utilisateur' -s /bin/bash nom-de-l’utilisateur **→ sur une seule ligne !**
-
+```
+useradd -m -g wheel -c 'Nom complet de l’utilisateur' -s /bin/bash nom-de-l’utilisateur **sur une seule ligne !**
 passwd nom-de-l’utilisateur
+```
 
 Avant de finir, on va configurer sudo en utilisant visudo. En effet, il nous suffit de modifier une ligne pour que l’on puisse accéder en tant qu’utilisateur classique aux droits complets sur la machine de manière temporaire.
 
 Il faut aller, en utilisant la flèche du bas jusqu’à la ligne :
 
-\#\#Uncomment to allow members of group wheel to execute any command
-
+```
+#Uncomment to allow members of group wheel to execute any command
+```
 Et enlever le \# sur la ligne qui suit. La séquence de touches « Échap : w et q » permet de converser la modification.
 
-À partir d’ici, c’est la section dédiée à Gnome qui commence :
+**À partir d’ici, c’est la section dédiée à Gnome qui commence :**
 
 On passe enfin au morceau de choix : l’installation de Gnome, les extensions étant indispensables pour avoir le mode « Gnome Classique ». Le paquet telepathy permet d’ajouter le maximum de support pour les comptes utilisateurs en ligne.
 
+```
 pacman -S gnome gnome-extra system-config-printer telepathy shotwell rhythmbox
+```
 
 Si vous voulez utiliser l’outils Gnome Logiciels, même si ce n’est pas des plus fonctionnels sous Archlinux :
 
+```
 pacman -S gnome-software
+```
 
 L’installation de Gnome est maintenant terminée.
 
-Fin de la section uniquement consacrée à Gnome, ici, il y a des points communs à tous les environnements proposés.
+**Fin de la section uniquement consacrée à Gnome, ici, il y a des points communs à tous les environnements proposés.**
 
 Pour être certain d’avoir le bon clavier au démarrage de GDM ou d’un autre gestionnaire de connexion comme sddm, lightdm ou lxdm, voici une petite commande à lancer (en modifiant le clavier selon les besoins) :
 
+```
 sudo localectl set-x11-keymap fr
+```
 
 Les valeurs étant à adapter en fonction de la locale et du clavier, bien entendu.
 
-**Note 4** : Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
+**Note 4 :** Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
 
 Étant donné que systemd est utilisé, voici la liste des services à activer (avec une explication rapide), **qui sera la même pour chacun des environnements** proposés dans les « addenda » :
 
+```
 systemctl enable syslog-ng → *gestion des fichiers d’enregistrement d’activité*
-
 systemctl enable cronie → *pour les tâches récurrentes*
-
 systemctl enable avahi-daemon → *dépendance de Cups*
-
 systemctl enable avahi-dnsconfd → *autre dépendance de Cups*
-
 systemctl enable org.cups.cupsd → *cups pour les imprimantes*
-
 systemctl enable bluetooth → *uniquement si on a du matériel bluetooth*
-
 systemctl enable ntpd → *pour synchroniser l’heure en réseau.*
+```
 
 **Note 5** : dans un premier temps, il ne faut pas activer le gestionnaire de connexion de l’environnement choisi. On fait uniquement un systemctl start suivi du nom du gestionnaire en question.
 
@@ -513,7 +547,9 @@ Finalisons l’installation de Gnome.
 
 Quelques outils à rajouter : xsane (pour le scanner), mais aussi unoconv (pour l’aperçu des fichiers dans Gnome Documents). On pourrait rajouter Adobe Flash, mais pourquoi rajouter cette usine à faille de sécurité ?
 
+```
 yaourt -S xsane unoconv
+```
 
 Il faut penser à vérifier que le clavier est correctement configuré. Ce qui se fait dans menu système unifié, options de configuration.
 
@@ -544,28 +580,35 @@ Addendum 1 : installer Plasma 5.9.x / 5.10.x
 
 L’installation se déroule ainsi :
 
+```
 yaourt -S plasma kde-applications kde-l10n-fr amarok digikam breeze-kde4
+```
 
 Le paquet breeze-kde4 permet de donner un thème « KDE 5 » aux applications non encore adaptées pour le nouvel environnement.
 
 Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivant avant de lancer pour la première fois sddm :
 
+```
 sudo localectl set-x11-keymap fr
+```
 
 Bien entendu, la valeur à utiliser après set-x11-keymap doit être identique à celle saisie plus haut quand on a configuré la base d'Archlinux. Sans oublier le correctif indiqué plus haut dans la section Gnome concernant le clavier français sous Xorg.
 
+```
 sudo systemctl start sddm
+```
 
 Si tout se passe bien, on peut utiliser :
 
+```
 sudo systemctl enable sddm
+```
 
 ![Illustration 15: Plasma 5.9.x (vue de dossiers) – KDE Frameworks 5.34.0 ]
 
 **Petit bonus** : un aperçu de Plasma 5.10 qui sera disponible sur les dépôts stables courant juin 2017. Au 1^er^ juin 2017, il faut activer les dépôts testing et community testing. Je vous conseille de patienter l’officialisation du port…
 
-![\
-Illustration 16: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.34.0]
+![Illustration 16: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.34.0]
 
 Addendum 2 : installer Xfce
 ---------------------------
@@ -580,7 +623,8 @@ Addendum 2 : installer Xfce
 
 Pour installer Xfce, il faut entrer :
 
-yaourt -S xfce4 xfce4-goodies gvfs smplayer quodlibet python2-pyinotify lightdm-gtk-greeter midori xarchiver claws-mail galculator evince ffmpegthumbnailer xscreensaver pavucontrol pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer **→** **(pour installer le support des imprimantes)**
+```
+yaourt -S xfce4 xfce4-goodies gvfs smplayer quodlibet python2-pyinotify lightdm-gtk-greeter midori xarchiver claws-mail galculator evince ffmpegthumbnailer xscreensaver pavucontrol pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer **→ (pour installer le support des imprimantes)**```
 
 SMPlayer et Quodlibet ? Pour la vidéo et l’audio. Midori ? Pour la navigation internet. Pour les périphériques amovibles, gvfs est obligatoire. Claws-mail ou Mozilla Thunderbird (avec le paquet thunderbird-i18n-fr) pour le courrier. Lightdm étant pris, car plus rapide à installer. Le paquet python2-pyinotify est nécessaire pour activer le greffon de mise à jour automatique de la musicothèque sous Quodlibet.
 
@@ -588,21 +632,29 @@ Evince ? Pour les fichiers en pdf. On peut aussi remplacer xarchiver par filero
 
 Si vous utilisez NetworkManager, vous pouvez rajouter l’applet pour gérer et surveiller votre réseau avec le paquet « network-manager-applet ». Si vous voulez personnaliser votre lightdm :
 
+```
 yaourt -S lightdm-gtk-greeter-settings
+```
 
 Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivant avant de lancer pour la première fois lightdm :
 
+```
 sudo localectl set-x11-keymap fr
+```
 
 Pour lancer Xfce, il faut entrer dans un premier temps :
 
+```
 sudo systemctl start lightdm
+```
 
 Et si tout se passe bien, on peut utiliser :
 
+```
 sudo systemctl enable lightdm
+```
 
-**Note 5 **: pour avoir des plus jolies icônes, on peut installer le paquet AUR elementary-xfce-icons ou encore les mint-x-icons. mais après, c’est à vous de voir !
+**Note 5 : ** pour avoir des plus jolies icônes, on peut installer le paquet AUR elementary-xfce-icons ou encore les mint-x-icons. mais après, c’est à vous de voir !
 
 ![Illustration 17: Xfce 4.12.0 en action.]
 
@@ -611,36 +663,40 @@ Addendum 3 : installer Mate-Desktop
 
 **Note :** commandes à entrer en tant qu’utilisateur classique. Si vous n’avez pas yaourt, sudo pacman -S sera à utiliser.
 
-**Note 2 : **Mate 1.18 étant uniquement en gtk3, cela simplifie l’installation.
+**Note 2 :** Mate 1.18 étant uniquement en gtk3, cela simplifie l’installation.
 
-**Note 3** : Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
+**Note 3 :**  Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
 
 L’installation ressemble à celle de Xfce, donc pour les explications des paquets, cf l’addenda consacré à Xfce. Idem pour l’utilisation de NetworkManager si vous le voulez. Il ne faut pas oublier de rajouter un outil de gravure, comme Brasero si nécessaire. Pour le navigateur, Mozilla Firefox, Chromium ou encore Midori. C’est selon les goûts !
 
+```
 yaourt -S mate mate-extra lightdm-gtk-greeter gnome-icon-theme smplayer quodlibet python2-pyinotify accountsservice claws-mail system-config-printer gtk3-print-backends **→** **(pour installer le support des imprimantes)**
+```
 
 Si vous voulez personnaliser votre lightdm :
 
+```
 yaourt -S lightdm-gtk-greeter-settings
+```
 
 Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivant avant de lancer pour la première fois lightdm :
 
+```
 sudo localectl set-x11-keymap fr
+```
 
 Pour lancer Mate Desktop, il faut entrer dans un premier temps :
 
+```
 sudo systemctl start accounts-daemon
-
 sudo systemctl start lightdm
-
+```
 Si tout se passe bien, on peut utiliser :
 
+```
 sudo systemctl enable accounts-daemon
-
 sudo systemctl enable lightdm
-
+```
 ![Illustration 18: Mate Desktop 1.18.0]
 
-  [https://www.archlinux32.org/]: https://www.archlinux-32.org/
-  [http://creativecommons.org/licenses/by-sa/]: http://creativecommons.org/licenses/by-sa/3.0/
   
