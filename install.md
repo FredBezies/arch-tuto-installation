@@ -93,15 +93,14 @@ Comme pour la section concernant le partitionnement en mode Bios, si vous craign
 
 Il faut se souvenir qu’il faut **obligatoirement** une table de partition GPT en cas d’installation en mode UEFI. Si vous n’êtes pas passé par gParted, il faut utiliser l’outil cgdisk.
 
-  ----------- ------------------ ----------------------------------- ---------------------
-  Référence   Point de montage   Taille                              Système de fichiers
-  /dev/sda1   /                  20 Go                               ext4
-  /dev/sda2   /boot              512 Mo                              Fat32
-  /dev/sda3                      Taille de la mémoire vive ou plus   swap
-  /dev/sda4   /home              Le reste du disque                  ext4
-  ----------- ------------------ ----------------------------------- ---------------------
-
-**Note : **pour la partition /boot, il faut qu’elle soit étiquetée en EF00 à sa création. Pour le swap, c’est la référence 8200.
+  |Référence  |  Point de montage |  Taille                           | Système de fichiers |
+  |-----------|-------------------|-----------------------------------|---------------------|
+  | /dev/sda1 | /                 | 20 Go                             |  ext4               |
+  | /dev/sda2 | /boot             | 512 Mo                            |  fat32              |
+  | /dev/sda3 |                   | Taille de la mémoire vive ou plus |  swap               |
+  | /dev/sda4 | /home             | Le reste du disque                |  ext4               |
+  
+**Note :** pour la partition /boot, il faut qu’elle soit étiquetée en EF00 à sa création. Pour le swap, c’est la référence 8200.
 
 ![Illustration 5: cgdisk en action pour un partitionnement avec un UEFI]
 
@@ -156,10 +155,10 @@ Si on veut utiliser un noyau linux long terme, il faut rajouter à la deuxième 
 
 **Note :** exfat-utils m’a été conseillé par André Ray pour la prise en charge des cartes SD de grande capacité. Merci pour le retour !
 
-maintenant que les outils de base sont installés, il faut générer le fichier /etc/fstab qui liste les partitions présentes.
+Maintenant que les outils de base sont installés, il faut générer le fichier /etc/fstab qui liste les partitions présentes.
 
 ```
-genfstab -U -p /mnt &gt;&gt; /mnt/etc/fstab
+genfstab -U -p /mnt >> /mnt/etc/fstab
 ```
 
 Au tour du chargeur de démarrage. J’utilise Grub2 qui s’occupe de tout et récupère les paquets qui vont bien. Le paquet os-prober est indispensable pour un double démarrage.
@@ -186,126 +185,146 @@ Avant d’aller plus loin, voici quelques infos pratiques. Cela concerne les pay
 
 Nous allons par la suite créer des fichiers qui demanderont des valeurs précises. Les voici résumées ici :
 
-  ------------ --------------- ------------------
-  Pays         Locale (LANG)   Clavier (KEYMAP)
-  Belgique     fr\_BE.UTF-8    be-latin1
-  Canada       fr\_CA.UTF-8    cf
-  France       fr\_FR.UTF-8    fr-latin9
-  Luxembourg   fr\_LU.UTF-8    fr-latin9
-  Suisse       fr\_CH.UTF-8    fr\_CH
-  ------------ --------------- ------------------
-
+  
+  | Pays       | Locale (LANG) | Clavier (KEYMAP) |
+  |------------|---------------|------------------|
+  | Belgique   |  fr\_BE.UTF-8 |  be-latin1       |
+  | Canada     |  fr\_CA.UTF-8 |  cf              |
+  | France     |  fr\_FR.UTF-8 |  fr-latin9       |
+  | Luxembourg |  fr\_LU.UTF-8 |  fr-latin9       |
+  | Suisse     |  fr\_CH.UTF-8 |  fr\_CH          |
+  
 Pour avoir le bon clavier en mode texte, créez le fichier /etc/vconsole.conf. Il suffira de l’adapter si le besoin s’en fait sentir.
 
+```
 KEYMAP=fr-latin9
-
 FONT=lat9w-16
+```
 
 Pour avoir la localisation française, le fichier /etc/locale.conf doit contenir la bonne valeur pour LANG. Pour un personne en France métropolitaine :
 
-LANG=fr\_FR.UTF-8
-
-LC\_COLLATE=C
-
+```
+LANG=fr_FR.UTF-8
+LC_COLLATE=C
+```
 **Note :** La deuxième ligne est nécessaire si on apprécie d’avoir le tri par la « casse » (majuscule puis minuscule) activé. Merci à Igor Milhit pour la remarque !
 
 Il faut vérifier que la ligne fr\_FR.UTF-8 UTF-8 dans le fichier /etc/locale.gen n’a pas de \# devant elle. Ainsi que la ligne en\_US.UTF-8 UTF-8. Évidemment, la valeur fr\_FR.UTF-8 doit être modifiée si besoin est. On va maintenant générer les traductions :
 
+```
 locale-gen
+```
 
 On peut spécifier la locale pour la session courante, à modifier en fonction de votre pays :
 
-export LANG=fr\_FR.UTF-8
+```
+export LANG=fr_FR.UTF-8
+```
 
 Le nom de la machine ? Il est contenu dans le fichier **/etc/hostname**. Il suffit de taper le nom sur la première ligne. Par exemple : *fredo-archlinux-gnome.* À remplacer par le nom de la machine bien entendu.
 
 Le fuseau horaire ? Une seule étape. Prenons le cas d’une installation avec le fuseau horaire de Paris. Tout dépend de votre lieu de résidence. On commence par créer un lien symbolique :
 
+```
 ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
+```
 
 Ensuite, deux cas se présentent. Soit on a une machine en mono-démarrage sur Archlinux, et on peut demander à ce que l’heure appliquée soit UTC, soit un double démarrage avec MS-Windows. Restons dans ce premier cas.
 
+```
 hwclock --systohc --utc
+```
 
 **Sinon, on ne touche à rien.** MS-Windows est un goujat dans ce dojuinne.
 
 Étape suivante ? Générer le fichier de configuration de Grub.
 
-mkinitcpio -p linux → ou **linux-lts** si vous voulez le noyau lts.
-
+```
+mkinitcpio -p linux ou **linux-lts** si vous voulez le noyau lts.
 grub-mkconfig -o /boot/grub/grub.cfg
+```
 
 **Note** : si vous avez une « hurlante » contenant « /run/lvm/lvmetad.socket: connect failed » ou quelque chose d’approchant, ce n’est pas un bug. C’est une alerte sans conséquence. Cf <https://wiki.archlinux.org/index.php/GRUB#Boot_freezes>
 
 1\) Pour une installation en mode BIOS :
 
+```
 grub-install --no-floppy --recheck /dev/sda
+```
 
 **2) Pour une installation en mode UEFI :**
 
 Il faut déjà vérifier la présence de la variable efivars. Si en entrant la commande mount, vous avez dans la liste une réponse du style :
 
+```
 efivars on /sys/firmware/efi/efivars type efivars (rw,nosuid,nodev,noexec,relatime)
+```
 
 Dans ce cas, vous pouvez aller directement à la ligne du grub-install, ci-dessous, et sauter la première ligne de commande. La deuxième ligne est d’un seul tenant.
 
-mount -t efivarfs efivarfs []{#anchor}/sys/firmware/efi/efivarfs
-
+```
+mount -t efivarfs efivarfs /sys/firmware/efi/efivarfs
 grub-install --target=x86\_64-efi --efi-directory=/boot --bootloader-id=arch\_grub --recheck
+```
 
 De plus, pour éviter tout problème de démarrage par la suite, il est conseillé de rajouter les commandes suivantes :
 
+```
 mkdir /boot/EFI/boot
-
 cp /boot/EFI/arch\_grub/grubx64.efi /boot/EFI/boot/bootx64.efi
+```
 
 ![Illustration 7 : Génération du noyau linux 4.11.3 début juin 2017]
 
 Bien entendu, aucune erreur ne doit apparaître. On donne un mot de passe au compte root :
 
+```
 passwd root
+```
 
 Pour le réseau, installer et activer NetworkManager est une bonne idée. Vous pouvez remplacer NetworkManager par le duo wicd et wicd-gtk **en cas de problème.** Pour wicd :
 
+```
 pacman -Syy wicd wicd-gtk
-
 systemctl enable wicd
+```
 
 Et pour Networkmanager :
 
+```
 pacman -Syy networkmanager
-
 systemctl enable NetworkManager
+```
 
-**NOTE 1 : **si vous n’utilisez pas NetworkManager, je vous renvoie à cette page du wiki anglophone d'Archlinux, qui vous aidera dans cette tâche : <https://wiki.archlinux.org/index.php/Netctl>
+**NOTE 1 :** si vous n’utilisez pas NetworkManager, je vous renvoie à cette page du wiki anglophone d'Archlinux, qui vous aidera dans cette tâche : <https://wiki.archlinux.org/index.php/Netctl>
 
-**NOTE 2** : netctl et networkmanager rentrent en conflit et **ne doivent pas** être utilisé en même temps. D’ailleurs, netctl et wicd entre aussi en conflit. Une règle simple : un seul gestionnaire de connexion réseau à la fois !
+**NOTE 2 : ** netctl et networkmanager rentrent en conflit et **ne doivent pas** être utilisé en même temps. D’ailleurs, netctl et wicd entre aussi en conflit. Une règle simple : un seul gestionnaire de connexion réseau à la fois !
 
 **NOTE 3 :** si vous voulez utiliser des réseaux wifi directement avec NetworkManager et son applet, le paquet gnome-keyring est indispensable. Merci à Vincent Manillier pour l’info.
 
 Dernier réglage, **optionnel **si on veut avoir accès à l’outil yaourt, il faut ajouter ceci au fichier /etc/pacman.conf à la fin. Une fois yaourt installé, on peut enlever **sans aucun risque** les lignes en question.
 
-\[archlinuxfr\]
-
+```
+[archlinuxfr]
 SigLevel = Never
-
 Server = http://repo.archlinux.fr/\$arch
+```
 
 Si vous voulez utiliser un outil comme Skype (qui est uniquement en 32 bits) et que vous installez un système 64 bits, il faut décommenter (enlever les \#) des lignes suivantes :
 
-\#\[multilib\]
-
-\#Include = /etc/pacman.d/mirrorlist
-
+```
+#[multilib]
+#Include = /etc/pacman.d/mirrorlist
+```
 On peut maintenant quitter tout, démonter proprement les partitions et redémarrer.
 
 C’est un peu plus délicat qu’auparavant. Au moins, on voit les étapes à suivre.
 
+```
 exit
-
 umount -R /mnt
-
 reboot
+```
 
 Voilà, on peut redémarrer. On va passer à la suite, largement moins ennuyeuse !
 
