@@ -10,7 +10,7 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 **NOTE 3 :** Pour Budgie Desktop et Cinnamon, je vous conseille de vous reporter au tutoriel d’avril 2017 : <http://frederic.bezies.free.fr/blog/?p=15985>
 
-**NOTE 4** : Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1^er^ mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [https://www.archlinux32.org/]
+**NOTE 4 :** Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1^er^ mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [https://www.archlinux32.org/]
 
 Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En juin 2017, c’est la 2017.06.01.
 
@@ -55,7 +55,7 @@ Pour le partitionnement en question :
 
 Il ne faut pas oublier de définir la partition attribuée à /boot comme démarrable (bootable). Ce qui donne l’écran suivant dans cfdisk.
 
-![Illustration 3: cfdisk en action]
+![Illustration 3: cfdisk en action](003.png)
 
 Pour le formatage des partitions, il suffit d’entrer les commandes suivantes :
 
@@ -87,7 +87,7 @@ On peut passer ensuite à l’installation de la base.
 
 Voici donc l’écran qui nous permet de démarrer en mode UEFI, supporté uniquement pour la version 64 bits.
 
-![Illustration 4: démarrage en mode UEFI]
+![Illustration 4: démarrage en mode UEFI](004.png)
 
 Comme pour la section concernant le partitionnement en mode Bios, si vous craignez de faire des bêtises, vous pouvez utiliser gParted en mode liveCD : <http://gparted.org/>
 
@@ -102,7 +102,7 @@ Il faut se souvenir qu’il faut **obligatoirement** une table de partition GPT 
   
 **Note :** pour la partition /boot, il faut qu’elle soit étiquetée en EF00 à sa création. Pour le swap, c’est la référence 8200.
 
-![Illustration 5: cgdisk en action pour un partitionnement avec un UEFI]
+![Illustration 5: cgdisk en action pour un partitionnement avec un UEFI](005.png)
 
 Le partitionnement à appliquer ? C’est le suivant :
 
@@ -138,11 +138,11 @@ Après avoir procédé au partitionnement et à l’attribution des partitions, 
 
 Avec l’outil nano nous allons modifier le fichier /etc/pacman.d/mirrorlist pour ne garder qu’un seul miroir. Le plus proche géographiquement et aussi le plus rapide possible. Pour une personne vivant en France, c’est **de préférence** mir.archlinux.fr et / ou archlinux.polymorf.fr.
 
-![Illustration 6: la liste des miroirs disponibles.]
+![Illustration 6: la liste des miroirs disponibles.](006.png)
 
-J’ai utilisé le raccourci clavier suivant : ***ALT+R***. On entre dans un premier temps « Server » (sans les guillemets). On presse la touche entrée. On saisit « \#Server » (sans les guillemets) pour commenter tous les serveurs.
+J’ai utilisé le raccourci clavier suivant : **ALT+R**. On entre dans un premier temps « Server » (sans les guillemets). On presse la touche entrée. On saisit « \#Server » (sans les guillemets) pour commenter tous les serveurs.
 
-Avec le raccourci clavier ***CTRL+W, ***il suffit de saisir le nom du serveur qu’on veut utiliser et enlever la « \# » sur sa ligne. Un ***CTRL+****X ***suivi de la touche « y » (pour yes) permet d’enregistrer la modification.
+Avec le raccourci clavier **CTRL+W**, il suffit de saisir le nom du serveur qu’on veut utiliser et enlever la « \# » sur sa ligne. Un **CTRL+X** suivi de la touche « y » (pour yes) permet d’enregistrer la modification.
 
 On passe à l’installation de la base. La deuxième ligne rajoute certains outils bien pratique à avoir dès le départ. On peut ensuite s’attaquer à l’installation proprement dite.
 
@@ -274,7 +274,7 @@ mkdir /boot/EFI/boot
 cp /boot/EFI/arch\_grub/grubx64.efi /boot/EFI/boot/bootx64.efi
 ```
 
-![Illustration 7 : Génération du noyau linux 4.11.3 début juin 2017]
+![Illustration 7 : Génération du noyau linux 4.11.3 début juin 2017](007.png)
 
 Bien entendu, aucune erreur ne doit apparaître. On donne un mot de passe au compte root :
 
