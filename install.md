@@ -28,11 +28,11 @@ Dans cette partie, certaines sections seront dédoublées à cause des différen
 
 Commençons par une installation en mode Bios, du point de vue du partitionnement et de l’attribution des partitions. Si vous utilisez une machine réelle ou virtuelle avec l’UEFI, des instructions spécifiques sont détaillées par la suite.
 
-### Partitionnement et attribution des partitions en mode Bios :
+#### Partitionnement et attribution des partitions en mode Bios :
 
 Voici donc l’écran qui nous permet de démarrer. Comme vous pouvez le voir, on peut démarrer soit avec un noyau 32 soit avec un noyau 64 bits. Il n’y a plus grande différence, sauf au niveau de certains logiciels typiquement 32 bits, mais j’expliquerai plus bas comment faire cohabiter 32 et 64 bits.
 
-![Illustration 1: écran de démarrage en mode Bios, uniquement en 64 bits (depuis mars 2017)](001.png)
+![Illustration 1: écran de démarrage en mode Bios, uniquement en 64 bits (depuis mars 2017)](pictures/001.png)
 
 La première chose à faire, c’est d’avoir le clavier français :
 
@@ -42,7 +42,7 @@ Pour le partitionnement, si vous avez peur de faire des bêtises, il est plus pr
 
 Avec cfdisk, sur l’écran de démarrage suivant, on choisit l’option « dos » pour le « label type » à appliquer.
 
-![Illustration 2: premier démarrage de cfdisk](002.png)
+![Illustration 2: premier démarrage de cfdisk](pictures/002.png)
 
 Pour le partitionnement en question :
 
@@ -56,7 +56,7 @@ Pour le partitionnement en question :
 
 Il ne faut pas oublier de définir la partition attribuée à /boot comme démarrable (bootable). Ce qui donne l’écran suivant dans cfdisk.
 
-![Illustration 3: cfdisk en action](003.png)
+![Illustration 3: cfdisk en action](pictures/003.png)
 
 Pour le formatage des partitions, il suffit d’entrer les commandes suivantes :
 
@@ -84,11 +84,11 @@ mount /dev/sda4 /mnt/home
 
 On peut passer ensuite à l’installation de la base.
 
-### Partitionnement et attribution des partitions en mode UEFI :
+#### Partitionnement et attribution des partitions en mode UEFI :
 
 Voici donc l’écran qui nous permet de démarrer en mode UEFI, supporté uniquement pour la version 64 bits.
 
-![Illustration 4: démarrage en mode UEFI](004.png)
+![Illustration 4: démarrage en mode UEFI](pictures/004.png)
 
 Comme pour la section concernant le partitionnement en mode Bios, si vous craignez de faire des bêtises, vous pouvez utiliser gParted en mode liveCD : <http://gparted.org/>
 
@@ -103,7 +103,7 @@ Il faut se souvenir qu’il faut **obligatoirement** une table de partition GPT 
   
 **Note :** pour la partition /boot, il faut qu’elle soit étiquetée en EF00 à sa création. Pour le swap, c’est la référence 8200.
 
-![Illustration 5: cgdisk en action pour un partitionnement avec un UEFI](005.png)
+![Illustration 5: cgdisk en action pour un partitionnement avec un UEFI](pictures/005.png)
 
 Le partitionnement à appliquer ? C’est le suivant :
 
@@ -139,7 +139,7 @@ Après avoir procédé au partitionnement et à l’attribution des partitions, 
 
 Avec l’outil nano nous allons modifier le fichier /etc/pacman.d/mirrorlist pour ne garder qu’un seul miroir. Le plus proche géographiquement et aussi le plus rapide possible. Pour une personne vivant en France, c’est **de préférence** mir.archlinux.fr et / ou archlinux.polymorf.fr.
 
-![Illustration 6: la liste des miroirs disponibles.](006.png)
+![Illustration 6: la liste des miroirs disponibles.](pictures/006.png)
 
 J’ai utilisé le raccourci clavier suivant : **ALT+R**. On entre dans un premier temps « Server » (sans les guillemets). On presse la touche entrée. On saisit « \#Server » (sans les guillemets) pour commenter tous les serveurs.
 
