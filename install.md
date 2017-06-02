@@ -4,11 +4,11 @@ Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnom
 
 Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme les imprimantes, les scanners, ou encore les webcams. Je vous renvoie aux wikis anglophone <https://wiki.archlinux.org/> et francophone <http://wiki.archlinux.fr/Accueil> pour ce genre de manipulations.
 
-**NOTE 1 : **Ce tutoriel est **volontairement simplifié**. Il va vous permettre de voir comment installer une ArchLinux **en solo**. **Ensuite, s’il y a des spécificités liées à votre matériel, c’est au cas par cas qu’il faut regarder et compulser frénétiquement les wikis ci-dessus.** Si vous voulez installer une Archlinux **en parallèle **d’une installation de MS-Windows, c’est en dehors du cadre de ce document.
+**NOTE 1 :** Ce tutoriel est **volontairement simplifié**. Il va vous permettre de voir comment installer une ArchLinux **en solo**. **Ensuite, s’il y a des spécificités liées à votre matériel, c’est au cas par cas qu’il faut regarder et compulser frénétiquement les wikis ci-dessus.** Si vous voulez installer une Archlinux **en parallèle **d’une installation de MS-Windows, c’est en dehors du cadre de ce document.
 
-**NOTE 2 : **Pour Lxde et LXQt, il faudra voir avec le tutoriel de février 2016 : <http://frederic.bezies.free.fr/blog/?p=14045>
+**NOTE 2 :** Pour Lxde et LXQt, il faudra voir avec le tutoriel de février 2016 : <http://frederic.bezies.free.fr/blog/?p=14045>
 
-**NOTE 3 : **Pour Budgie Desktop et Cinnamon, je vous conseille de vous reporter au tutoriel d’avril 2017 : <http://frederic.bezies.free.fr/blog/?p=15985>
+**NOTE 3 :** Pour Budgie Desktop et Cinnamon, je vous conseille de vous reporter au tutoriel d’avril 2017 : <http://frederic.bezies.free.fr/blog/?p=15985>
 
 **NOTE 4** : Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1^er^ mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [https://www.archlinux32.org/]
 
@@ -35,7 +35,7 @@ Voici donc l’écran qui nous permet de démarrer. Comme vous pouvez le voir, o
 
 La première chose à faire, c’est d’avoir le clavier français :
 
-loadkeys fr
+```loadkeys fr```
 
 Pour le partitionnement, si vous avez peur de faire des bêtises, il est plus prudent de passer par un LiveCD comme gParted disponible à l’adresse suivante : <http://gparted.org/>
 
@@ -59,27 +59,27 @@ Il ne faut pas oublier de définir la partition attribuée à /boot comme démar
 
 Pour le formatage des partitions, il suffit d’entrer les commandes suivantes :
 
+```
 mkfs.ext2 /dev/sda1
-
 mkfs.ext4 /dev/sda3
-
 mkfs.ext4 /dev/sda4
+```
 
 Sans oublier la partition de swap :
 
+```
 mkswap /dev/sda2
-
 swapon /dev/sda2
+```
 
 On va ensuite créer les points de montage et y associer les partitions qui correspondent.
 
+```
 mount /dev/sda3 /mnt
-
 mkdir /mnt/{boot,home}
-
 mount /dev/sda1 /mnt/boot
-
 mount /dev/sda4 /mnt/home
+```
 
 On peut passer ensuite à l’installation de la base.
 
@@ -107,27 +107,27 @@ Il faut se souvenir qu’il faut **obligatoirement** une table de partition GPT 
 
 Le partitionnement à appliquer ? C’est le suivant :
 
+```
 mkfs.ext4 /dev/sda1
-
 mkfs.fat -F32 /dev/sda2
-
 mkfs.ext4 /dev/sda4
+```
 
 Sans oublier la partition de swap :
 
+```
 mkswap /dev/sda3
-
 swapon /dev/sda3
+```
 
 Et pour les points de montage :
 
+```
 mount /dev/sda1 /mnt
-
 mkdir /mnt/{boot,home}
-
 mount /dev/sda2 /mnt/boot
-
 mount /dev/sda4 /mnt/home
+```
 
 On peut passer à l’installation de la base.
 
@@ -147,9 +147,10 @@ Avec le raccourci clavier ***CTRL+W, ***il suffit de saisir le nom du serveur qu
 
 On passe à l’installation de la base. La deuxième ligne rajoute certains outils bien pratique à avoir dès le départ. On peut ensuite s’attaquer à l’installation proprement dite.
 
+```
 pacstrap /mnt base base-devel
-
 pacstrap /mnt zip unzip p7zip vim mc alsa-utils syslog-ng mtools dosfstools lsb-release ntfs-3g exfat-utils **(sur une seule ligne !)**
+```
 
 Si on veut utiliser un noyau linux long terme, il faut rajouter à la deuxième ligne pacstrap le paquet linux-lts. Pour ntfs-3g, c’est utile si vous êtes amené à utiliser des disques formatés en ntfs. Si ce n’est pas le cas, vous pouvez l’ignorer allègrement.
 
@@ -157,21 +158,29 @@ Si on veut utiliser un noyau linux long terme, il faut rajouter à la deuxième 
 
 maintenant que les outils de base sont installés, il faut générer le fichier /etc/fstab qui liste les partitions présentes.
 
+```
 genfstab -U -p /mnt &gt;&gt; /mnt/etc/fstab
+```
 
 Au tour du chargeur de démarrage. J’utilise Grub2 qui s’occupe de tout et récupère les paquets qui vont bien. Le paquet os-prober est indispensable pour un double démarrage.
 
 1\) Pour un ordinateur avec BIOS :
 
+```
 pacstrap /mnt grub os-prober
+```
 
 2\) Pour un ordinateur avec UEFI :
 
+```
 pacstrap /mnt grub os-prober efibootmgr
+```
 
 On passe aux réglages de l’OS qu’on vient d’installer. Il faut donc y entrer. On utilise la commande suivante :
 
+```
 arch-chroot /mnt
+```
 
 Avant d’aller plus loin, voici quelques infos pratiques. Cela concerne les pays francophones comme la Belgique, la Suisse, le Luxembourg ou encore le Canada francophone.
 
@@ -615,22 +624,4 @@ sudo systemctl enable lightdm
 
   [https://www.archlinux32.org/]: https://www.archlinux-32.org/
   [http://creativecommons.org/licenses/by-sa/]: http://creativecommons.org/licenses/by-sa/3.0/
-  [Illustration 1: écran de démarrage en mode Bios, uniquement en 64 bits (depuis mars 2017)]: Pictures/1000000000000280000001E027E33FE8D49E9451.png{width="16.932cm" height="12.698cm"}
-  [Illustration 2: premier démarrage de cfdisk]: Pictures/10000000000002D0000001907352F6B8E4827065.png{width="19.05cm" height="10.58cm"}
-  [Illustration 3: cfdisk en action]: Pictures/10000000000002D000000190BA27BE9B72D312BA.png{width="19.046cm" height="10.582cm"}
-  [Illustration 4: démarrage en mode UEFI]: Pictures/10000000000004000000030061242FE29BA8B4E1.png{width="17cm" height="12.749cm"}
-  [Illustration 5: cgdisk en action pour un partitionnement avec un UEFI]: Pictures/1000000000000400000003005B0482D3FE8862E1.png{width="17.881cm" height="13.409cm"}
-  [Illustration 6: la liste des miroirs disponibles.]: Pictures/10000000000002D000000190D3C5DC63364F7131.png{width="19.046cm" height="10.582cm"}
-  [Illustration 7 : Génération du noyau linux 4.11.3 début juin 2017]: Pictures/10000000000002D000000190F789A01AB63DB50D.png{width="19.046cm" height="10.582cm"}
-  [Illustration 8: alsamixer en action]: Pictures/1000000000000280000001E05513EF200C618933.png{width="16.932cm" height="12.698cm"}
-  [Illustration 9: Choix du paquet à installer concernant virtualbox-guest-utils]: Pictures/1000000000000280000001E0F73A3D07EDF7A981.png{width="16.932cm" height="12.698cm"}
-  [Illustration 10: GDM 3.24.2 avec les sessions Wayland et Gnome sur Xorg]: Pictures/1000000000000550000003006ACA297E9DBF90CE.png{width="17.881cm" height="10.097cm"}
-  [Illustration 11: Gnome 3.24.2 en vue activités]: Pictures/1000000000000550000003001A6CD0336D19A25C.png{width="17.881cm" height="10.097cm"}
-  [Illustration 12: Gnome Tweak Tool en action.]: Pictures/10000000000005500000030082941C12CB5D931F.png{width="17.881cm" height="10.097cm"}
-  [Illustration 13: Gnome Shell 3.24.2 et « LibreOffice-fresh »]: Pictures/100000000000055000000300A810CA8B496F270B.png{width="17.881cm" height="10.097cm"}
-  [Illustration 14: Gnome classique 3.24.2 en action]: Pictures/10000000000005500000030064080EA9E97554E2.png{width="17cm" height="9.599cm"}
-  [Illustration 15: Plasma 5.9.x (vue de dossiers) – KDE Frameworks 5.34.0 ]: Pictures/100000000000055000000300AF31B355F6A7ABCA.png{width="17cm" height="9.599cm"}
-  [\
-  Illustration 16: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.34.0]: Pictures/100000000000055000000300283EC179B3E443BA.png{width="17cm" height="9.599cm"}
-  [Illustration 17: Xfce 4.12.0 en action.]: Pictures/1000000000000550000003008579FB9D5E28E1ED.png{width="17.881cm" height="10.097cm"}
-  [Illustration 18: Mate Desktop 1.18.0]: Pictures/1000000000000550000003000A0DCD5FBA5810C7.png{width="17.881cm" height="10.097cm"}
+  
