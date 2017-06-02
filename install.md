@@ -41,17 +41,17 @@ Pour le partitionnement, si vous avez peur de faire des bêtises, il est plus pr
 
 Avec cfdisk, sur l’écran de démarrage suivant, on choisit l’option « dos » pour le « label type » à appliquer.
 
-![Illustration 2: premier démarrage de cfdisk]
+![Illustration 2: premier démarrage de cfdisk](002.png)
 
 Pour le partitionnement en question :
 
-  ----------- ------------------ ----------------------------------- ---------------------
-  Référence   Point de montage   Taille                              Système de fichiers
-  /dev/sda1   /boot              512 Mo                              ext2
-  /dev/sda2                      Taille de la mémoire vive ou plus   swap
-  /dev/sda3   /                  20 Go                               ext4
-  /dev/sda4   /home              Le reste du disque                  ext4
-  ----------- ------------------ ----------------------------------- ---------------------
+  | Référence |  Point de montage |  Taille                           |   Système de fichiers |
+  |-----------|-------------------|-----------------------------------|-----------------------|
+  | /dev/sda1 | /boot             |  512 Mo                           |  ext2                 |
+  | /dev/sda2 |                   | Taille de la mémoire vive ou plus |  swap                 |
+  | /dev/sda3 |  /                | 20 Go                             |  ext4                 |
+  | /dev/sda4 | /home             | Le reste du disque                | ext4                  |
+  
 
 Il ne faut pas oublier de définir la partition attribuée à /boot comme démarrable (bootable). Ce qui donne l’écran suivant dans cfdisk.
 
