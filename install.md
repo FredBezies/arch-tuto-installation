@@ -1,7 +1,7 @@
-Petit guide d’installation d’Archlinux avec Gnome 3.24.x / Plasma 5.9.x et 5.10.x / Xfce / Mate-Desktop
-=======================================================================================================
+Petit guide d’installation d’Archlinux avec Gnome 3.24.x / Plasma 5.10.x / Xfce / Mate-Desktop
+==============================================================================================
 
-Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.24 et suivant, Plasma 5.9.x et 5.10.x (courant juin 2017), Xfce et Mate-Desktop. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
+Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.24 et suivant, Plasma 5.10.x, Xfce et Mate-Desktop. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
 
 Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme les imprimantes, les scanners, ou encore les webcams. Je vous renvoie aux wikis anglophone <https://wiki.archlinux.org/> et francophone <http://wiki.archlinux.fr/Accueil> pour ce genre de manipulations.
 
@@ -598,12 +598,10 @@ J’ai surtout voulu faire un **guide rapide**, histoire de montrer qu’en une 
 
 Bonne découverte !
 
-IV) Addendum 1 : installer Plasma 5.9.x / 5.10.x
-------------------------------------------------
+IV) Addendum 1 : installer Plasma 5.10.x
+----------------------------------------
 
 **Note :** commandes à entrer en tant qu’utilisateur classique. Si vous n’avez pas yaourt, sudo pacman -S sera à utiliser. Kde-l10n-fr étant à remplacer par votre locale. Dans les précédentes versions, il y avait k3b, mais il a été intégré dans les kde-applications à partir de la version 17.04.
-
-**Note 2** : Plasma 5.10 étant sorti le 30 mai 2017, il y a de fortes chances pour qu’il soit disponible début juin 2017 pour Archlinux.
 
 L’installation se déroule ainsi :
 
@@ -631,15 +629,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable sddm
 ```
 
-![Illustration 15: Plasma 5.9.x (vue de dossiers) – KDE Frameworks 5.34.0](pictures/015.png)
+![Illustration 15: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.34.0](pictures/015.png)
 
-*Illustration 15: Plasma 5.9.x (vue de dossiers) – KDE Frameworks 5.34.0*
-
-**Petit bonus** : un aperçu de Plasma 5.10 qui sera disponible sur les dépôts stables courant juin 2017. Au 1er juin 2017, il faut activer les dépôts testing et community testing. Je vous conseille de patienter l’officialisation du port…
-
-![Illustration 16: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.34.0](pictures/016.jpg)
-
-*Illustration 16: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.34.0* 
+*Illustration 15: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.34.0* 
 
 V) Addendum 2 : installer Xfce
 ------------------------------
@@ -688,9 +680,9 @@ sudo systemctl enable lightdm
 
 **Note 5 :** pour avoir des plus jolies icônes, on peut installer le paquet AUR elementary-xfce-icons ou encore les mint-x-icons. mais après, c’est à vous de voir !
 
-![Illustration 17: Xfce 4.12.0 en action.](pictures/017.jpg)
+![Illustration 16: Xfce 4.12.0 en action.](pictures/016.png)
 
-*Illustration 17: Xfce 4.12.0 en action.*
+*Illustration 16: Xfce 4.12.0 en action.*
 
 VI) Addendum 3 : installer Mate-Desktop
 ---------------------------------------
@@ -731,7 +723,7 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable accounts-daemon
 sudo systemctl enable lightdm
 ```
-![Illustration 18: Mate Desktop 1.18.0](pictures/018.jpg)
+![Illustration 17: Mate Desktop 1.18.0](pictures/017.png)
 
-*Illustration 18: Mate Desktop 1.18.0*
+*Illustration 17: Mate Desktop 1.18.0*
   
