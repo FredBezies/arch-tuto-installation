@@ -642,7 +642,7 @@ V) Addendum 2 : installer Xfce
 
 **Note 3 :** courant janvier 2017, gstreamer-0.10 a été déprécié, après 4 ans sans la moindre mise à jour par les développeurs, et par conséquent, le greffon audio de Xfce est désormais celui de Pulseaudio, d’où le rajout de pavucontrol dans la liste des paquets.
 
-**Note 4 : ** VLC a été remplacé par SMPlayer pour des raisons pratiques. VLC reviendra quand il sortira en version 3.0 officielle et finale.
+**Note 4 :** VLC a été remplacé par SMPlayer pour des raisons pratiques. VLC reviendra quand il sortira en version 3.0 officielle et finale.
 
 Pour installer Xfce, il faut entrer :
 
