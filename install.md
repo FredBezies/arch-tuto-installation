@@ -696,7 +696,7 @@ VI) Addendum 3 : installer Mate-Desktop
 L’installation ressemble à celle de Xfce, donc pour les explications des paquets, cf l’addenda consacré à Xfce. Idem pour l’utilisation de NetworkManager si vous le voulez. Il ne faut pas oublier de rajouter un outil de gravure, comme Brasero si nécessaire. Pour le navigateur, Mozilla Firefox, Chromium ou encore Midori. C’est selon les goûts !
 
 ```
-yaourt -S mate mate-extra lightdm-gtk-greeter gnome-icon-theme smplayer quodlibet python2-pyinotify accountsservice claws-mail system-config-printer gtk3-print-backends **→** **(pour installer le support des imprimantes)**
+yaourt -S mate mate-extra lightdm-gtk-greeter gnome-icon-theme smplayer quodlibet python2-pyinotify accountsservice claws-mail system-config-printer ffmpegthumbailer gtk3-print-backends **→** **(pour installer le support des imprimantes)**
 ```
 
 Si vous voulez personnaliser votre lightdm :
