@@ -515,7 +515,7 @@ On passe enfin au morceau de choix : l’installation de Gnome, les extensions 
 pacman -S gnome gnome-extra system-config-printer telepathy shotwell rhythmbox
 ```
 
-Si vous voulez utiliser l’outils Gnome Logiciels, même si ce n’est pas des plus fonctionnels sous Archlinux :
+Si vous voulez utiliser l’outil Gnome Logiciels, même si ce n’est pas des plus fonctionnels sous Archlinux :
 
 ```
 pacman -S gnome-software
