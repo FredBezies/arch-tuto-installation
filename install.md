@@ -247,7 +247,7 @@ Ensuite, deux cas se présentent. Soit on a une machine en mono-démarrage sur A
 hwclock --systohc --utc
 ```
 
-**Sinon, on ne touche à rien.** MS-Windows est un goujat dans ce dojuinne.
+**Sinon, on ne touche à rien.** MS-Windows est un goujat dans ce domaine.
 
 Étape suivante ? Générer le fichier de configuration de Grub.
 
