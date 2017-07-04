@@ -321,7 +321,7 @@ Dernier réglage, **optionnel** si on veut avoir accès à l’outil yaourt, il 
 ```
 [archlinuxfr]
 SigLevel = Never
-Server = http://repo.archlinux.fr/\$arch
+Server = http://repo.archlinux.fr/$arch
 ```
 
 Si vous voulez utiliser un outil comme Skype (qui est uniquement en 32 bits) et que vous installez un système 64 bits, il faut décommenter (enlever les \#) des lignes suivantes :
@@ -372,7 +372,7 @@ ForwardToSyslog=yes
 
 Les outils en place, on lance alsamixer avec la commande du même nom, pour configurer le niveau sonore :
 
-![Illustration 8: alsamixer en action](008.png)
+![Illustration 8: alsamixer en action](pictures/008.png)
 
 *Illustration 8: alsamixer en action*
 
