@@ -13,14 +13,14 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 **NOTE 4 :** Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1er mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [Archlinux32](https://www.archlinux32.org/).
 
-Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En juillet 2017, c’est la 2017.07.01.
+Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En août 2017, c’est la 2017.08.01.
 
 Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit et André Ray pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
 
 I) Installons notre base
 ------------------------
 
-Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2017.07.01-x86\_64.iso, mise en ligne début juillet 2017.
+Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2017.08.01-x86\_64.iso, mise en ligne début août 2017.
 
 La machine virtuelle est une machine VirtualBox à laquelle j’ai rajouté un disque virtuel de 128 Go. Des points spécifiques concernant l’utilisation dans VirtualBox sont indiqués. Par défaut, le noyau proposé par Archlinux est un noyau « court terme ». Si vous voulez un noyau LTS, je vous expliquerai comment faire.
 
@@ -286,9 +286,9 @@ mkdir /boot/EFI/boot
 cp /boot/EFI/arch_grub/grubx64.efi /boot/EFI/boot/bootx64.efi
 ```
 
-![Illustration 7 : Génération du noyau linux 4.11.7 début juillet 2017](pictures/007.png)
+![Illustration 7 : Génération du noyau linux 4.12.3 début août 2017](pictures/007.png)
 
-*Illustration 7 : Génération du noyau linux 4.11.7 début juillet 2017*
+*Illustration 7 : Génération du noyau linux 4.12.3 début août 2017*
 
 Bien entendu, aucune erreur ne doit apparaître. On donne un mot de passe au compte root :
 
@@ -468,7 +468,7 @@ La série des paquets foomatic permet d’avoir le maximum de pilotes pour l’i
 pacman -S foomatic-{db,db-ppds,db-gutenprint-ppds,db-nonfree,db-nonfree-ppds} gutenprint
 ```
 
-Depuis la fin juillet 2014, il y a deux versions qui sont supportés par Archlinux pour LibreOffice, en conformité avec ce que propose la Document Foundation. Pour la version **stable** et les utilisateurs **prudents**, on utilise la ligne de commande :
+Il y a deux versions supportés par Archlinux pour LibreOffice, en conformité avec ce que propose la Document Foundation. Pour la version **stable** et les utilisateurs **prudents**, on utilise la ligne de commande :
 
 ```
 pacman -S libreoffice-still-fr
@@ -629,9 +629,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable sddm
 ```
 
-![Illustration 15: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.35.0](pictures/015.png)
+![Illustration 15: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.36.0](pictures/015.png)
 
-*Illustration 15: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.35.0* 
+*Illustration 15: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.36.0* 
 
 V) Addendum 2 : installer Xfce
 ------------------------------
