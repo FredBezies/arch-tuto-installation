@@ -13,14 +13,14 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 **NOTE 4 :** Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1er mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [Archlinux32](https://www.archlinux32.org/).
 
-Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En septembre 2017, c’est la 2017.09.01.
+Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En octobre 2017, c’est la 2017.10.01.
 
 Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit et André Ray pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
 
 I) Installons notre base
 ------------------------
 
-Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2017.09.01-x86\_64.iso, mise en ligne début août 2017.
+Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2017.10.01-x86\_64.iso, mise en ligne début octobre 2017.
 
 La machine virtuelle est une machine VirtualBox à laquelle j’ai rajouté un disque virtuel de 128 Go. Des points spécifiques concernant l’utilisation dans VirtualBox sont indiqués. Par défaut, le noyau proposé par Archlinux est un noyau « court terme ». Si vous voulez un noyau LTS, je vous expliquerai comment faire.
 
@@ -145,6 +145,14 @@ On peut passer à l’installation de la base.
 Après avoir procédé au partitionnement et à l’attribution des partitions, on peut attaquer les choses sérieuses, à savoir récupérer la base de notre installation. mais avant toute chose, choisissons le miroir le plus rapide.
 
 **Note :** si vous utilisez une connexion wifi, je vous conseille de voir cette page du wiki anglophone d'archlinux : <https://wiki.archlinux.org/index.php/Netctl>
+
+**Note 2 :** si vous êtes derrière un serveur proxy, il faut rajouter les lignes suivantes avec les valeurs qui vont bien. Merci à Nicolas pour l'info :)
+
+```
+export http_proxy=http://leproxy:leport/
+export https_proxy=$http_proxy
+export ftp_proxy=$http_proxy
+```
 
 Avec l’outil nano nous allons modifier le fichier /etc/pacman.d/mirrorlist pour ne garder qu’un seul miroir. Le plus proche géographiquement et aussi le plus rapide possible. Pour une personne vivant en France, c’est **de préférence** mir.archlinux.fr et / ou archlinux.polymorf.fr.
 
@@ -286,9 +294,9 @@ mkdir /boot/EFI/boot
 cp /boot/EFI/arch_grub/grubx64.efi /boot/EFI/boot/bootx64.efi
 ```
 
-![Illustration 7 : Génération du noyau linux 4.12.8 début septembre 2017](pictures/007.png)
+![Illustration 7 : Génération du noyau linux 4.13.3 début octobre 2017](pictures/007.png)
 
-*Illustration 7 : Génération du noyau linux 4.12.8 début septembre 2017*
+*Illustration 7 : Génération du noyau linux 4.13.3 début octobre 2017*
 
 Bien entendu, aucune erreur ne doit apparaître. On donne un mot de passe au compte root :
 
@@ -629,9 +637,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable sddm
 ```
 
-![Illustration 15: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.37.0](pictures/015.png)
+![Illustration 15: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.38.0](pictures/015.png)
 
-*Illustration 15: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.37.0* 
+*Illustration 15: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.38.0* 
 
 V) Addendum 2 : installer Xfce
 ------------------------------
