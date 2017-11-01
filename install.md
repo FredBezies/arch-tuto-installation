@@ -1,7 +1,7 @@
-Petit guide d’installation d’Archlinux avec Gnome 3.24.x / Plasma 5.10.x / Xfce / Mate-Desktop
+Petit guide d’installation d’Archlinux avec Gnome 3.26.x / Plasma 5.11.x / Xfce / Mate-Desktop
 ==============================================================================================
 
-Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.24 et suivant, Plasma 5.10.x, Xfce et Mate-Desktop. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
+Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.26 et suivant, Plasma 5.11.x, Xfce et Mate-Desktop. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
 
 Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme les imprimantes, les scanners, ou encore les webcams. Je vous renvoie aux wikis anglophone <https://wiki.archlinux.org/> et francophone <http://wiki.archlinux.fr/Accueil> pour ce genre de manipulations.
 
@@ -13,14 +13,14 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 **NOTE 4 :** Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1er mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [Archlinux32](https://www.archlinux32.org/).
 
-Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En octobre 2017, c’est la 2017.10.01.
+Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En novembre 2017, c’est la 2017.11.01.
 
 Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit et André Ray pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
 
 I) Installons notre base
 ------------------------
 
-Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2017.10.01-x86\_64.iso, mise en ligne début octobre 2017.
+Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2017.11.01-x86\_64.iso, mise en ligne début novembre 2017.
 
 La machine virtuelle est une machine VirtualBox à laquelle j’ai rajouté un disque virtuel de 128 Go. Des points spécifiques concernant l’utilisation dans VirtualBox sont indiqués. Par défaut, le noyau proposé par Archlinux est un noyau « court terme ». Si vous voulez un noyau LTS, je vous expliquerai comment faire.
 
@@ -294,9 +294,9 @@ mkdir /boot/EFI/boot
 cp /boot/EFI/arch_grub/grubx64.efi /boot/EFI/boot/bootx64.efi
 ```
 
-![Illustration 7 : Génération du noyau linux 4.13.3 début octobre 2017](pictures/007.png)
+![Illustration 7 : Génération du noyau linux 4.13.9 début novembre 2017](pictures/007.png)
 
-*Illustration 7 : Génération du noyau linux 4.13.3 début octobre 2017*
+*Illustration 7 : Génération du noyau linux 4.13.9 début novembre 2017*
 
 Bien entendu, aucune erreur ne doit apparaître. On donne un mot de passe au compte root :
 
@@ -418,7 +418,7 @@ Pour Nvidia, c’est un casse-tête au niveau des pilotes propriétaires. Le plu
 
  
  | Circuits graphiques | Pilotes libres     | Pilotes non libres (si existant)                     |
- |---------------------|--------------------|------------------------------------------------------|                                     
+ |---------------------|--------------------|------------------------------------------------------|
  | AMD                 | xf86-video-ati     |  Catalyst (disponible sur AUR, le dépôt utilisateur) |
  | Intel               | xf86-video-intel   |                                                      |
  | Nvidia              | xf86-video-nouveau | Nvidia (cf le wiki d'archlinux) pour la version à installer en fonction de la carte graphique          |
@@ -563,9 +563,9 @@ Sinon, il suffit de se référer à l’addenda correspondant à l’environneme
 
 Au démarrage suivant, GDM nous accueille, et nous pouvons nous connecter.
 
-![Illustration 10: GDM 3.24.2 avec les sessions Wayland et Gnome sur Xorg](pictures/010.png)
+![Illustration 10: GDM 3.26.2.1 avec les sessions Wayland et Gnome sur Xorg](pictures/010.png)
 
-*Illustration 10: GDM 3.24.2 avec les sessions Wayland et Gnome sur Xorg*
+*Illustration 10: GDM 3.26.2.1 avec les sessions Wayland et Gnome sur Xorg*
 
 III) Finalisons l’installation de Gnome.
 ----------------------------------------
@@ -580,9 +580,9 @@ yaourt -S xsane unoconv
 
 Il faut penser à vérifier que le clavier est correctement configuré. Ce qui se fait dans menu système unifié, options de configuration.
 
-![Illustration 11: Gnome 3.24.2 en vue activités](pictures/011.png)
+![Illustration 11: Gnome 3.26.2 en vue activités](pictures/011.png)
 
-*Illustration 11: Gnome 3.24.2 en vue activités*
+*Illustration 11: Gnome 3.26.2 en vue activités*
 
 On va personnaliser le bureau Gnome en lui ajoutant la date complète et les boutons pour minimiser et maximiser les fenêtres avec Gnome Tweak Tool.
 
@@ -592,13 +592,13 @@ On va personnaliser le bureau Gnome en lui ajoutant la date complète et les bou
 
 Pour finir des captures d’écran du mode « Gnome Shell » et « Gnome Classique ».
 
-![Illustration 13: Gnome Shell 3.24.2 et « LibreOffice-fresh »](pictures/013.png)
+![Illustration 13: Gnome Shell 3.26.2 et « LibreOffice-fresh »](pictures/013.png)
 
-*Illustration 13: Gnome Shell 3.24.2 et « LibreOffice-fresh »*
+*Illustration 13: Gnome Shell 3.26.2 et « LibreOffice-fresh »*
 
-![Illustration 14: Gnome classique 3.24.2 en action](pictures/014.png)
+![Illustration 14: Gnome classique 3.26.2 en action](pictures/014.png)
 
-*Illustration 14: Gnome classique 3.24.2 en action*
+*Illustration 14: Gnome classique 3.26.2 en action*
 
 Voila, le guide est maintenant fini. Cependant, je n’ai pas abordé l’installation d’un pare-feu. C’est quelque chose de plus technique.
 
@@ -606,7 +606,7 @@ J’ai surtout voulu faire un **guide rapide**, histoire de montrer qu’en une 
 
 Bonne découverte !
 
-IV) Addendum 1 : installer Plasma 5.10.x
+IV) Addendum 1 : installer Plasma 5.11.x
 ----------------------------------------
 
 **Note :** commandes à entrer en tant qu’utilisateur classique. Si vous n’avez pas yaourt, sudo pacman -S sera à utiliser. Kde-l10n-fr étant à remplacer par votre locale. Dans les précédentes versions, il y avait k3b, mais il a été intégré dans les kde-applications à partir de la version 17.04.
@@ -637,9 +637,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable sddm
 ```
 
-![Illustration 15: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.38.0](pictures/015.png)
+![Illustration 15: Plasma 5.11.x (vue de dossiers) avec les KDE Frameworks 5.38.0](pictures/015.png)
 
-*Illustration 15: Plasma 5.10.x (vue de dossiers) avec les KDE Frameworks 5.38.0* 
+*Illustration 15: Plasma 5.11.x (vue de dossiers) avec les KDE Frameworks 5.38.0* 
 
 V) Addendum 2 : installer Xfce
 ------------------------------
@@ -655,7 +655,7 @@ V) Addendum 2 : installer Xfce
 Pour installer Xfce, il faut entrer :
 
 ```
-yaourt -S xfce4 xfce4-goodies gvfs smplayer quodlibet python2-pyinotify lightdm-gtk-greeter midori xarchiver claws-mail galculator evince ffmpegthumbnailer xscreensaver pavucontrol pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer **→ (pour installer le support des imprimantes)**
+yaourt -S xfce4 xfce4-goodies gvfs smplayer quodlibet python2-pyinotify lightdm-gtk-greeter midori xarchiver claws-mail galculator evince ffmpegthumbnailer xscreensaver pavucontrol pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer gtk3-print-backends **→ (pour installer le support des imprimantes)**
 ```
 
 SMPlayer et Quodlibet ? Pour la vidéo et l’audio. Midori ? Pour la navigation internet. Pour les périphériques amovibles, gvfs est obligatoire. Claws-mail ou Mozilla Thunderbird (avec le paquet thunderbird-i18n-fr) pour le courrier. Lightdm étant pris, car plus rapide à installer. Le paquet python2-pyinotify est nécessaire pour activer le greffon de mise à jour automatique de la musicothèque sous Quodlibet.
