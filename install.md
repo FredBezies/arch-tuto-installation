@@ -359,7 +359,7 @@ Une fois le système démarré, on se connecte **en root**. Étant donné que j�
 
 Ainsi que ntp (synchronisation de l’heure en réseau) et cronie (pour les tâches d’administration à automatiser). L’installation de yaourt dépend de l’ajout du dépôt archlinuxfr, bien entendu.
 
-Une fois yaourt installé (si on le désire), on peut enlever le dépôt archlinux du fichier /etc/pacman.conf car yaourt est disponible sur AUR.
+Une fois yaourt installé (si on le désire), on peut enlever le dépôt archlinuxfr du fichier /etc/pacman.conf car yaourt est disponible sur AUR.
 
 ```
 pacman -Syy
