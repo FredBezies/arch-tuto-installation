@@ -365,6 +365,18 @@ Une fois yaourt installé (si on le désire), on peut enlever le dépôt archlin
 pacman -Syy
 pacman -S yaourt ntp cronie
 ```
+**Note :** si on veut avoir les logs en clair en cas de problème, il faut modifier avec nano (ou vim) le fichier /etc/systemd/journald.conf en remplaçant la ligne :
+
+```
+#ForwardToSyslog=no
+```
+
+par :
+
+```
+ForwardToSyslog=yes
+```
+
 Les outils en place, on lance alsamixer avec la commande du même nom, pour configurer le niveau sonore :
 
 ![Illustration 8: alsamixer en action](pictures/008.png)
