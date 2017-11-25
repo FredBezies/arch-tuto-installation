@@ -533,7 +533,7 @@ Les valeurs étant à adapter en fonction de la locale et du clavier, bien enten
 Étant donné que systemd est utilisé, voici la liste des services à activer (avec une explication rapide), **qui sera la même pour chacun des environnements** proposés dans les « addenda » :
 
 ```
-systemctl enable syslog-ng@ → *gestion des fichiers d’enregistrement d’activité*
+systemctl enable syslog-ng@default → *gestion des fichiers d’enregistrement d’activité*
 systemctl enable cronie → *pour les tâches récurrentes*
 systemctl enable avahi-daemon → *dépendance de Cups*
 systemctl enable avahi-dnsconfd → *autre dépendance de Cups*
