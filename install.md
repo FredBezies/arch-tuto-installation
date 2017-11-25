@@ -365,19 +365,6 @@ Une fois yaourt installé (si on le désire), on peut enlever le dépôt archlin
 pacman -Syy
 pacman -S yaourt ntp cronie
 ```
-
-**Note :** si on veut avoir les logs en clair en cas de problème, il faut modifier avec nano (ou vim) le fichier /etc/systemd/journald.conf en remplaçant la ligne :
-
-```
-#ForwardToSyslog=no
-```
-
-par :
-
-```
-ForwardToSyslog=yes
-```
-
 Les outils en place, on lance alsamixer avec la commande du même nom, pour configurer le niveau sonore :
 
 ![Illustration 8: alsamixer en action](pictures/008.png)
@@ -546,7 +533,7 @@ Les valeurs étant à adapter en fonction de la locale et du clavier, bien enten
 Étant donné que systemd est utilisé, voici la liste des services à activer (avec une explication rapide), **qui sera la même pour chacun des environnements** proposés dans les « addenda » :
 
 ```
-systemctl enable syslog-ng → *gestion des fichiers d’enregistrement d’activité*
+systemctl enable syslog-ng@ → *gestion des fichiers d’enregistrement d’activité*
 systemctl enable cronie → *pour les tâches récurrentes*
 systemctl enable avahi-daemon → *dépendance de Cups*
 systemctl enable avahi-dnsconfd → *autre dépendance de Cups*
