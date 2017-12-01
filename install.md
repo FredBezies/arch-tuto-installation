@@ -164,7 +164,7 @@ J’ai utilisé le raccourci clavier suivant : **ALT+R**. On entre dans un prem
 
 Avec le raccourci clavier **CTRL+W**, il suffit de saisir le nom du serveur qu’on veut utiliser et enlever la « \# » sur sa ligne. Un **CTRL+X** suivi de la touche « y » (pour yes) permet d’enregistrer la modification.
 
-On passe à l’installation de la base. La deuxième ligne rajoute certains outils bien pratique à avoir dès le départ. On peut ensuite s’attaquer à l’installation proprement dite.
+On passe à l’installation de la base. La deuxième ligne rajoute certains outils bien pratiques à avoir dès le départ. On peut ensuite s’attaquer à l’installation proprement dite.
 
 ```
 pacstrap /mnt base base-devel
@@ -221,7 +221,7 @@ KEYMAP=fr-latin9
 FONT=lat9w-16
 ```
 
-Pour avoir la localisation française, le fichier /etc/locale.conf doit contenir la bonne valeur pour LANG. Pour un personne en France métropolitaine :
+Pour avoir la localisation française, le fichier /etc/locale.conf doit contenir la bonne valeur pour LANG. Pour une personne en France métropolitaine :
 
 ```
 LANG=fr_FR.UTF-8
@@ -320,7 +320,7 @@ systemctl enable NetworkManager
 
 **NOTE 1 :** si vous n’utilisez pas NetworkManager, je vous renvoie à cette page du wiki anglophone d'Archlinux, qui vous aidera dans cette tâche : <https://wiki.archlinux.org/index.php/Netctl>
 
-**NOTE 2 :** netctl et networkmanager rentrent en conflit et **ne doivent pas** être utilisé en même temps. D’ailleurs, netctl et wicd entre aussi en conflit. Une règle simple : un seul gestionnaire de connexion réseau à la fois !
+**NOTE 2 :** netctl et networkmanager rentrent en conflit et **ne doivent pas** être utilisé en même temps. D’ailleurs, netctl et wicd entrent aussi en conflit. Une règle simple : un seul gestionnaire de connexion réseau à la fois !
 
 **NOTE 3 :** si vous voulez utiliser des réseaux wifi directement avec NetworkManager et son applet, le paquet gnome-keyring est indispensable. Merci à Vincent Manillier pour l’info.
 
@@ -437,7 +437,7 @@ Cependant, depuis l’arrivée de Pacman 4.2, il est impossible de construire un
 yaourt -S ttf-ms-fonts
 ```
 
-Si vous faites une installation dans VirtualBox, il faut deux paquets. En plus de xf86-video-vesa, il faut le paquet virtualbox-guest-utils. Cependant, il y a deux choix qui arrive pour ce paquet.
+Si vous faites une installation dans VirtualBox, il faut deux paquets. En plus de xf86-video-vesa, il faut le paquet virtualbox-guest-utils. Cependant, il y a deux choix qui arrivent pour ce paquet.
 
 Ce qui donne :
 
