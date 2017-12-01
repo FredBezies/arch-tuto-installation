@@ -13,14 +13,14 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 **NOTE 4 :** Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1er mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [Archlinux32](https://www.archlinux32.org/).
 
-Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En novembre 2017, c’est la 2017.11.01.
+Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En décembre 2017, c’est la 2017.12.01.
 
-Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit et André Ray pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
+Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit, André Ray, Nicolas, Charles Monzat et SuperMario S pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
 
 I) Installons notre base
 ------------------------
 
-Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2017.11.01-x86\_64.iso, mise en ligne début novembre 2017.
+Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2017.12.01-x86\_64.iso, mise en ligne début décembre 2017.
 
 La machine virtuelle est une machine VirtualBox à laquelle j’ai rajouté un disque virtuel de 128 Go. Des points spécifiques concernant l’utilisation dans VirtualBox sont indiqués. Par défaut, le noyau proposé par Archlinux est un noyau « court terme ». Si vous voulez un noyau LTS, je vous expliquerai comment faire.
 
@@ -294,9 +294,9 @@ mkdir /boot/EFI/boot
 cp /boot/EFI/arch_grub/grubx64.efi /boot/EFI/boot/bootx64.efi
 ```
 
-![Illustration 7 : Génération du noyau linux 4.13.9 début novembre 2017](pictures/007.png)
+![Illustration 7 : Génération du noyau linux 4.13.12 début décembre 2017](pictures/007.png)
 
-*Illustration 7 : Génération du noyau linux 4.13.9 début novembre 2017*
+*Illustration 7 : Génération du noyau linux 4.13.12 début décembre 2017*
 
 Bien entendu, aucune erreur ne doit apparaître. On donne un mot de passe au compte root :
 
@@ -365,6 +365,7 @@ Une fois yaourt installé (si on le désire), on peut enlever le dépôt archlin
 pacman -Syy
 pacman -S yaourt ntp cronie
 ```
+
 **Note :** si on veut avoir les logs en clair en cas de problème, il faut modifier avec nano (ou vim) le fichier /etc/systemd/journald.conf en remplaçant la ligne :
 
 ```
@@ -459,7 +460,7 @@ La prise en charge des modules noyau se fait avec la commande systemctl suivante
 systemctl enable vboxservice
 ```
 
-**Note :** si vous installez un jour VirtualBox sur une machine réelle je vous renvoie à cette page du wiki francophone : <https://wiki.archlinux.fr/VirtualBox>
+**Note 4 :** si vous installez un jour VirtualBox sur une machine réelle je vous renvoie à cette page du wiki francophone : <https://wiki.archlinux.fr/VirtualBox>
 
 On va rajouter quelques outils, histoire de ne pas voir un environnement vide au premier démarrage.
 
@@ -540,7 +541,7 @@ sudo localectl set-x11-keymap fr
 
 Les valeurs étant à adapter en fonction de la locale et du clavier, bien entendu.
 
-**Note 4 :** Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
+**Note 5 :** Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
 
 Étant donné que systemd est utilisé, voici la liste des services à activer (avec une explication rapide), **qui sera la même pour chacun des environnements** proposés dans les « addenda » :
 
@@ -554,7 +555,7 @@ systemctl enable bluetooth → *uniquement si on a du matériel bluetooth*
 systemctl enable ntpd → *pour synchroniser l’heure en réseau.*
 ```
 
-**Note 5** : dans un premier temps, il ne faut pas activer le gestionnaire de connexion de l’environnement choisi. On fait uniquement un systemctl start suivi du nom du gestionnaire en question.
+**Note 6** : dans un premier temps, il ne faut pas activer le gestionnaire de connexion de l’environnement choisi. On fait uniquement un systemctl start suivi du nom du gestionnaire en question.
 
 Comme je présente Gnome dans la section principale, c’est GDM. Sinon, il faut se référer à l’addenda correspondant.
 
@@ -646,6 +647,10 @@ V) Addendum 2 : installer Xfce
 **Note :** commandes à entrer en tant qu’utilisateur classique. Si vous n’avez pas yaourt, sudo pacman -S sera à utiliser.
 
 **Note 2 :** si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
+Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
+```
+yaourt -S gvfs-{afc,goa,google,gphoto2,mntp,nfs,smb}
+```
 
 **Note 3 :** courant janvier 2017, gstreamer-0.10 a été déprécié, après 4 ans sans la moindre mise à jour par les développeurs, et par conséquent, le greffon audio de Xfce est désormais celui de Pulseaudio, d’où le rajout de pavucontrol dans la liste des paquets.
 
@@ -699,11 +704,15 @@ VI) Addendum 3 : installer Mate-Desktop
 **Note 2 :** Mate 1.18 étant uniquement en gtk3, cela simplifie l’installation.
 
 **Note 3 :**  Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
+Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
+```
+yaourt -S gvfs-{afc,goa,google,gphoto2,mntp,nfs,smb}
+```
 
 L’installation ressemble à celle de Xfce, donc pour les explications des paquets, cf l’addenda consacré à Xfce. Idem pour l’utilisation de NetworkManager si vous le voulez. Il ne faut pas oublier de rajouter un outil de gravure, comme Brasero si nécessaire. Pour le navigateur, Mozilla Firefox, Chromium ou encore Midori. C’est selon les goûts !
 
 ```
-yaourt -S mate mate-extra lightdm-gtk-greeter gnome-icon-theme smplayer quodlibet python2-pyinotify accountsservice claws-mail  ffmpegthumbnailer pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer **→ (pour installer le support des imprimantes)**
+yaourt -S mate mate-extra lightdm-gtk-greeter gnome-icon-theme smplayer quodlibet python2-pyinotify accountsservice claws-mail ffmpegthumbnailer pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer **→** **(pour installer le support des imprimantes)**
 ```
 
 Si vous voulez personnaliser votre lightdm :
