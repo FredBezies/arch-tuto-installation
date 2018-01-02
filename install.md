@@ -649,7 +649,7 @@ V) Addendum 2 : installer Xfce
 **Note 2 :** si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
 Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
 ```
-yaourt -S gvfs-{afc,goa,google,gphoto2,mntp,nfs,smb}
+yaourt -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
 ```
 
 **Note 3 :** courant janvier 2017, gstreamer-0.10 a été déprécié, après 4 ans sans la moindre mise à jour par les développeurs, et par conséquent, le greffon audio de Xfce est désormais celui de Pulseaudio, d’où le rajout de pavucontrol dans la liste des paquets.
