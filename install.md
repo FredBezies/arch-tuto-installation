@@ -13,14 +13,14 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 **NOTE 4 :** Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1er mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [Archlinux32](https://www.archlinux32.org/).
 
-Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En décembre 2017, c’est la 2017.12.01.
+Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En janvier 2018, c’est la 2018.01.01.
 
 Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit, André Ray, Nicolas, Charles Monzat et SuperMario S pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
 
 I) Installons notre base
 ------------------------
 
-Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2017.12.01-x86\_64.iso, mise en ligne début décembre 2017.
+Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2018.01.01-x86\_64.iso, mise en ligne début janvier 2018.
 
 La machine virtuelle est une machine VirtualBox à laquelle j’ai rajouté un disque virtuel de 128 Go. Des points spécifiques concernant l’utilisation dans VirtualBox sont indiqués. Par défaut, le noyau proposé par Archlinux est un noyau « court terme ». Si vous voulez un noyau LTS, je vous expliquerai comment faire.
 
@@ -30,7 +30,7 @@ Commençons par une installation en mode Bios, du point de vue du partitionnemen
 
 #### Partitionnement et attribution des partitions en mode Bios :
 
-Voici donc l’écran qui nous permet de démarrer. Comme vous pouvez le voir, on peut démarrer soit avec un noyau 32 soit avec un noyau 64 bits. Il n’y a plus grande différence, sauf au niveau de certains logiciels typiquement 32 bits, mais j’expliquerai plus bas comment faire cohabiter 32 et 64 bits.
+Voici donc l’écran qui nous permet de démarrer. J’expliquerai plus bas comment faire cohabiter des logiciels 32 et 64 bits sur une seule installation.
 
 ![Illustration 1: écran de démarrage en mode Bios, uniquement en 64 bits (depuis mars 2017)](pictures/001.png)
 
@@ -294,9 +294,9 @@ mkdir /boot/EFI/boot
 cp /boot/EFI/arch_grub/grubx64.efi /boot/EFI/boot/bootx64.efi
 ```
 
-![Illustration 7 : Génération du noyau linux 4.13.12 début décembre 2017](pictures/007.png)
+![Illustration 7 : Génération du noyau linux 4.14.11 début janvier 2018](pictures/007.png)
 
-*Illustration 7 : Génération du noyau linux 4.13.12 début décembre 2017*
+*Illustration 7 : Génération du noyau linux 4.14.11 début janvier 2018*
 
 Bien entendu, aucune erreur ne doit apparaître. On donne un mot de passe au compte root :
 
@@ -637,9 +637,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable sddm
 ```
 
-![Illustration 15: Plasma 5.11.x (vue de dossiers) avec les KDE Frameworks 5.38.0](pictures/015.png)
+![Illustration 15: Plasma 5.11.x (vue de dossiers) avec les KDE Frameworks 5.41.0](pictures/015.png)
 
-*Illustration 15: Plasma 5.11.x (vue de dossiers) avec les KDE Frameworks 5.38.0* 
+*Illustration 15: Plasma 5.11.x (vue de dossiers) avec les KDE Frameworks 5.41.0* 
 
 V) Addendum 2 : installer Xfce
 ------------------------------
