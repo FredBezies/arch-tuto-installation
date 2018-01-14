@@ -283,7 +283,7 @@ efivars on /sys/firmware/efi/efivars type efivars (rw,nosuid,nodev,noexec,relati
 Dans ce cas, vous pouvez aller directement à la ligne du grub-install, ci-dessous, et sauter la première ligne de commande. La deuxième ligne est d’un seul tenant.
 
 ```
-mount -t efivarfs efivarfs /sys/firmware/efi/efivarfs
+mount -t efivarfs efivarfs /sys/firmware/efi/efivars
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub --recheck
 ```
 
