@@ -15,7 +15,7 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En janvier 2018, c’est la 2018.01.01.
 
-Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit, André Ray, Nicolas, Charles Monzat et SuperMario S pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
+Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit, André Ray, Nicolas, Charles Monzat, SuperMario S et Angristan pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
 
 I) Installons notre base
 ------------------------
@@ -423,7 +423,7 @@ Pour Nvidia, c’est un casse-tête au niveau des pilotes propriétaires. Le plu
  | Intel               | xf86-video-intel   |                                                      |
  | Nvidia              | xf86-video-nouveau | Nvidia (cf le wiki d'archlinux) pour la version à installer en fonction de la carte graphique          |
 
-Dans le cas d’une machine virtuelle, j’ai utilisé le paquet **xf86-video-vesa**. On passe ensuite à l’installation des polices. Voici la ligne de commande pour les principales.
+Dans le cas d’une machine virtuelle, j’ai utilisé le paquet **xf86-video-vesa**. On passe ensuite à l’installation des polices. Voici la ligne de commande pour les principales. Le paquet freetype2 apportant quelques améliorations. Merci à Angristan pour la suggestion.
 
 ```
 pacman -S ttf-{bitstream-vera,liberation,freefont,dejavu} freetype2
