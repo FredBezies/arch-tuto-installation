@@ -426,7 +426,7 @@ Pour Nvidia, c’est un casse-tête au niveau des pilotes propriétaires. Le plu
 Dans le cas d’une machine virtuelle, j’ai utilisé le paquet **xf86-video-vesa**. On passe ensuite à l’installation des polices. Voici la ligne de commande pour les principales.
 
 ```
-pacman -S ttf-{bitstream-vera,liberation,freefont,dejavu}
+pacman -S ttf-{bitstream-vera,liberation,freefont,dejavu} freetype2
 ```
 
 **Note 2 :** pour les polices Microsoft, le paquet ttf-ms-fonts, elles sont sur le dépôt AUR, donc il faut utiliser yaourt pour les récupérer et les installer.
