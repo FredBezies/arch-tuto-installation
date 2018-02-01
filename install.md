@@ -299,7 +299,7 @@ cp /boot/EFI/arch_grub/grubx64.efi /boot/EFI/boot/bootx64.efi
 
 ![Illustration 7 : Génération du noyau linux 4.14.15 début février 2018](pictures/007.png)
 
-*Illustration 7 : Génération du noyau linux 4.14.11 début février 2018*
+*Illustration 7 : Génération du noyau linux 4.14.15 début février 2018*
 
 Bien entendu, aucune erreur ne doit apparaître. On donne un mot de passe au compte root :
 
