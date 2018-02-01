@@ -422,7 +422,7 @@ Pour Nvidia, c’est un casse-tête au niveau des pilotes propriétaires. Le plu
  
  | Circuits graphiques | Pilotes libres     | Pilotes non libres (si existant)                     |
  |---------------------|--------------------|------------------------------------------------------|
- | AMD                 | xf86-video-ati     |  Catalyst (disponible sur AUR, le dépôt utilisateur) |
+ | AMD                 | xf86-video-ati     |                                                      |
  | Intel               | xf86-video-intel   |                                                      |
  | Nvidia              | xf86-video-nouveau | Nvidia (cf le wiki d'archlinux) pour la version à installer en fonction de la carte graphique          |
 
