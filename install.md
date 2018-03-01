@@ -1,26 +1,26 @@
-Petit guide d’installation d’Archlinux avec Gnome 3.26.x / Plasma 5.11.x / Xfce / Mate-Desktop
+Petit guide d’installation d’Archlinux avec Gnome 3.26.x / Plasma 5.12.x / Xfce / Mate-Desktop
 ==============================================================================================
 
-Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.26 et suivant, Plasma 5.11.x, Xfce et Mate-Desktop. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
+Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.26 et suivant, Plasma 5.12.x, Xfce et Mate-Desktop. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
 
 Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme les imprimantes, les scanners, ou encore les webcams. Je vous renvoie aux wikis anglophone <https://wiki.archlinux.org/> et francophone <http://wiki.archlinux.fr/Accueil> pour ce genre de manipulations.
 
 **NOTE 1 :** Ce tutoriel est **volontairement simplifié**. Il va vous permettre de voir comment installer une ArchLinux **en solo**. **Ensuite, s’il y a des spécificités liées à votre matériel, c’est au cas par cas qu’il faut regarder et compulser frénétiquement les wikis ci-dessus.** Si vous voulez installer une Archlinux **en parallèle **d’une installation de MS-Windows, c’est en dehors du cadre de ce document.
 
-**NOTE 2 :** Pour Lxde et LXQt, il faudra voir avec le tutoriel de février 2016 : <http://frederic.bezies.free.fr/blog/?p=14045>
+**NOTE 2 :** Pour Lxde et LXQt, il faudra voir avec le tutoriel de mars 2016 : <http://frederic.bezies.free.fr/blog/?p=14045>
 
 **NOTE 3 :** Pour Budgie Desktop et Cinnamon, je vous conseille de vous reporter au tutoriel d’avril 2017 : <http://frederic.bezies.free.fr/blog/?p=15985>
 
 **NOTE 4 :** Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1er mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [Archlinux32](https://www.archlinux32.org/).
 
-Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En février 2018, c’est la 2018.02.01.
+Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En mars 2018, c’est la 2018.03.01.
 
 Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit, André Ray, Nicolas, Charles Monzat, SuperMario S, Angristan et Simon B pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
 
 I) Installons notre base
 ------------------------
 
-Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2018.02.01-x86\_64.iso, mise en ligne début février 2018.
+Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2018.03.01-x86\_64.iso, mise en ligne début mars 2018.
 
 La machine virtuelle est une machine VirtualBox à laquelle j’ai rajouté un disque virtuel de 128 Go. Des points spécifiques concernant l’utilisation dans VirtualBox sont indiqués. Par défaut, le noyau proposé par Archlinux est un noyau « court terme ». Si vous voulez un noyau LTS, je vous expliquerai comment faire.
 
@@ -297,9 +297,9 @@ mkdir /boot/EFI/boot
 cp /boot/EFI/arch_grub/grubx64.efi /boot/EFI/boot/bootx64.efi
 ```
 
-![Illustration 7 : Génération du noyau linux 4.14.15 début février 2018](pictures/007.png)
+![Illustration 7 : Génération du noyau linux 4.15.6 début mars 2018](pictures/007.png)
 
-*Illustration 7 : Génération du noyau linux 4.14.15 début février 2018*
+*Illustration 7 : Génération du noyau linux 4.15.6 début mars 2018*
 
 Bien entendu, aucune erreur ne doit apparaître. On donne un mot de passe au compte root :
 
@@ -405,7 +405,7 @@ pacman -S gst-plugins-{base,good,bad,ugly} gst-libav
 
 gst-libav ? Il prend en charge tout ce qui est x264 et apparenté.
 
-Passons à l’installation de Xorg. Le paquet xf86-input-evdev est obsolète depuis début février 2017, à cause du passage à xorg-server 1.19.
+Passons à l’installation de Xorg. Le paquet xf86-input-evdev est obsolète depuis début mars 2017, à cause du passage à xorg-server 1.19.
 
 **Note :** il n’y a pas d’espace entre le – et le { vers la fin de la commande suivante.
 
@@ -581,7 +581,7 @@ Il faut penser à vérifier que le clavier est correctement configuré. Ce qui s
 
 *Illustration 11: Gnome 3.26.2 en vue activités*
 
-On va personnaliser le bureau Gnome en lui ajoutant la date complète et les boutons pour minimiser et maximiser les fenêtres avec Gnome Tweak Tool.
+On va personnaliser le bureau Gnome en lui ajoutant la date complète et les boutons pour minimiser et maximiser les fenêtres avec Gnome Tweak Tool alias Ajustements.
 
 ![Illustration 12: Gnome Tweak Tool en action.](pictures/012.png)
 
@@ -603,7 +603,7 @@ J’ai surtout voulu faire un **guide rapide**, histoire de montrer qu’en une 
 
 Bonne découverte !
 
-IV) Addendum 1 : installer Plasma 5.11.x
+IV) Addendum 1 : installer Plasma 5.12.x
 ----------------------------------------
 
 **Note :** commandes à entrer en tant qu’utilisateur classique. Si vous n’avez pas yaourt, sudo pacman -S sera à utiliser. Kde-l10n-fr étant à remplacer par votre locale. Dans les précédentes versions, il y avait k3b, mais il a été intégré dans les kde-applications à partir de la version 17.04.
@@ -634,9 +634,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable sddm
 ```
 
-![Illustration 15: Plasma 5.11.x (vue de dossiers) avec les KDE Frameworks 5.42.0](pictures/015.png)
+![Illustration 15: Plasma 5.12.x (vue de dossiers) avec les KDE Frameworks 5.43.0](pictures/015.png)
 
-*Illustration 15: Plasma 5.11.x (vue de dossiers) avec les KDE Frameworks 5.42.0* 
+*Illustration 15: Plasma 5.12.x (vue de dossiers) avec les KDE Frameworks 5.43.0* 
 
 V) Addendum 2 : installer Xfce
 ------------------------------
@@ -649,7 +649,7 @@ Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la lig
 yaourt -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
 ```
 
-**Note 3 :** courant février 2017, gstreamer-0.10 a été déprécié, après 4 ans sans la moindre mise à jour par les développeurs, et par conséquent, le greffon audio de Xfce est désormais celui de Pulseaudio, d’où le rajout de pavucontrol dans la liste des paquets.
+**Note 3 :** courant mars 2017, gstreamer-0.10 a été déprécié, après 4 ans sans la moindre mise à jour par les développeurs, et par conséquent, le greffon audio de Xfce est désormais celui de Pulseaudio, d’où le rajout de pavucontrol dans la liste des paquets.
 
 **Note 4 :** VLC a été remplacé par SMPlayer pour des raisons pratiques. VLC reviendra quand il sortira en version 3.0 officielle et finale.
 
@@ -700,9 +700,7 @@ VI) Addendum 3 : installer Mate-Desktop
 
 **Note :** commandes à entrer en tant qu’utilisateur classique. Si vous n’avez pas yaourt, sudo pacman -S sera à utiliser.
 
-**Note 2 :** Mate 1.18 étant uniquement en gtk3, cela simplifie l’installation.
-
-**Note 3 :**  Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
+**Note 2 :**  Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
 Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
 ```
 yaourt -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
@@ -738,7 +736,7 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable accounts-daemon
 sudo systemctl enable lightdm
 ```
-![Illustration 17: Mate Desktop 1.18.0](pictures/017.png)
+![Illustration 17: Mate Desktop 1.20.0](pictures/017.png)
 
-*Illustration 17: Mate Desktop 1.18.0*
+*Illustration 17: Mate Desktop 1.20.0*
   
