@@ -651,17 +651,15 @@ yaourt -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
 
 **Note 3 :** courant mars 2017, gstreamer-0.10 a été déprécié, après 4 ans sans la moindre mise à jour par les développeurs, et par conséquent, le greffon audio de Xfce est désormais celui de Pulseaudio, d’où le rajout de pavucontrol dans la liste des paquets.
 
-**Note 4 :** VLC a été remplacé par SMPlayer pour des raisons pratiques. VLC reviendra quand il sortira en version 3.0 officielle et finale.
-
-**Note 5 :** Midori a été enlevé, le projet semblant être au point mort depuis pas mal de temps.
+**Note 4 :** Midori a été enlevé, le projet semblant être au point mort depuis pas mal de temps.
 
 Pour installer Xfce, il faut entrer :
 
 ```
-yaourt -S xfce4 xfce4-goodies gvfs smplayer quodlibet python2-pyinotify lightdm-gtk-greeter xarchiver claws-mail galculator evince ffmpegthumbnailer xscreensaver pavucontrol pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer **→ (pour installer le support des imprimantes)**
+yaourt -S xfce4 xfce4-goodies gvfs vlc quodlibet python2-pyinotify lightdm-gtk-greeter xarchiver claws-mail galculator evince ffmpegthumbnailer xscreensaver pavucontrol pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer **→ (pour installer le support des imprimantes)**
 ```
 
-SMPlayer et Quodlibet ? Pour la vidéo et l’audio. Pour les périphériques amovibles, gvfs est obligatoire. Claws-mail ou Mozilla Thunderbird (avec le paquet thunderbird-i18n-fr) pour le courrier. Lightdm étant pris, car plus rapide à installer. Le paquet python2-pyinotify est nécessaire pour activer le greffon de mise à jour automatique de la musicothèque sous Quodlibet.
+VLC et Quodlibet ? Pour la vidéo et l’audio. Pour les périphériques amovibles, gvfs est obligatoire. Claws-mail ou Mozilla Thunderbird (avec le paquet thunderbird-i18n-fr) pour le courrier. Lightdm étant pris, car plus rapide à installer. Le paquet python2-pyinotify est nécessaire pour activer le greffon de mise à jour automatique de la musicothèque sous Quodlibet.
 
 Evince ? Pour les fichiers en pdf. On peut aussi remplacer xarchiver par fileroller. Quant à ffmpegthumbnailer, c’est utile si vous désirez avoir un aperçu des vidéos stockées sur votre ordinateur. Enfin, xscreensaver sert au verrouillage de l’écran.
 
@@ -709,7 +707,7 @@ yaourt -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
 L’installation ressemble à celle de Xfce, donc pour les explications des paquets, cf l’addenda consacré à Xfce. Idem pour l’utilisation de NetworkManager si vous le voulez. Il ne faut pas oublier de rajouter un outil de gravure, comme Brasero si nécessaire. Pour le navigateur, Mozilla Firefox ou Chromium. C’est selon les goûts !
 
 ```
-yaourt -S mate mate-extra lightdm-gtk-greeter gnome-icon-theme smplayer quodlibet python2-pyinotify accountsservice claws-mail ffmpegthumbnailer pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer **→** **(pour installer le support des imprimantes)**
+yaourt -S mate mate-extra lightdm-gtk-greeter gnome-icon-theme vlc quodlibet python2-pyinotify accountsservice claws-mail ffmpegthumbnailer pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer **→** **(pour installer le support des imprimantes)**
 ```
 
 Si vous voulez personnaliser votre lightdm :
