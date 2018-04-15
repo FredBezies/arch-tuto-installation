@@ -55,7 +55,7 @@ Pour le partitionnement en question :
   |-----------|-------------------|-----------------------------------|-----------------------|
   | /dev/sda1 | /boot             |  512 Mo                           |  ext2                 |
   | /dev/sda2 |                   | Taille de la mémoire vive ou plus |  swap                 |
-  | /dev/sda3 |  /                | 20 Go                             |  ext4                 |
+  | /dev/sda3 |  /                | 20 Go (avec une marge de 20 à 30 % en plus)                            |  ext4                 |
   | /dev/sda4 | /home             | Le reste du disque                | ext4                  |
   
 
@@ -104,7 +104,7 @@ Il faut se souvenir qu’il faut **obligatoirement** une table de partition GPT 
 
   |Référence  |  Point de montage |  Taille                           | Système de fichiers |
   |-----------|-------------------|-----------------------------------|---------------------|
-  | /dev/sda1 | /                 | 20 Go                             |  ext4               |
+  | /dev/sda1 | /                 | 20 Go (avec une marge de 20 à 30 % en plus)                            |  ext4               |
   | /dev/sda2 | /boot             | 512 Mo                            |  fat32              |
   | /dev/sda3 |                   | Taille de la mémoire vive ou plus |  swap               |
   | /dev/sda4 | /home             | Le reste du disque                |  ext4               |
