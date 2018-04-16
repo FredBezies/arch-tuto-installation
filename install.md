@@ -410,10 +410,8 @@ Passons à l’installation de Xorg. Le paquet xf86-input-evdev est obsolète de
 **Note :** il n’y a pas d’espace entre le – et le { vers la fin de la commande suivante.
 
 ```
-pacman -S xorg-{server,xinit,apps} xf86-input-{mouse,keyboard} xdg-user-dirs
+pacman -S xorg-{server,xinit,apps} xf86-input-libinput xdg-user-dirs
 ```
-
-Si on utilise un ordinateur portable avec un pavé tactile, il faut rajouter le paquet xf86-input-synaptics ou **de préférence** xf86-input-libinput.
 
 Il faut ensuite choisir le pilote pour le circuit vidéo. Voici les principaux pilotes, sachant que le paquet xf86-video-vesa englobe une énorme partie des circuits graphiques, dont ceux non listés dans le tableau un peu plus loin. En cas de doute : <https://wiki.archlinux.org/index.php/Xorg#Driver_installation>
 
