@@ -162,7 +162,7 @@ Avec l’outil nano nous allons modifier le fichier /etc/pacman.d/mirrorlist pou
 
 J’ai utilisé le raccourci clavier suivant : **ALT+R**. On entre dans un premier temps « Server » (sans les guillemets). On presse la touche entrée. On saisit « \#Server » (sans les guillemets) pour commenter tous les serveurs.
 
-Avec le raccourci clavier **CTRL+W**, il suffit de saisir le nom du serveur qu’on veut utiliser et enlever la « \# » sur sa ligne. Un **CTRL+X** suivi de la touche « y » (pour yes) permet d’enregistrer la modification.
+Avec le raccourci clavier **CTRL+W**, il suffit de saisir le nom du serveur qu’on veut utiliser et enlever le « \# » sur sa ligne. Un **CTRL+X** suivi de la touche « y » (pour yes) permet d’enregistrer la modification.
 
 On passe à l’installation de la base. La deuxième ligne rajoute certains outils bien pratiques à avoir dès le départ. On peut ensuite s’attaquer à l’installation proprement dite.
 
@@ -341,7 +341,7 @@ Si vous voulez utiliser un outil comme Skype (qui est uniquement en 32 bits) et 
 #[multilib]
 #Include = /etc/pacman.d/mirrorlist
 ```
-On peut maintenant quitter tout, démonter proprement les partitions et redémarrer.
+On peut maintenant tout quitter, démonter proprement les partitions et redémarrer.
 
 C’est un peu plus délicat qu’auparavant. Au moins, on voit les étapes à suivre.
 
@@ -422,7 +422,7 @@ Pour Nvidia, c’est un casse-tête au niveau des pilotes propriétaires. Le plu
  
  | Circuits graphiques | Pilotes libres     | Pilotes non libres (si existant)                     |
  |---------------------|--------------------|------------------------------------------------------|
- | AMD                 | xf86-video-ati     |                                                      |
+ | AMD                 | xf86-video-ati ou xf86-video-amdgpu en fonction du circuit    |                                                      |
  | Intel               | xf86-video-intel   |                                                      |
  | Nvidia              | xf86-video-nouveau | Nvidia (cf le wiki d'archlinux) pour la version à installer en fonction de la carte graphique          |
 
@@ -554,9 +554,7 @@ systemctl enable ntpd → *pour synchroniser l’heure en réseau.*
 
 **Note 6** : dans un premier temps, il ne faut pas activer le gestionnaire de connexion de l’environnement choisi. On fait uniquement un systemctl start suivi du nom du gestionnaire en question.
 
-Comme je présente Gnome dans la section principale, c’est GDM. Sinon, il faut se référer à l’addenda correspondant.
-
-Sinon, il suffit de se référer à l’addenda correspondant à l’environnement de votre choix.
+Comme je présente Gnome dans la section principale, c’est GDM. Sinon, il suffit de se référer à l’addenda correspondant à l’environnement de votre choix.
 
 Au démarrage suivant, GDM nous accueille, et nous pouvons nous connecter.
 
