@@ -9,3 +9,5 @@ C'est un complément au document officiel qui m'a été demandé plusieurs fois.
 En espérant qu'il soit utile.
 
 Bonne lecture !
+
+**Note : les mises à jour du tutoriel sont arrêtées pour une durée indéterminée.**
