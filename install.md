@@ -598,12 +598,12 @@ Bonne découverte !
 IV) Addendum 1 : installer Plasma 5.12.x
 ----------------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Si vous n’avez pas yaourt, sudo pacman -S sera à utiliser. Kde-l10n-fr étant à remplacer par votre locale. Dans les précédentes versions, il y avait k3b, mais il a été intégré dans les kde-applications à partir de la version 17.04.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser une enrobeur de pacman comme yaourt ou trizen par exemple. Dans les précédentes versions, il y avait k3b, mais il a été intégré dans les kde-applications à partir de la version 17.04.
 
 L’installation se déroule ainsi :
 
 ```
-yaourt -S plasma kde-applications kde-l10n-fr amarok digikam breeze-kde4
+sudo pacman -S plasma kde-applications kde-l10n-fr amarok digikam breeze-kde4
 ```
 
 Le paquet breeze-kde4 permet de donner un thème « KDE 5 » aux applications non encore adaptées pour le nouvel environnement.
@@ -633,12 +633,12 @@ sudo systemctl enable sddm
 V) Addendum 2 : installer Xfce
 ------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Si vous n’avez pas yaourt, sudo pacman -S sera à utiliser.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser une enrobeur de pacman comme yaourt ou trizen par exemple.
 
 **Note 2 :** si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
 Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
 ```
-yaourt -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
+sudo pacman -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
 ```
 
 **Note 3 :** courant mars 2017, gstreamer-0.10 a été déprécié, après 4 ans sans la moindre mise à jour par les développeurs, et par conséquent, le greffon audio de Xfce est désormais celui de Pulseaudio, d’où le rajout de pavucontrol dans la liste des paquets.
@@ -648,7 +648,7 @@ yaourt -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
 Pour installer Xfce, il faut entrer :
 
 ```
-yaourt -S xfce4 xfce4-goodies gvfs vlc quodlibet python2-pyinotify lightdm-gtk-greeter xarchiver claws-mail galculator evince ffmpegthumbnailer xscreensaver pavucontrol pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer **→ (pour installer le support des imprimantes)**
+sudo pacman -S xfce4 xfce4-goodies gvfs vlc quodlibet python2-pyinotify lightdm-gtk-greeter xarchiver claws-mail galculator evince ffmpegthumbnailer xscreensaver pavucontrol pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer **→ (pour installer le support des imprimantes)**
 ```
 
 VLC et Quodlibet ? Pour la vidéo et l’audio. Pour les périphériques amovibles, gvfs est obligatoire. Claws-mail ou Mozilla Thunderbird (avec le paquet thunderbird-i18n-fr) pour le courrier. Lightdm étant pris, car plus rapide à installer. Le paquet python2-pyinotify est nécessaire pour activer le greffon de mise à jour automatique de la musicothèque sous Quodlibet.
@@ -658,7 +658,7 @@ Evince ? Pour les fichiers en pdf. On peut aussi remplacer xarchiver par filero
 Si vous utilisez NetworkManager, vous pouvez rajouter l’applet pour gérer et surveiller votre réseau avec le paquet « network-manager-applet ». Si vous voulez personnaliser votre lightdm :
 
 ```
-yaourt -S lightdm-gtk-greeter-settings
+sudo pacman -S lightdm-gtk-greeter-settings
 ```
 
 Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivant avant de lancer pour la première fois lightdm :
@@ -688,24 +688,24 @@ sudo systemctl enable lightdm
 VI) Addendum 3 : installer Mate-Desktop
 ---------------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Si vous n’avez pas yaourt, sudo pacman -S sera à utiliser.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser une enrobeur de pacman comme yaourt ou trizen par exemple.
 
 **Note 2 :**  Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
 Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
 ```
-yaourt -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
+sudo pacman -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
 ```
 
 L’installation ressemble à celle de Xfce, donc pour les explications des paquets, cf l’addenda consacré à Xfce. Idem pour l’utilisation de NetworkManager si vous le voulez. Il ne faut pas oublier de rajouter un outil de gravure, comme Brasero si nécessaire. Pour le navigateur, Mozilla Firefox ou Chromium. C’est selon les goûts !
 
 ```
-yaourt -S mate mate-extra lightdm-gtk-greeter gnome-icon-theme vlc quodlibet python2-pyinotify accountsservice claws-mail ffmpegthumbnailer pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer **→** **(pour installer le support des imprimantes)**
+sudo pacman -S mate mate-extra lightdm-gtk-greeter gnome-icon-theme vlc quodlibet python2-pyinotify accountsservice claws-mail ffmpegthumbnailer pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer **→** **(pour installer le support des imprimantes)**
 ```
 
 Si vous voulez personnaliser votre lightdm :
 
 ```
-yaourt -S lightdm-gtk-greeter-settings
+sudo pacman -S lightdm-gtk-greeter-settings
 ```
 
 Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivant avant de lancer pour la première fois lightdm :
