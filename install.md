@@ -32,9 +32,9 @@ Commençons par une installation en mode Bios, du point de vue du partitionnemen
 
 Voici donc l’écran qui nous permet de démarrer. J’expliquerai plus bas comment faire cohabiter des logiciels 32 et 64 bits sur une seule installation.
 
-![Illustration 1: écran de démarrage en mode Bios, uniquement en 64 bits (depuis mars 2017)](pictures/001.png)
+![Illustration 1: écran de démarrage en mode Bios, version 64 bits](pictures/001.png)
 
-*Illustration 1: écran de démarrage en mode Bios, uniquement en 64 bits (depuis mars 2017)*
+*Illustration 1: écran de démarrage en mode Bios, version 64 bits*
 
 
 La première chose à faire, c’est d’avoir le clavier français :
@@ -53,9 +53,9 @@ Pour le partitionnement en question :
 
   | Référence |  Point de montage |  Taille                           |   Système de fichiers |
   |-----------|-------------------|-----------------------------------|-----------------------|
-  | /dev/sda1 | /boot             |  512 Mo                           |  ext2                 |
-  | /dev/sda2 |                   | Taille de la mémoire vive ou plus |  swap                 |
-  | /dev/sda3 |  /                | 20 Go (avec une marge de 20 à 30 % en plus)                            |  ext4                 |
+  | /dev/sda1 | /boot             | 512 Mo                            |  ext2                 |
+  | /dev/sda2 |                   | Taille de la mémoire vive ou plus – à partir de 8 Go de mémoire vive, 1 Go est conseillé |  swap                 |
+  | /dev/sda3 |  /                | 20 Go minimum                     |  ext4                 |
   | /dev/sda4 | /home             | Le reste du disque                | ext4                  |
   
 
@@ -104,9 +104,9 @@ Il faut se souvenir qu’il faut **obligatoirement** une table de partition GPT 
 
   |Référence  |  Point de montage |  Taille                           | Système de fichiers |
   |-----------|-------------------|-----------------------------------|---------------------|
-  | /dev/sda1 | /                 | 20 Go (avec une marge de 20 à 30 % en plus)                            |  ext4               |
+  | /dev/sda1 | /                 | 20 Go minimum                     |  ext4               |
   | /dev/sda2 | /boot             | 512 Mo                            |  fat32              |
-  | /dev/sda3 |                   | Taille de la mémoire vive ou plus |  swap               |
+  | /dev/sda3 |                   | Taille de la mémoire vive ou plus – à partir de 8 Go de mémoire vive, 1 Go est conseillé |  swap               |
   | /dev/sda4 | /home             | Le reste du disque                |  ext4               |
   
 **Note :** pour la partition /boot, il faut qu’elle soit étiquetée en EF00 à sa création. Pour le swap, c’est la référence 8200.
@@ -160,7 +160,7 @@ Avec l’outil nano nous allons modifier le fichier /etc/pacman.d/mirrorlist pou
 
 *Illustration 6: la liste des miroirs disponibles.*
 
-J’ai utilisé le raccourci clavier suivant : **ALT+R**. On entre dans un premier temps « Server » (sans les guillemets). On presse la touche entrée. On saisit « \#Server » (sans les guillemets) pour commenter tous les serveurs.
+J’ai utilisé le raccourci clavier suivant : **ALT+R**. On entre dans un premier temps « Server » (sans les guillemets). On presse la touche entrée. On saisit « \#Server » (sans les guillemets) pour commenter tous les serveurs.  Puis on valide en appuyant sur la touche **A**.
 
 Avec le raccourci clavier **CTRL+W**, il suffit de saisir le nom du serveur qu’on veut utiliser et enlever le « \# » sur sa ligne. Un **CTRL+X** suivi de la touche « y » (pour yes) permet d’enregistrer la modification.
 
