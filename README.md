@@ -10,4 +10,4 @@ En espérant qu'il soit utile.
 
 Bonne lecture !
 
-**Note : les mises à jour du tutoriel sont arrêtées pour une durée indéterminée.**
+**Note : le tutoriel est en cours de refonte, d'où l'absence d'une grosse mise à jour en mai 2018.**
