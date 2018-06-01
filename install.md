@@ -13,14 +13,13 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 **NOTE 4 :** Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1er mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [Archlinux32](https://www.archlinux32.org/).
 
-Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En avril 2018, c’est la 2018.04.01.
+Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En juin 2018, c’est la 2018.06.01.
 
-Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit, André Ray, Nicolas, Charles Monzat, SuperMario S, Angristan et Simon B pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
 
 I) Installons notre base
 ------------------------
 
-Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2018.04.01-x86\_64.iso, mise en ligne début avril 2018.
+Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2018.06.01-x86\_64.iso, mise en ligne début juin 2018.
 
 La machine virtuelle est une machine VirtualBox à laquelle j’ai rajouté un disque virtuel de 128 Go. Des points spécifiques concernant l’utilisation dans VirtualBox sont indiqués. Par défaut, le noyau proposé par Archlinux est un noyau « court terme ». Si vous voulez un noyau LTS, je vous expliquerai comment faire.
 
@@ -53,7 +52,7 @@ Pour le partitionnement en question :
 
   | Référence |  Point de montage |  Taille                           |   Système de fichiers |
   |-----------|-------------------|-----------------------------------|-----------------------|
-  | /dev/sda1 | /boot             | 512 Mo                            |  ext2                 |
+  | /dev/sda1 | /boot             |  512 Mo                           |  ext2 ou ext4         |
   | /dev/sda2 |                   | Taille de la mémoire vive ou plus – à partir de 8 Go de mémoire vive, 1 Go est conseillé |  swap                 |
   | /dev/sda3 |  /                | 20 Go minimum                     |  ext4                 |
   | /dev/sda4 | /home             | Le reste du disque                | ext4                  |
@@ -68,7 +67,7 @@ Il ne faut pas oublier de définir la partition attribuée à /boot comme démar
 Pour le formatage des partitions, il suffit d’entrer les commandes suivantes :
 
 ```
-mkfs.ext2 /dev/sda1
+mkfs.ext2 /dev/sda1 ou mkfs.ext4 /dev/sda1 (en fonction de votre choix)
 mkfs.ext4 /dev/sda3
 mkfs.ext4 /dev/sda4
 ```
@@ -101,6 +100,8 @@ Voici donc l’écran qui nous permet de démarrer en mode UEFI, supporté uniqu
 Comme pour la section concernant le partitionnement en mode Bios, si vous craignez de faire des bêtises, vous pouvez utiliser gParted en mode liveCD : <http://gparted.org/>
 
 Il faut se souvenir qu’il faut **obligatoirement** une table de partition GPT en cas d’installation en mode UEFI. Si vous n’êtes pas passé par gParted, il faut utiliser l’outil cgdisk.
+
+**Note :** La section est en cours de refonte, donc ce partitionnement sera sûrement retouché.
 
   |Référence  |  Point de montage |  Taille                           | Système de fichiers |
   |-----------|-------------------|-----------------------------------|---------------------|
@@ -160,9 +161,9 @@ Avec l’outil nano nous allons modifier le fichier /etc/pacman.d/mirrorlist pou
 
 *Illustration 6: la liste des miroirs disponibles.*
 
-J’ai utilisé le raccourci clavier suivant : **ALT+R**. On entre dans un premier temps « Server » (sans les guillemets). On presse la touche entrée. On saisit « \#Server » (sans les guillemets) pour commenter tous les serveurs.  Puis on valide en appuyant sur la touche **A**.
+J’ai utilisé le raccourci clavier suivant : **ALT+R**. On entre dans un premier temps « Server » (sans les guillemets). On presse la touche entrée. On saisit « \#Server » (sans les guillemets) pour commenter tous les serveurs.
 
-Avec le raccourci clavier **CTRL+W**, il suffit de saisir le nom du serveur qu’on veut utiliser et enlever le « \# » sur sa ligne. Un **CTRL+X** suivi de la touche « y » (pour yes) permet d’enregistrer la modification.
+Avec le raccourci clavier **CTRL+W**, il suffit de saisir le nom du serveur qu’on veut utiliser et enlever la « \# » sur sa ligne. Un **CTRL+X** suivi de la touche « y » (pour yes) permet d’enregistrer la modification. Puis on valide en appuyant sur la touche **A**.
 
 On passe à l’installation de la base. La deuxième ligne rajoute certains outils bien pratiques à avoir dès le départ. On peut ensuite s’attaquer à l’installation proprement dite.
 
@@ -297,9 +298,9 @@ mkdir /boot/EFI/boot
 cp /boot/EFI/arch_grub/grubx64.efi /boot/EFI/boot/bootx64.efi
 ```
 
-![Illustration 7 : Génération du noyau linux 4.15.14 début avril 2018](pictures/007.png)
+![Illustration 7 : Génération du noyau linux 4.16.12 début juin 2018](pictures/007.png)
 
-*Illustration 7 : Génération du noyau linux 4.15.14 début avril 2018*
+*Illustration 7 : Génération du noyau linux 4.16.12 début juin 2018*
 
 Bien entendu, aucune erreur ne doit apparaître. On donne un mot de passe au compte root :
 
@@ -327,21 +328,13 @@ systemctl enable NetworkManager
 
 **NOTE 3 :** si vous voulez utiliser des réseaux wifi directement avec NetworkManager et son applet, le paquet gnome-keyring est indispensable. Merci à Vincent Manillier pour l’info.
 
-Dernier réglage, **optionnel** si on veut avoir accès à l’outil yaourt, il faut ajouter ceci au fichier /etc/pacman.conf à la fin. Une fois yaourt installé, on peut enlever **sans aucun risque** les lignes en question.
-
-```
-[archlinuxfr]
-SigLevel = Never
-Server = http://repo.archlinux.fr/$arch
-```
-
 Si vous voulez utiliser un outil comme Skype (qui est uniquement en 32 bits) et que vous installez un système 64 bits, il faut décommenter (enlever les \#) des lignes suivantes :
 
 ```
 #[multilib]
 #Include = /etc/pacman.d/mirrorlist
 ```
-On peut maintenant tout quitter, démonter proprement les partitions et redémarrer.
+On peut maintenant quitter tout, démonter proprement les partitions et redémarrer.
 
 C’est un peu plus délicat qu’auparavant. Au moins, on voit les étapes à suivre.
 
@@ -358,15 +351,10 @@ II) Installons maintenant l’environnement graphique !
 
 Nous attaquons donc la partie la plus intéressante, l’installation de l’environnement graphique. Il y a des étapes communes à tous les environnements. Un peu plus loin est indiquée la partie concernant **uniquement** Gnome.
 
-Une fois le système démarré, on se connecte **en root**. Étant donné que j’ai installé NetworkManager (ou wicd selon les goûts) à l’étape précédente, le réseau fonctionne directement. On tape les lignes de commande suivantes pour mettre à jour les dépôts et installer yaourt un outil qui va nous simplifier grandement la vie.
-
-Ainsi que ntp (synchronisation de l’heure en réseau) et cronie (pour les tâches d’administration à automatiser). L’installation de yaourt dépend de l’ajout du dépôt archlinuxfr, bien entendu.
-
-Une fois yaourt installé (si on le désire), on peut enlever le dépôt archlinuxfr du fichier /etc/pacman.conf car yaourt est disponible sur AUR.
+Une fois le système démarré, on se connecte **en root**. Étant donné que j’ai installé NetworkManager (ou wicd selon les goûts) à l’étape précédente, le réseau fonctionne directement. J’ajoute ntp (synchronisation de l’heure en réseau) et cronie (pour les tâches d’administration à automatiser). 
 
 ```
-pacman -Syy
-pacman -S yaourt ntp cronie
+pacman -Syy ntp cronie
 ```
 
 **Note :** si on veut avoir les logs en clair en cas de problème, il faut modifier avec nano (ou vim) le fichier /etc/systemd/journald.conf en remplaçant la ligne :
@@ -395,7 +383,7 @@ alsactl store
 
 Nous sommes dans le multimédia ? Restons-y.
 
-On va installer l’ensemble des greffons gstreamer qui nous donneront accès aux fichiers multimédias une fois Gnome lancé. Si vous n’avez pas installé yaourt, il faudra le remplacer par **pacman -S** ou **sudo pacman -S** quand vous utiliserez votre compte utilisateur « normal » plus tard.
+On va installer l’ensemble des greffons gstreamer qui nous donneront accès aux fichiers multimédias une fois Gnome lancé. Il faudra le remplacer par **pacman -S** ou **sudo pacman -S** quand vous utiliserez votre compte utilisateur « normal » plus tard.
 
 Pour l’exécution de la ligne suivante, il est demandé de choisir un support pour OpenGL. Pour le moment, on choisit MesaGL. La modification correspondant à votre matériel sera faite lors de l’installation de Xorg. Ainsi que la version « libx264 » proposé en premier choix. Merci à Adrien de Linuxtricks pour m’avoir aidé à réduire la longueur de la ligne de commande :)
 
@@ -410,8 +398,10 @@ Passons à l’installation de Xorg. Le paquet xf86-input-evdev est obsolète de
 **Note :** il n’y a pas d’espace entre le – et le { vers la fin de la commande suivante.
 
 ```
-pacman -S xorg-{server,xinit,apps} xf86-input-libinput xdg-user-dirs
+pacman -S xorg-{server,xinit,apps} xf86-input-{mouse,keyboard} xdg-user-dirs
 ```
+
+Si on utilise un ordinateur portable avec un pavé tactile, il faut rajouter le paquet xf86-input-synaptics ou **de préférence** xf86-input-libinput.
 
 Il faut ensuite choisir le pilote pour le circuit vidéo. Voici les principaux pilotes, sachant que le paquet xf86-video-vesa englobe une énorme partie des circuits graphiques, dont ceux non listés dans le tableau un peu plus loin. En cas de doute : <https://wiki.archlinux.org/index.php/Xorg#Driver_installation>
 
@@ -420,7 +410,7 @@ Pour Nvidia, c’est un casse-tête au niveau des pilotes propriétaires. Le plu
  
  | Circuits graphiques | Pilotes libres     | Pilotes non libres (si existant)                     |
  |---------------------|--------------------|------------------------------------------------------|
- | AMD                 | xf86-video-ati ou xf86-video-amdgpu en fonction du circuit    |                                                      |
+ | AMD                 | xf86-video-ati     |                                                      |
  | Intel               | xf86-video-intel   |                                                      |
  | Nvidia              | xf86-video-nouveau | Nvidia (cf le wiki d'archlinux) pour la version à installer en fonction de la carte graphique          |
 
@@ -431,12 +421,6 @@ pacman -S ttf-{bitstream-vera,liberation,freefont,dejavu} freetype2
 ```
 
 **Note 2 :** pour les polices Microsoft, le paquet ttf-ms-fonts, elles sont sur le dépôt AUR, donc il faut utiliser yaourt pour les récupérer et les installer.
-
-Cependant, depuis l’arrivée de Pacman 4.2, il est impossible de construire un paquet avec l’option --asroot. Donc vous devrez lancer la commande ci-dessous en tant qu’utilisateur simple.
-
-```
-yaourt -S ttf-ms-fonts
-```
 
 Si vous faites une installation dans VirtualBox, il faut deux paquets. En plus de xf86-video-vesa, il faut le paquet virtualbox-guest-utils. Cependant, il y a deux choix qui arrivent pour ce paquet.
 
@@ -518,7 +502,7 @@ Et enlever le \# sur la ligne qui suit. La séquence de touches « Échap : w e
 
 **À partir d’ici, c’est la section dédiée à Gnome qui commence :**
 
-On passe enfin au morceau de choix : l’installation de Gnome, les extensions étant indispensables pour avoir le mode « Gnome Classique ». Le paquet telepathy permet d’ajouter le maximum de support pour les comptes utilisateurs en ligne. Gnome Logiciels (alias gnome-software) est désormais installé avec le méta-paquet gnome.
+On passe enfin au morceau de choix : l’installation de Gnome. Le paquet telepathy permet d’ajouter le maximum de support pour les comptes utilisateurs en ligne. Gnome Logiciels (alias gnome-software) est désormais installé avec le méta-paquet gnome.
 
 ```
 pacman -S gnome gnome-extra system-config-printer telepathy shotwell rhythmbox
@@ -552,7 +536,9 @@ systemctl enable ntpd → *pour synchroniser l’heure en réseau.*
 
 **Note 6** : dans un premier temps, il ne faut pas activer le gestionnaire de connexion de l’environnement choisi. On fait uniquement un systemctl start suivi du nom du gestionnaire en question.
 
-Comme je présente Gnome dans la section principale, c’est GDM. Sinon, il suffit de se référer à l’addenda correspondant à l’environnement de votre choix.
+Comme je présente Gnome dans la section principale, c’est GDM. Sinon, il faut se référer à l’addenda correspondant.
+
+Sinon, il suffit de se référer à l’addenda correspondant à l’environnement de votre choix.
 
 Au démarrage suivant, GDM nous accueille, et nous pouvons nous connecter.
 
@@ -568,7 +554,7 @@ III) Finalisons l’installation de Gnome.
 Quelques outils à rajouter : xsane (pour le scanner), mais aussi unoconv (pour l’aperçu des fichiers dans Gnome Documents). On pourrait rajouter Adobe Flash, mais pourquoi rajouter cette usine à faille de sécurité ?
 
 ```
-yaourt -S xsane unoconv
+sudo pacman -S xsane unoconv
 ```
 
 Il faut penser à vérifier que le clavier est correctement configuré. Ce qui se fait dans menu système unifié, options de configuration.
@@ -601,6 +587,7 @@ IV) Addendum 1 : installer Plasma 5.12.x
 **Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser une enrobeur de pacman comme yaourt ou trizen par exemple.
 
 Kde-l10n-fr étant à remplacer par votre locale. Dans les précédentes versions, il y avait k3b, mais il a été intégré dans les kde-applications à partir de la version 17.04.
+
 L’installation se déroule ainsi :
 
 ```
@@ -627,9 +614,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable sddm
 ```
 
-![Illustration 14: Plasma 5.12.x (vue de dossiers) avec les KDE Frameworks 5.44.0](pictures/014.png)
+![Illustration 14: Plasma 5.12.x (vue de dossiers) avec les KDE Frameworks 5.46.0](pictures/014.png)
 
-*Illustration 14: Plasma 5.12.x (vue de dossiers) avec les KDE Frameworks 5.44.0* 
+*Illustration 14: Plasma 5.12.x (vue de dossiers) avec les KDE Frameworks 5.46.0* 
 
 V) Addendum 2 : installer Xfce
 ------------------------------
@@ -693,6 +680,7 @@ VI) Addendum 3 : installer Mate-Desktop
 
 **Note 2 :**  Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
 Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
+
 ```
 sudo pacman -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
 ```
@@ -727,7 +715,6 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable accounts-daemon
 sudo systemctl enable lightdm
 ```
-![Illustration 16: Mate Desktop 1.20.0](pictures/016.png)
+![Illustration 16: Mate Desktop 1.20.1](pictures/016.png)
 
-*Illustration 16: Mate Desktop 1.20.0*
-  
+*Illustration 16: Mate Desktop 1.20.1*
