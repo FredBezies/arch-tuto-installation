@@ -170,7 +170,7 @@ Avec le raccourci clavier **CTRL+W**, il suffit de saisir le nom du serveur qu�
 On passe à l’installation de la base. La deuxième ligne rajoute certains outils bien pratiques à avoir dès le départ. On peut ensuite s’attaquer à l’installation proprement dite.
 
 ```
-pacstrap /mnt base base-devel
+pacstrap /mnt base base-devel pacman-contrib
 pacstrap /mnt zip unzip p7zip vim mc alsa-utils syslog-ng mtools dosfstools lsb-release ntfs-3g exfat-utils **(sur une seule ligne !)**
 ```
 
