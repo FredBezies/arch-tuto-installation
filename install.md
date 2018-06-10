@@ -291,12 +291,6 @@ Dans ce cas, vous pouvez aller directement à la ligne du grub-install, ci-desso
 mount -t efivarfs efivarfs /sys/firmware/efi/efivars
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub --recheck
 ```
-
-De plus, pour éviter tout problème de démarrage par la suite, il est conseillé de rajouter les commandes suivantes :
-
-```
-mkdir /boot/EFI/boot
-cp /boot/EFI/arch_grub/grubx64.efi /boot/EFI/boot/bootx64.efi
 ```
 
 ![Illustration 7 : Génération du noyau linux 4.16.12 début juin 2018](pictures/007.png)
