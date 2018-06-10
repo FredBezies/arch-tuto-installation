@@ -106,7 +106,7 @@ Il faut se souvenir qu’il faut **obligatoirement** une table de partition GPT 
   |Référence  |  Point de montage |  Taille                           | Système de fichiers |
   |-----------|-------------------|-----------------------------------|---------------------|
   | /dev/sda1 | /                 | 20 Go minimum                     |  ext4               |
-  | /dev/sda2 | /boot/efi         | 512 Mo                            |  fat32              |
+  | /dev/sda2 | /boot/efi         | 128 Mo                            |  fat32              |
   | /dev/sda3 |                   | Taille de la mémoire vive ou plus – à partir de 8 Go de mémoire vive, 1 Go est conseillé |  swap               |
   | /dev/sda4 | /home             | Le reste du disque                |  ext4               |
   
