@@ -103,12 +103,10 @@ Comme pour la section concernant le partitionnement en mode Bios, si vous craign
 
 Il faut se souvenir qu’il faut **obligatoirement** une table de partition GPT en cas d’installation en mode UEFI. Si vous n’êtes pas passé par gParted, il faut utiliser l’outil cgdisk.
 
-**Note :** La section est en cours de refonte, donc ce partitionnement sera sûrement retouché.
-
   |Référence  |  Point de montage |  Taille                           | Système de fichiers |
   |-----------|-------------------|-----------------------------------|---------------------|
   | /dev/sda1 | /                 | 20 Go minimum                     |  ext4               |
-  | /dev/sda2 | /boot             | 512 Mo                            |  fat32              |
+  | /dev/sda2 | /boot/efi         | 512 Mo                            |  fat32              |
   | /dev/sda3 |                   | Taille de la mémoire vive ou plus – à partir de 8 Go de mémoire vive, 1 Go est conseillé |  swap               |
   | /dev/sda4 | /home             | Le reste du disque                |  ext4               |
   
@@ -137,7 +135,8 @@ Et pour les points de montage :
 ```
 mount /dev/sda1 /mnt
 mkdir /mnt/{boot,home}
-mount /dev/sda2 /mnt/boot
+mkdir /mnt/boot/efi
+mount /dev/sda2 /mnt/boot/efi
 mount /dev/sda4 /mnt/home
 ```
 
@@ -290,7 +289,7 @@ Dans ce cas, vous pouvez aller directement à la ligne du grub-install, ci-desso
 
 ```
 mount -t efivarfs efivarfs /sys/firmware/efi/efivars
-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub --recheck
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub --recheck
 ```
 
 De plus, pour éviter tout problème de démarrage par la suite, il est conseillé de rajouter les commandes suivantes :
