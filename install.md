@@ -54,7 +54,7 @@ Pour le partitionnement en question :
 
   | Référence |  Point de montage |  Taille                           |   Système de fichiers |
   |-----------|-------------------|-----------------------------------|-----------------------|
-  | /dev/sda1 | /boot             |  512 Mo                           |  ext2 ou ext4         |
+  | /dev/sda1 | /boot             |  512 Mo                           |  ext4         |
   | /dev/sda2 |                   | Taille de la mémoire vive ou plus – à partir de 8 Go de mémoire vive, 1 Go est conseillé |  swap                 |
   | /dev/sda3 |  /                | 20 Go minimum                     |  ext4                 |
   | /dev/sda4 | /home             | Le reste du disque                | ext4                  |
