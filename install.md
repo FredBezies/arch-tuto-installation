@@ -152,8 +152,6 @@ Après avoir procédé au partitionnement et à l’attribution des partitions, 
 
 ```
 export http_proxy=http://leproxy:leport/
-export https_proxy=$http_proxy
-export ftp_proxy=$http_proxy
 ```
 
 Avec l’outil nano nous allons modifier le fichier /etc/pacman.d/mirrorlist pour ne garder qu’un seul miroir. Le plus proche géographiquement et aussi le plus rapide possible. Pour une personne vivant en France, c’est **de préférence** mir.archlinux.fr et / ou archlinux.polymorf.fr.
