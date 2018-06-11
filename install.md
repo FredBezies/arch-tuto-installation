@@ -110,7 +110,7 @@ Il faut se souvenir qu’il faut **obligatoirement** une table de partition GPT 
   | /dev/sda3 |                   | Taille de la mémoire vive ou plus – à partir de 8 Go de mémoire vive, 1 Go est conseillé |  swap               |
   | /dev/sda4 | /home             | Le reste du disque                |  ext4               |
   
-**Note :** pour la partition /boot, il faut qu’elle soit étiquetée en EF00 à sa création. Pour le swap, c’est la référence 8200.
+**Note :** pour la partition /boot/efi, il faut qu’elle soit étiquetée en EF00 à sa création. Pour le swap, c’est la référence 8200.
 
 ![Illustration 5: cgdisk en action pour un partitionnement avec un UEFI](pictures/005.png)
 *Illustration 5: cgdisk en action pour un partitionnement avec un UEFI*
