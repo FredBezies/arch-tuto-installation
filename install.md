@@ -1,7 +1,7 @@
-Petit guide d’installation d’Archlinux avec Gnome 3.28.x / Plasma 5.12.x / Xfce / Mate-Desktop
+Petit guide d’installation d’Archlinux avec Gnome 3.28.x / Plasma 5.13.x / Xfce / Mate-Desktop
 ==============================================================================================
 
-Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.28 et suivant, Plasma 5.12.x, Xfce et Mate-Desktop. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
+Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.28 et suivant, Plasma 5.13.x, Xfce et Mate-Desktop. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
 
 Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme les imprimantes, les scanners, ou encore les webcams. Je vous renvoie aux wikis anglophone <https://wiki.archlinux.org/> et francophone <http://wiki.archlinux.fr/Accueil> pour ce genre de manipulations.
 
@@ -113,6 +113,7 @@ Il faut se souvenir qu’il faut **obligatoirement** une table de partition GPT 
 **Note :** pour la partition /boot/efi, il faut qu’elle soit étiquetée en EF00 à sa création. Pour le swap, c’est la référence 8200.
 
 ![Illustration 5: cgdisk en action pour un partitionnement avec un UEFI](pictures/005.png)
+
 *Illustration 5: cgdisk en action pour un partitionnement avec un UEFI*
 
 Le partitionnement à appliquer ? C’est le suivant :
@@ -573,7 +574,7 @@ J’ai surtout voulu faire un **guide rapide**, histoire de montrer qu’en une 
 
 Bonne découverte !
 
-IV) Addendum 1 : installer Plasma 5.12.x
+IV) Addendum 1 : installer Plasma 5.13.x
 ----------------------------------------
 
 **Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser une enrobeur de pacman comme yaourt ou trizen par exemple.
@@ -606,9 +607,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable sddm
 ```
 
-![Illustration 14: Plasma 5.12.x (vue de dossiers) avec les KDE Frameworks 5.46.0](pictures/014.png)
+![Illustration 14: Plasma 5.13.x (vue de dossiers) avec les KDE Frameworks 5.47.0](pictures/014.png)
 
-*Illustration 14: Plasma 5.12.x (vue de dossiers) avec les KDE Frameworks 5.46.0* 
+*Illustration 14: Plasma 5.13.x (vue de dossiers) avec les KDE Frameworks 5.47.0* 
 
 V) Addendum 2 : installer Xfce
 ------------------------------
