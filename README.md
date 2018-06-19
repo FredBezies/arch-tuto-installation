@@ -9,3 +9,15 @@ C'est un complément au document officiel qui m'a été demandé plusieurs fois.
 En espérant qu'il soit utile.
 
 Bonne lecture !
+
+Ajout au 19 juin 2018, concernant l'ajout des pilotes virtualbox dans une machine virtuelle émulée :
+
+**Attention** : Il y a un bug avec le trio VirtualBox 5.2.12, linux 4.17.x et Xorg 1.20. Bug rapporté ici. https://www.virtualbox.org/ticket/17827
+
+Le correctif ? Créer un fichier /etc/modprobe.d/vbox.conf et y insérer ceci :
+
+```
+blacklist vboxguest
+```
+
+Il y aura une boite d'alerte dans votre environnement, mais au moins, vous aurez une souris 100% fonctionnelle.
