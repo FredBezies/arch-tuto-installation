@@ -434,11 +434,12 @@ Le premier nécessite le paquet linux-headers (ou linux-lts-headers), le deuxiè
 
 **Attention** : Il y a un bug avec le trio VirtualBox 5.2.12, linux 4.17.x et Xorg 1.20. Bug rapporté ici. https://www.virtualbox.org/ticket/17827
 
-Le correctif ? Créer un fichier /etc/modprobe.d/vbox.conf et y insérer ceci :
+Le correctif ? Créer un fichier /etc/modprobe.d/blacklist.conf et y insérer ceci :
 
 ```
-blacklist vboxguest
+install vboxguest /bin/false
 ```
+
 
 Il y aura une boite d'alerte dans votre environnement, mais au moins, vous aurez une souris 100% fonctionnelle.
 
