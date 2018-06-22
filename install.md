@@ -278,16 +278,8 @@ grub-install --no-floppy --recheck /dev/sda
 
 **2) Pour une installation en mode UEFI :**
 
-Il faut déjà vérifier la présence de la variable efivars. Si en entrant la commande mount, vous avez dans la liste une réponse du style :
-
 ```
-efivars on /sys/firmware/efi/efivars type efivars (rw,nosuid,nodev,noexec,relatime)
-```
-
-Dans ce cas, vous pouvez aller directement à la ligne du grub-install, ci-dessous, et sauter la première ligne de commande. La deuxième ligne est d’un seul tenant.
-
-```
-mount -t efivarfs efivarfs /sys/firmware/efi/efivars
+mount | grep efivars &> /dev/null || mount -t efivarfs efivarfs /sys/firmware/efi/efivars
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub --recheck
 ```
 
