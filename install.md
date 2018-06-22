@@ -278,7 +278,8 @@ grub-install --no-floppy --recheck /dev/sda
 
 **2) Pour une installation en mode UEFI :**
 
-La ligne suivante permet de vérifier un point de montage et de l’activer au besoin. Merci à Kevin Dubrulle pour l’ajout.
+La première ligne permet de vérifier un point de montage et de l’activer au besoin. La deuxième installe Grub. Merci à Kevin Dubrulle pour l’ajout.
+
 ```
 mount | grep efivars &> /dev/null || mount -t efivarfs efivarfs /sys/firmware/efi/efivars
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub --recheck
