@@ -302,6 +302,13 @@ mount | grep efivars &> /dev/null || mount -t efivarfs efivarfs /sys/firmware/ef
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub --recheck
 ```
 
+De plus, pour éviter tout problème de démarrage par la suite, spécialement dans VirtualBox, il est conseillé de rajouter les commandes suivantes :
+
+```
+mkdir /boot/efi/EFI/boot
+cp /boot/efi/EFI/arch_grub/grubx64.efi /boot/efi/EFI/boot/bootx64.efi
+```
+
 ![Illustration 7 : Génération du noyau linux 4.16.12 début juin 2018](pictures/007.png)
 
 *Illustration 7 : Génération du noyau linux 4.16.12 début juin 2018*
@@ -347,8 +354,8 @@ exit
 umount -R /mnt
 reboot
 ```
+Voilà, on peut redémarrer. **Il faut éjecter le support d’installation pour éviter des problèmes au démarrage suivant.** On va passer à la suite, largement moins ennuyeuse !
 
-Voilà, on peut redémarrer. On va passer à la suite, largement moins ennuyeuse !
 
 II) Installons maintenant l’environnement graphique !
 -----------------------------------------------------
