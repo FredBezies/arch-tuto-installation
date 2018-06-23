@@ -3,10 +3,10 @@ Sommaire
 ========
 
    * [Petit guide d’installation d’Archlinux avec Gnome 3.28.x / Plasma 5.13.x / Xfce / Mate-Desktop](#petit-guide-dinstallation-darchlinux-avec-gnome-328x--plasma-513x--xfce--mate-desktop)
-      * [I) Installons notre base](#i-installons-notre-base)
-            * [Partitionnement et attribution des partitions en mode Bios :](#partitionnement-et-attribution-des-partitions-en-mode-bios)
-            * [Partitionnement et attribution des partitions en mode UEFI :](#partitionnement-et-attribution-des-partitions-en-mode-uefi)
-            * [Installation de la base de notre Archlinux :](#installation-de-la-base-de-notre-archlinux)
+      * [I) Installons notre base](#i-installons-notre-base)</br>
+            * [Partitionnement et attribution des partitions en mode Bios :](#partitionnement-et-attribution-des-partitions-en-mode-bios)</br>
+            * [Partitionnement et attribution des partitions en mode UEFI :](#partitionnement-et-attribution-des-partitions-en-mode-uefi)</br>
+            * [Installation de la base de notre Archlinux :](#installation-de-la-base-de-notre-archlinux)</br>
       * [II) Installons maintenant l’environnement graphique !](#ii-installons-maintenant-lenvironnement-graphique)
       * [III) Finalisons l’installation de Gnome.](#iii-finalisons-linstallation-de-gnome)
       * [IV) Addendum 1 : installer Plasma 5.13.x](#iv-addendum-1-installer-plasma-513x)
