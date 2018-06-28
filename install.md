@@ -193,6 +193,8 @@ Si on veut utiliser un noyau linux long terme, il faut rajouter à la deuxième 
 
 **Note :** exfat-utils m’a été conseillé par André Ray pour la prise en charge des cartes SD de grande capacité. Merci pour le retour !
 
+Si vous êtes sur un pc portable, l’ajout de tlp est conseillé pour améliorer l’autonomie de la batterie. Plus d’info sur cette page : <https://wiki.archlinux.org/index.php/TLP>
+
 Maintenant que les outils de base sont installés, il faut générer le fichier /etc/fstab qui liste les partitions présentes.
 
 ```
