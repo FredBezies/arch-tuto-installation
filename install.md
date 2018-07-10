@@ -536,6 +536,18 @@ L’installation de Gnome est maintenant terminée.
 
 **Fin de la section uniquement consacrée à Gnome, ici, il y a des points communs à tous les environnements proposés.**
 
+**Petit bonus : installer Trizen pour compléter Pacman.**
+
+On peut utiliser trizen à la place du vieillissant yaourt.
+
+Son installation en utilisateur simple ?
+
+```
+git clone https://aur.archlinux.org/trizen
+cd trizen
+makepkg -si
+```
+
 Pour être certain d’avoir le bon clavier au démarrage de GDM ou d’un autre gestionnaire de connexion comme sddm, lightdm ou lxdm, voici une petite commande à lancer (en modifiant le clavier selon les besoins) :
 
 ```
@@ -742,3 +754,4 @@ sudo systemctl enable lightdm
 ![Illustration 16: Mate Desktop 1.20.3](pictures/016.png)
 
 *Illustration 16: Mate Desktop 1.20.3*
+
