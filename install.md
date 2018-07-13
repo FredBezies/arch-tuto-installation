@@ -452,17 +452,6 @@ Le premier nécessite le paquet linux-headers (ou linux-lts-headers), le deuxiè
 
 **Note 3 :** si vous avez décidé d’installer le noyau lts, il faut installer les paquets linux-lts-headers et virtualbox-guest-dkms. Il n’y a plus de modules précompilés pour le noyau linux-lts
 
-**Attention** : Il y a un bug avec le trio VirtualBox 5.2.12, linux 4.17.x et Xorg 1.20. Bug rapporté ici. https://www.virtualbox.org/ticket/17827
-
-Le correctif ? Créer un fichier /etc/modprobe.d/blacklist.conf et y insérer ceci :
-
-```
-install vboxguest /bin/false
-```
-
-
-Il y aura une boite d'alerte dans votre environnement, mais au moins, vous aurez une souris 100% fonctionnelle.
-
 La prise en charge des modules noyau se fait avec la commande systemctl suivante :
 
 ```
