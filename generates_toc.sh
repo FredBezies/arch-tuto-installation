@@ -1,6 +1,10 @@
 #!/bin/bash
 
-BEGIN="$(grep -En '^Petit guide' install.md | cut -d':' -f1)"
+
+set -eu
+
+
+BEGIN="$(grep -En '^<!---' install.md | head -1 | cut -d':' -f1)"
 
 tail -n +"${BEGIN}" install.md > /tmp/install.md.old
 
@@ -14,3 +18,4 @@ echo >> /tmp/install.md.toc
 cat /tmp/install.md.old >> /tmp/install.md.toc
 mv /tmp/install.md.toc install.md
 rm -f /tmp/install.md.old
+
