@@ -2,7 +2,7 @@
 Sommaire
 ========
 
-   * [Petit guide d’installation d’Archlinux avec Gnome 3.28.x / Plasma 5.13.x / Xfce / Mate-Desktop](#petit-guide-dinstallation-darchlinux-avec-gnome-328x--plasma-513x--xfce--mate-desktop)
+   * [Petit guide d’installation d’Archlinux avec Gnome 3.28.x / Plasma 5.13.x / Xfce / Mate-Desktop / Deepin / Cinnamon](#petit-guide-dinstallation-darchlinux-avec-gnome-328x--plasma-513x--xfce--mate-desktop--deepin--cinnamon)
       * [I) Installons notre base](#i-installons-notre-base)</br>
             * [Partitionnement et attribution des partitions en mode Bios :](#partitionnement-et-attribution-des-partitions-en-mode-bios)</br>
             * [Partitionnement et attribution des partitions en mode UEFI :](#partitionnement-et-attribution-des-partitions-en-mode-uefi)</br>
@@ -12,6 +12,8 @@ Sommaire
       * [IV) Addendum 1 : installer Plasma 5.13.x](#iv-addendum-1-installer-plasma-513x)
       * [V) Addendum 2 : installer Xfce](#v-addendum-2-installer-xfce)
       * [VI) Addendum 3 : installer Mate-Desktop](#vi-addendum-3-installer-mate-desktop)
+      * [VII) Addendum 4 : installer Deepin-Desktop](#vii-addendum-4-installer-deepin-desktop)
+      * [VIII) Addendum 5 : installer Cinnamon](#viii-addendum-5-installer-cinnamon)
 
 Créé par [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
@@ -19,10 +21,10 @@ Créé par [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 BEGIN
 -->
 
-Petit guide d’installation d’Archlinux avec Gnome 3.28.x / Plasma 5.13.x / Xfce / Mate-Desktop
-==============================================================================================
+Petit guide d’installation d’Archlinux avec Gnome 3.28.x / Plasma 5.13.x / Xfce / Mate-Desktop / Deepin / Cinnamon
+==================================================================================================================
 
-Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.28 et suivant, Plasma 5.13.x, Xfce et Mate-Desktop. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
+Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.28 et suivant, Plasma 5.13.x, Xfce, Mate-Desktop, Deepin et Cinnamon. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
 
 Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme les imprimantes, les scanners, ou encore les webcams. Je vous renvoie aux wikis anglophone <https://wiki.archlinux.org/> et francophone <http://wiki.archlinux.fr/Accueil> pour ce genre de manipulations.
 
@@ -30,9 +32,7 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 **NOTE 2 :** Pour Lxde et LXQt, il faudra voir avec le tutoriel de mars 2016 : <http://frederic.bezies.free.fr/blog/?p=14045>
 
-**NOTE 3 :** Pour Budgie Desktop et Cinnamon, je vous conseille de vous reporter au tutoriel d’avril 2017 : <http://frederic.bezies.free.fr/blog/?p=15985>
-
-**NOTE 4 :** Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1er mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [Archlinux32](https://www.archlinux32.org/).
+**NOTE 3 :** Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1er mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [Archlinux32](https://www.archlinux32.org/).
 
 Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En juillet 2018, c’est la 2018.07.01.
 
@@ -717,7 +717,7 @@ sudo pacman -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
 L’installation ressemble à celle de Xfce, donc pour les explications des paquets, cf l’addenda consacré à Xfce. Idem pour l’utilisation de NetworkManager si vous le voulez. Il ne faut pas oublier de rajouter un outil de gravure, comme Brasero si nécessaire. Pour le navigateur, Mozilla Firefox ou Chromium. C’est selon les goûts !
 
 ```
-sudo pacman -S mate mate-extra lightdm-gtk-greeter gnome-icon-theme vlc quodlibet python2-pyinotify accountsservice claws-mail ffmpegthumbnailer pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer **→** **(pour installer le support des imprimantes)**
+sudo pacman -S mate mate-extra lightdm-gtk-greeter gnome-icon-theme vlc quodlibet python2-pyinotify accountsservice claws-mail ffmpegthumbnailer pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer → (pour installer le support des imprimantes)
 ```
 
 Si vous voulez personnaliser votre lightdm :
@@ -747,4 +747,94 @@ sudo systemctl enable lightdm
 ![Illustration 16: Mate Desktop 1.20.3](pictures/016.png)
 
 *Illustration 16: Mate Desktop 1.20.3*
+
+VII. Addendum 4 : installer Deepin-Desktop
+------------------------------------------
+
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser une enrobeur de pacman comme yaourt ou trizen par exemple.
+
+**Note 2** : Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs. Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
+
+```
+sudo pacman -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
+```
+
+L’installation est ultra simple. La ligne de commande est sûrement l’une des plus courtes du document !
+
+```
+sudo pacman -S deepin deepin-extra linux-headers system-config-printer → (pour installer le support des imprimantes)
+```
+
+Si vous voulez personnaliser votre lightdm :
+
+```
+sudo pacman -S lightdm-gtk-greeter-settings
+```
+
+Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivant avant de lancer pour la première fois lightdm :
+
+```
+sudo localectl set-x11-keymap fr
+```
+
+Pour lancer Deepin Desktop, il faut entrer dans un premier temps :
+
+```
+sudo systemctl start lightdm
+```
+
+Si tout se passe bien, on peut utiliser :
+
+```
+sudo systemctl enable lightdm
+```
+
+![Illustration 17: Deepin Desktop 15.7](pictures/017.png)
+
+*Illustration 17: Deepin Desktop 15.7*
+
+VIII. Addendum 5 : installer Cinnamon
+-------------------------------------
+
+Note : commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser une enrobeur de pacman comme yaourt ou trizen par exemple.
+
+Note 2 : Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs. Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
+
+```
+sudo pacman -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
+```
+
+Comme pour Deepin, l’installation est assez courte.
+
+```
+sudo pacman -S cinnamon cinnamon-translation gnome-terminal gnome-extra lightdm-gtk-greeter system-config-printer → (pour installer le support des imprimantes)
+```
+
+Si vous voulez personnaliser votre lightdm :
+
+```
+sudo pacman -S lightdm-gtk-greeter-settings
+```
+
+Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivant avant de lancer pour la première fois lightdm :
+
+```
+sudo localectl set-x11-keymap fr
+```
+
+Pour lancer Cinnamon, il faut entrer dans un premier temps :
+
+```
+sudo systemctl start lightdm
+```
+
+Si tout se passe bien, on peut utiliser :
+
+```
+sudo systemctl enable lightdm
+```
+
+![Illustration 18: Cinnamon 3.8.8](pictures/018.png)
+
+*Illustration 18: Cinnamon 3.8.8*
 
