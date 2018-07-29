@@ -536,6 +536,7 @@ On peut utiliser trizen à la place du vieillissant yaourt.
 Son installation en utilisateur simple ?
 
 ```
+sudo pacman -S git
 git clone https://aur.archlinux.org/trizen
 cd trizen
 makepkg -si
