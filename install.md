@@ -797,9 +797,9 @@ sudo systemctl enable lightdm
 VIII. Addendum 5 : installer Cinnamon
 -------------------------------------
 
-Note : commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser une enrobeur de pacman comme yaourt ou trizen par exemple.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser une enrobeur de pacman comme yaourt ou trizen par exemple.
 
-Note 2 : Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs. Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
+**Note 2 :** Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs. Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
 
 ```
 sudo pacman -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
