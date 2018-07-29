@@ -90,7 +90,7 @@ Il ne faut pas oublier de définir la partition attribuée à /boot comme démar
 Pour le formatage des partitions, il suffit d’entrer les commandes suivantes :
 
 ```
-mkfs.ext2 /dev/sda1 ou mkfs.ext4 /dev/sda1 (en fonction de votre choix)
+mkfs.ext4 /dev/sda1 
 mkfs.ext4 /dev/sda3
 mkfs.ext4 /dev/sda4
 ```
