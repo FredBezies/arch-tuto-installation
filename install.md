@@ -808,7 +808,7 @@ sudo pacman -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
 Comme pour Deepin, l’installation est assez courte.
 
 ```
-sudo pacman -S cinnamon cinnamon-translation gnome-terminal gnome-extra lightdm-gtk-greeter system-config-printer → (pour installer le support des imprimantes)
+sudo pacman -S cinnamon cinnamon-translation gnome-terminal gnome-extra lightdm-gtk-greeter shotwell rhythmbox system-config-printer → (pour installer le support des imprimantes)
 ```
 
 Si vous voulez personnaliser votre lightdm :
