@@ -315,9 +315,9 @@ mkdir /boot/efi/EFI/boot
 cp /boot/efi/EFI/arch_grub/grubx64.efi /boot/efi/EFI/boot/bootx64.efi
 ```
 
-![Illustration 7 : Génération du noyau linux 4.17.3 début juillet 2018](pictures/007.png)
+![Illustration 7 : Génération du noyau linux 4.17.11 début août 2018](pictures/007.png)
 
-*Illustration 7 : Génération du noyau linux 4.17.3 début juillet 2018*
+*Illustration 7 : Génération du noyau linux 4.17.11 début août 2018*
 
 Bien entendu, aucune erreur ne doit apparaître. On donne un mot de passe au compte root :
 
