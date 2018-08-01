@@ -15,3 +15,4 @@ Changements :
 1er juin 2018 : suppression de la section sur Yaourt, modernisation de la section pour le partionnement Bios, mise à niveau des captures d'écran et un petit peu de nettoyage. L'UEFI sera traité pour la prochaine version du tutoriel.
 10 juin 2018 : mise à jour de la section UEFI.
 1er juillet 2018 : ajout d'un sommaire (merci à Kevin Dubrulle), d'une note concernant un bug avec VirtualBox, passage à Plasma 5.13 et Mate Desktop 1.20.3 entre autres.
+1er août 2018 : retrait du correctif pour VirtualBox, retour de Cinnamon et Deepin Desktop, ajout de l'installation de Trizen
