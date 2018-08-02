@@ -614,7 +614,7 @@ Bonne découverte !
 IV) Addendum 1 : installer Plasma 5.13.x
 ----------------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser une enrobeur de pacman comme yaourt ou trizen par exemple.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt ou trizen par exemple.
 
 Kde-l10n-fr étant à remplacer par votre locale. Dans les précédentes versions, il y avait k3b, mais il a été intégré dans les kde-applications à partir de la version 17.04.
 
@@ -626,7 +626,7 @@ sudo pacman -S plasma kde-applications kde-l10n-fr amarok digikam breeze-kde4
 
 Le paquet breeze-kde4 permet de donner un thème « KDE 5 » aux applications non encore adaptées pour le nouvel environnement.
 
-Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivant avant de lancer pour la première fois sddm :
+Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivante avant de lancer pour la première fois sddm :
 
 ```
 sudo localectl set-x11-keymap fr
@@ -651,7 +651,7 @@ sudo systemctl enable sddm
 V) Addendum 2 : installer Xfce
 ------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser une enrobeur de pacman comme yaourt ou trizen par exemple.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt ou trizen par exemple.
 
 **Note 2 :** si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
 Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
@@ -679,7 +679,7 @@ Si vous utilisez NetworkManager, vous pouvez rajouter l’applet pour gérer et 
 sudo pacman -S lightdm-gtk-greeter-settings
 ```
 
-Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivant avant de lancer pour la première fois lightdm :
+Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivante avant de lancer pour la première fois lightdm :
 
 ```
 sudo localectl set-x11-keymap fr
@@ -706,7 +706,7 @@ sudo systemctl enable lightdm
 VI) Addendum 3 : installer Mate-Desktop
 ---------------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser une enrobeur de pacman comme yaourt ou trizen par exemple.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt ou trizen par exemple.
 
 **Note 2 :**  Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
 Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
@@ -727,7 +727,7 @@ Si vous voulez personnaliser votre lightdm :
 sudo pacman -S lightdm-gtk-greeter-settings
 ```
 
-Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivant avant de lancer pour la première fois lightdm :
+Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivante avant de lancer pour la première fois lightdm :
 
 ```
 sudo localectl set-x11-keymap fr
@@ -752,7 +752,7 @@ sudo systemctl enable lightdm
 VII. Addendum 4 : installer Deepin-Desktop
 ------------------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser une enrobeur de pacman comme yaourt ou trizen par exemple.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt ou trizen par exemple.
 
 **Note 2** : Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs. Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
 
@@ -772,7 +772,7 @@ Si vous voulez personnaliser votre lightdm :
 sudo pacman -S lightdm-gtk-greeter-settings
 ```
 
-Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivant avant de lancer pour la première fois lightdm :
+Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivante avant de lancer pour la première fois lightdm :
 
 ```
 sudo localectl set-x11-keymap fr
@@ -797,7 +797,7 @@ sudo systemctl enable lightdm
 VIII. Addendum 5 : installer Cinnamon
 -------------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser une enrobeur de pacman comme yaourt ou trizen par exemple.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt ou trizen par exemple.
 
 **Note 2 :** Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs. Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
 
@@ -817,7 +817,7 @@ Si vous voulez personnaliser votre lightdm :
 sudo pacman -S lightdm-gtk-greeter-settings
 ```
 
-Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivant avant de lancer pour la première fois lightdm :
+Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivante avant de lancer pour la première fois lightdm :
 
 ```
 sudo localectl set-x11-keymap fr
