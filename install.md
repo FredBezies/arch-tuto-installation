@@ -481,13 +481,13 @@ pacman -S foomatic-{db,db-ppds,db-gutenprint-ppds,db-nonfree,db-nonfree-ppds} gu
 Il y a deux versions supportés par Archlinux pour LibreOffice, en conformité avec ce que propose la Document Foundation. Pour la version **stable** et les utilisateurs **prudents**, on utilise la ligne de commande (hunspell ajoute la vérification orthographique) :
 
 ```
-pacman -S libreoffice-still-fr hunspell hunspell-fr
+pacman -S libreoffice-still-fr hunspell-fr
 ```
 
 Pour les utilisateurs plus **aventureux**, qui veulent la version récente :
 
 ```
-pacman -S libreoffice-fresh-fr hunspell hunspell-fr
+pacman -S libreoffice-fresh-fr hunspell-fr
 ```
 On rajoute ensuite Mozilla Firefox en français :
 
@@ -509,10 +509,6 @@ passwd nom-de-l’utilisateur
 ```
 
 Avant de finir, on va configurer sudo en utilisant visudo :
-
-```
-EDITOR=nano visudo
-```
 
 En effet, il nous suffit de modifier une ligne pour que l’on puisse accéder en tant qu’utilisateur classique aux droits complets sur la machine de manière temporaire.
 
@@ -724,7 +720,7 @@ sudo pacman -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
 L’installation ressemble à celle de Xfce, donc pour les explications des paquets, cf l’addenda consacré à Xfce. Idem pour l’utilisation de NetworkManager si vous le voulez. Il ne faut pas oublier de rajouter un outil de gravure, comme Brasero si nécessaire. Pour le navigateur, Mozilla Firefox ou Chromium. C’est selon les goûts !
 
 ```
-sudo pacman -S mate mate-extra lightdm-gtk-greeter gnome-icon-theme vlc quodlibet python2-pyinotify accountsservice claws-mail ffmpegthumbnailer pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer → (pour installer le support des imprimantes)
+sudo pacman -S mate mate-extra lightdm-gtk-greeter gnome-icon-theme vlc quodlibet python2-pyinotify accountsservice claws-mail ffmpegthumbnailer pulseaudio pulseaudio-alsa pulseaudio-bluetooth blueman libcanberra-{pulse,gstreamer} system-config-printer → (pour installer le support des imprimantes)
 ```
 
 Si vous voulez personnaliser votre lightdm :
