@@ -190,7 +190,7 @@ On passe à l’installation de la base. La deuxième ligne rajoute certains out
 
 ```
 pacstrap /mnt base base-devel pacman-contrib
-pacstrap /mnt zip unzip p7zip vim mc alsa-utils syslog-ng mtools dosfstools lsb-release ntfs-3g exfat-utils (sur une seule ligne !)
+pacstrap /mnt zip unzip p7zip vim mc alsa-utils syslog-ng mtools dosfstools lsb-release ntfs-3g exfat-utils bash-completion (sur une seule ligne !)
 ```
 
 Si on veut utiliser un noyau linux long terme, il faut rajouter à la deuxième ligne pacstrap le paquet linux-lts. Pour ntfs-3g, c’est utile si vous êtes amené à utiliser des disques formatés en ntfs. Si ce n’est pas le cas, vous pouvez l’ignorer allègrement.
@@ -422,7 +422,7 @@ Si on utilise un ordinateur portable avec un pavé tactile, il faut rajouter le 
 
 Il faut ensuite choisir le pilote pour le circuit vidéo. Voici les principaux pilotes, sachant que le paquet xf86-video-vesa englobe une énorme partie des circuits graphiques, dont ceux non listés dans le tableau un peu plus loin. En cas de doute : <https://wiki.archlinux.org/index.php/Xorg#Driver_installation>
 
-Pour Nvidia, c’est un casse-tête au niveau des pilotes propriétaires. Le plus simple est de se référer au wiki d'Archlinux : <https://wiki.archlinux.org/index.php/NVIDIA>
+Pour Nvidia, c’est un casse-tête au niveau des pilotes propriétaires. Le plus simple est de se référer au wiki d'Archlinux : <https://wiki.archlinux.org/index.php/NVIDIA>. Et si vous avez la technologie Optimus : <https://wiki.archlinux.org/index.php/NVIDIA_Optimus>
 
  
  | Circuits graphiques | Pilotes libres     | Pilotes non libres (si existant)                     |
@@ -478,16 +478,16 @@ La série des paquets foomatic permet d’avoir le maximum de pilotes pour l’i
 pacman -S foomatic-{db,db-ppds,db-gutenprint-ppds,db-nonfree,db-nonfree-ppds} gutenprint
 ```
 
-Il y a deux versions supportés par Archlinux pour LibreOffice, en conformité avec ce que propose la Document Foundation. Pour la version **stable** et les utilisateurs **prudents**, on utilise la ligne de commande :
+Il y a deux versions supportés par Archlinux pour LibreOffice, en conformité avec ce que propose la Document Foundation. Pour la version **stable** et les utilisateurs **prudents**, on utilise la ligne de commande (hunspell ajoute la vérification orthographique) :
 
 ```
-pacman -S libreoffice-still-fr
+pacman -S libreoffice-still-fr hunspell hunspell-fr
 ```
 
 Pour les utilisateurs plus **aventureux**, qui veulent la version récente :
 
 ```
-pacman -S libreoffice-fresh-fr
+pacman -S libreoffice-fresh-fr hunspell hunspell-fr
 ```
 On rajoute ensuite Mozilla Firefox en français :
 
@@ -508,14 +508,20 @@ useradd -m -g wheel -c 'Nom complet de l’utilisateur' -s /bin/bash nom-de-l’
 passwd nom-de-l’utilisateur
 ```
 
-Avant de finir, on va configurer sudo en utilisant visudo. En effet, il nous suffit de modifier une ligne pour que l’on puisse accéder en tant qu’utilisateur classique aux droits complets sur la machine de manière temporaire.
+Avant de finir, on va configurer sudo en utilisant visudo :
+
+```
+EDITOR=nano visudo
+```
+
+En effet, il nous suffit de modifier une ligne pour que l’on puisse accéder en tant qu’utilisateur classique aux droits complets sur la machine de manière temporaire.
 
 Il faut aller, en utilisant la flèche du bas jusqu’à la ligne :
 
 ```
 #Uncomment to allow members of group wheel to execute any command
 ```
-Et enlever le \# sur la ligne qui suit. La séquence de touches « Échap : w et q » permet de converser la modification.
+Et enlever le \# sur la ligne qui suit. (La séquence de touches « Échap : w et q » permet de converser la modification dans vi.)
 
 **À partir d’ici, c’est la section dédiée à Gnome qui commence :**
 
@@ -666,7 +672,7 @@ sudo pacman -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
 Pour installer Xfce, il faut entrer :
 
 ```
-sudo pacman -S xfce4 xfce4-goodies gvfs vlc quodlibet python2-pyinotify lightdm-gtk-greeter xarchiver claws-mail galculator evince ffmpegthumbnailer xscreensaver pavucontrol pulseaudio pulseaudio-alsa libcanberra-{pulse,gstreamer} system-config-printer → (pour installer le support des imprimantes)
+sudo pacman -S xfce4 xfce4-goodies gvfs vlc quodlibet python2-pyinotify lightdm-gtk-greeter xarchiver claws-mail galculator evince ffmpegthumbnailer xscreensaver pavucontrol pulseaudio pulseaudio-alsa pulseaudio-bluetooth blueman libcanberra-{pulse,gstreamer} system-config-printer → (pour installer le support des imprimantes)
 ```
 
 VLC et Quodlibet ? Pour la vidéo et l’audio. Pour les périphériques amovibles, gvfs est obligatoire. Claws-mail ou Mozilla Thunderbird (avec le paquet thunderbird-i18n-fr) pour le courrier. Lightdm étant pris, car plus rapide à installer. Le paquet python2-pyinotify est nécessaire pour activer le greffon de mise à jour automatique de la musicothèque sous Quodlibet.
