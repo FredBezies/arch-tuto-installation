@@ -529,17 +529,26 @@ L’installation de Gnome est maintenant terminée.
 
 **Fin de la section uniquement consacrée à Gnome, ici, il y a des points communs à tous les environnements proposés.**
 
-**Petit bonus : installer Trizen pour compléter Pacman.**
+**Petit bonus : installer Trizen ou Yay pour compléter Pacman.**
 
-On peut utiliser trizen à la place du vieillissant yaourt.
+On peut utiliser trizen (écrit en perl) ou Yay (écrit en Go) à la place du vieillissant yaourt.
 
-Son installation en utilisateur simple ?
+L'installation en utilisateur simple ? Pour Trizen :
 
 ```
 sudo pacman -S git
 git clone https://aur.archlinux.org/trizen
 cd trizen
-makepkg -si
+makepkg -sri
+```
+
+Pour Yay :
+
+```
+sudo pacman -S git
+git clone https://aur.archlinux.org/yay
+cd yay
+makepkg -sri
 ```
 
 Pour être certain d’avoir le bon clavier au démarrage de GDM ou d’un autre gestionnaire de connexion comme sddm, lightdm ou lxdm, voici une petite commande à lancer (en modifiant le clavier selon les besoins) :
@@ -614,7 +623,7 @@ Bonne découverte !
 IV) Addendum 1 : installer Plasma 5.13.x
 ----------------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt ou trizen par exemple.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt, trizen ou yay par exemple.
 
 Kde-l10n-fr étant à remplacer par votre locale. Dans les précédentes versions, il y avait k3b, mais il a été intégré dans les kde-applications à partir de la version 17.04.
 
@@ -651,7 +660,7 @@ sudo systemctl enable sddm
 V) Addendum 2 : installer Xfce
 ------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt ou trizen par exemple.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt, trizen ou yay par exemple.
 
 **Note 2 :** si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
 Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
@@ -706,7 +715,7 @@ sudo systemctl enable lightdm
 VI) Addendum 3 : installer Mate-Desktop
 ---------------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt ou trizen par exemple.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt, trizen ou yay par exemple.
 
 **Note 2 :**  Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
 Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
@@ -752,7 +761,7 @@ sudo systemctl enable lightdm
 VII. Addendum 4 : installer Deepin-Desktop
 ------------------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt ou trizen par exemple.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt, trizen ou yay par exemple.
 
 **Note 2** : Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs. Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
 
@@ -797,7 +806,7 @@ sudo systemctl enable lightdm
 VIII. Addendum 5 : installer Cinnamon
 -------------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt ou trizen par exemple.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt, trizen ou yay par exemple.
 
 **Note 2 :** Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs. Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
 
