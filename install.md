@@ -1,4 +1,3 @@
-
 Sommaire
 ========
 
@@ -242,7 +241,7 @@ Pour avoir le bon clavier en mode texte, créez le fichier /etc/vconsole.conf. I
 
 ```
 KEYMAP=fr-latin9
-FONT=lat9w-16
+FONT=eurlatgr
 ```
 
 Pour avoir la localisation française, le fichier /etc/locale.conf doit contenir la bonne valeur pour LANG. Pour une personne en France métropolitaine :
