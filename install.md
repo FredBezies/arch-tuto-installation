@@ -629,7 +629,7 @@ Kde-l10n-fr étant à remplacer par votre locale. Dans les précédentes version
 L’installation se déroule ainsi :
 
 ```
-sudo pacman -S plasma kde-applications amarok digikam breeze-kde4
+sudo pacman -S plasma kde-applications amarok digikam
 ```
 
 Le paquet breeze-kde4 permet de donner un thème « KDE 5 » aux applications non encore adaptées pour le nouvel environnement.
