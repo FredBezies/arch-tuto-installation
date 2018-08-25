@@ -4,11 +4,18 @@
 }
 
 kbd {
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 0.1em 0.2em;
-    /*margin: 0 0.2em;*/
-    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
-    background-color: #f7f7f7;
+    font-family: Menlo,Monaco,Consolas,'Courier New',monospace;
+    line-height: 1.57142857;
+    text-transform: capitalize;
+    border-width: 1px 1px 3px 1px;
+    border-style: solid;
+    border-color: #e0e0e0;
+    border-bottom-color: #dbdbdb;
+    border-radius: 5px;
+    background: #fbfbfb;
+    background: -webkit-linear-gradient(top,#fbfbfb 0,#f3f3f3 100%);
+    background: linear-gradient(to bottom,#fbfbfb 0,#f3f3f3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbfbfb', endColorstr='#f3f3f3', GradientType=0);
+    text-shadow: 1px 1px #fff;
+    padding: 2px 5px;
 }
