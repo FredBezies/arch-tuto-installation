@@ -1,12 +1,14 @@
-Petit guide d’installation d’Archlinux avec Gnome 3.28.x / Plasma 5.13.x / Xfce / Mate-Desktop / Deepin / Cinnamon
-==================================================================================================================
+Petit guide d’installation d’Archlinux
+======================================
+avec Gnome 3.28.x / Plasma 5.13.x / Xfce / Mate-Desktop / Deepin / Cinnamon
+***************************************************************************
 
 Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.28 et suivant, Plasma 5.13.x, Xfce, Mate-Desktop, Deepin et Cinnamon. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
 
 Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme les imprimantes, les scanners, ou encore les webcams. Je vous renvoie aux wikis anglophone https://wiki.archlinux.org/ et francophone http://wiki.archlinux.fr/Accueil pour ce genre de manipulations.
 
 .. warning::
-    | Ce tutoriel est **volontairement simplifié**. Il va vous permettre de voir comment installer une ArchLinux **en solo**. 
+    | Ce tutoriel est **volontairement simplifié**. Il va vous permettre de voir comment installer une ArchLinux **en solo**.
     | **Ensuite, s’il y a des spécificités liées à votre matériel, c’est au cas par cas qu’il faut regarder et compulser frénétiquement les wikis ci-dessus.**
     | Si vous voulez installer une Archlinux **en parallèle** d’une installation de MS-Windows, c’est en dehors du cadre de ce document.
 

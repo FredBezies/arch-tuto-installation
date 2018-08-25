@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Petit guide d’installation d’Archlinux avec Gnome 3.28.x / Plasma 5.13.x / Xfce / Mate-Desktop / Deepin / Cinnamon'
+project = 'Petit guide d’installation d’Archlinux'
 copyright = '2018 - Frederic Bezies'
 author = 'Frederic Bezies'
 
@@ -136,7 +136,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'GuideInstallationArchlinux.tex', 'Petit guide d’installation d’Archlinux avec Gnome 3.28.x / Plasma 5.13.x / Xfce / Mate-Desktop / Deepin / Cinnamon',
+    (master_doc, 'GuideInstallationArchlinux.tex', 'Petit guide d’installation d’Archlinux',
      'Frederic Bezies', 'manuel'),
 ]
 
@@ -146,7 +146,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'GuideInstallationArchlinux', 'Petit guide d’installation d’Archlinux avec Gnome 3.28.x / Plasma 5.13.x / Xfce / Mate-Desktop / Deepin / Cinnamon',
+    (master_doc, 'GuideInstallationArchlinux', 'Petit guide d’installation d’Archlinux',
      [author], 1)
 ]
 
@@ -157,6 +157,6 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'GuideInstallationArchlinux', 'Petit guide d’installation d’Archlinux avec Gnome 3.28.x / Plasma 5.13.x / Xfce / Mate-Desktop / Deepin / Cinnamon',
+    (master_doc, 'GuideInstallationArchlinux', 'Petit guide d’installation d’Archlinux',
      author, 'Frederic Bezies', 'manuel'),
 ]

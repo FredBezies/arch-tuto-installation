@@ -16,6 +16,7 @@ Partitionnement et attribution des partitions en mode Bios
 Voici donc l’écran qui nous permet de démarrer. J’expliquerai plus bas comment faire cohabiter des logiciels 32 et 64 bits sur une seule installation.
 
 .. image:: ../pictures/001.png
+
 *Illustration 1: écran de démarrage en mode Bios, version 64 bits*
 
 
@@ -31,6 +32,7 @@ Pour le partitionnement, si vous avez peur de faire des bêtises, il est plus pr
 Avec cfdisk, sur l’écran de démarrage suivant, on choisit l’option « dos » pour le « label type » à appliquer.
 
 .. image:: ../pictures/002.png
+
 *Illustration 2: premier démarrage de cfdisk*
 
 Pour le partitionnement en question :
@@ -52,6 +54,7 @@ Pour le partitionnement en question :
 Il ne faut pas oublier de définir la partition attribuée à :guilabel:`/boot` comme démarrable (bootable). Ce qui donne l’écran suivant dans cfdisk.
 
 .. image:: ../pictures/003.png
+
 *Illustration 3: cfdisk en action*
 
 Pour le formatage des partitions, il suffit d’entrer les commandes suivantes ::
@@ -80,6 +83,7 @@ Partitionnement et attribution des partitions en mode UEFI
 Voici donc l’écran qui nous permet de démarrer en mode UEFI, supporté uniquement pour la version 64 bits.
 
 .. image:: ../pictures/004.png
+
 *Illustration 4: démarrage en mode UEFI*
 
 Comme pour la section concernant le partitionnement en mode Bios, si vous craignez de faire des bêtises, vous pouvez utiliser gParted en mode liveCD : http://gparted.org/
@@ -101,9 +105,10 @@ Il faut se souvenir qu’il faut **obligatoirement** une table de partition GPT 
   +-----------+-------------------+-------------------------------------+---------------------+
 
 .. note::
-  pour la partition :guilabel:`/boot/efi`, il faut qu’elle soit étiquetée en EF00 à sa création. Pour le swap, c’est la référence 8200.
+    pour la partition :guilabel:`/boot/efi`, il faut qu’elle soit étiquetée en EF00 à sa création. Pour le swap, c’est la référence 8200.
 
 .. image:: ../pictures/005.png
+
 *Illustration 5: cgdisk en action pour un partitionnement avec un UEFI*
 
 Le partitionnement à appliquer ? C’est le suivant ::
@@ -145,6 +150,7 @@ Après avoir procédé au partitionnement et à l’attribution des partitions, 
 Avec l’outil nano nous allons modifier le fichier :guilabel:`/etc/pacman.d/mirrorlist` pour ne garder qu’un seul miroir. Le plus proche géographiquement et aussi le plus rapide possible. Pour une personne vivant en France, c’est **de préférence** mir.archlinux.fr et / ou archlinux.polymorf.fr.
 
 .. image:: ../pictures/006.png
+
 *Illustration 6: la liste des miroirs disponibles.*
 
 | J’ai utilisé le raccourci clavier suivant :kbd:`ALT+R`. On entre dans un premier temps :guilabel:`Server`.
@@ -276,6 +282,7 @@ De plus, pour éviter tout problème de démarrage par la suite, spécialement d
   $ cp /boot/efi/EFI/arch_grub/grubx64.efi /boot/efi/EFI/boot/bootx64.efi
 
 .. image:: ../pictures/007.png
+
 *Illustration 7 : Génération du noyau linux 4.17.11 début août 2018*
 
 Bien entendu, aucune erreur ne doit apparaître. On donne un mot de passe au compte root ::
