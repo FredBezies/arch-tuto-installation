@@ -1,0 +1,18 @@
+## CHANGE LOG
+
+- 1er juin 2017 : mise en ligne de la première version
+- 5 juin 2017 : arrivée de Plasma 5.10.x dans les dépots officiels et mises à jour du tutoriel en conséquence.
+- 1er juillet 2017 : mise en ligne de la version du mois de juillet. Amélioration au niveau de Mate-Desktop et quelques mises à jour classiques sinon.
+- 1er août 2017 : comme en juillet 2017, donc pas grand chose à dire :)
+- 3 septembre 2017 : comme en juillet 2017, donc pas grand chose à dire :)
+- 1er octobre 2017 : mise à jour mineure avec l'ajout d'un petit paragraphe concernant l'utilisation de serveurs proxy.
+- 1er novembre 2017 : arrivée de Gnome 3.26.2 et Plasma 5.11
+- 1er décembre 2017 : modification du service syslog-ng, renuménoration des notes, correction d'une coquille au niveau du dépot tiers (Merci Charles Monzat), ajout de la totale pour gvfs (Merci SuperMario S)
+- 4 janvier 2018 : juste quelques nettoyages. Pas grand chose, donc !
+- 1er février 2018 : ajout des corrections apportées par Angristan et Simon B.
+- 1er mars 2018 : les principaux ajouts sont l'arrivée de Mate-Desktop 1.20 et Plasma 5.12.
+- 1er avril 2018 : arrivée de Gnome 3.28 et suppression de la session Gnome classique.
+- 1er juin 2018 : suppression de la section sur Yaourt, modernisation de la section pour le partionnement Bios, mise à niveau des captures d'écran et un petit peu de nettoyage. L'UEFI sera traité pour la prochaine version du tutoriel.
+- 10 juin 2018 : mise à jour de la section UEFI.
+- 1er juillet 2018 : ajout d'un sommaire (merci à Kevin Dubrulle), d'une note concernant un bug avec VirtualBox, passage à Plasma 5.13 et Mate Desktop 1.20.3 entre autres.
+- 1er août 2018 : retrait du correctif pour VirtualBox, retour de Cinnamon et Deepin Desktop, ajout de l'installation de Trizen
