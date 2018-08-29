@@ -629,7 +629,7 @@ Dans les précédentes versions, il y avait k3b, mais il a été intégré dans 
 L’installation se déroule ainsi :
 
 ```
-sudo pacman -S plasma kde-applications amarok digikam
+sudo pacman -S plasma kde-applications digikam elisa
 ```
 Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivante avant de lancer pour la première fois sddm :
 
