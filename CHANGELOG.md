@@ -16,3 +16,4 @@
 - 10 juin 2018 : mise à jour de la section UEFI.
 - 1er juillet 2018 : ajout d'un sommaire (merci à Kevin Dubrulle), d'une note concernant un bug avec VirtualBox, passage à Plasma 5.13 et Mate Desktop 1.20.3 entre autres.
 - 1er août 2018 : retrait du correctif pour VirtualBox, retour de Cinnamon et Deepin Desktop, ajout de l'installation de Trizen
+- 2 septembre 2018 : remaniement de la section sur Plasma, et diverses coquilles corrigées
