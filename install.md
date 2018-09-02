@@ -532,6 +532,8 @@ L’installation de Gnome est maintenant terminée.
 
 On peut utiliser trizen (écrit en perl) ou Yay (écrit en Go) à la place du vieillissant yaourt.
 
+**Note : actions à effectuer en tant qu'utilisateur classique**
+
 L'installation en utilisateur simple ? Pour Trizen :
 
 ```
