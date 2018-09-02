@@ -767,7 +767,7 @@ VII. Addendum 4 : installer Deepin-Desktop
 sudo pacman -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
 ```
 
-L’installation est ultra simple. La ligne de commande est sûrement l’une des plus courtes du document !
+L’installation est ultra simple. La ligne de commande est sûrement l’une des plus courtes du document ! Il faudra bien sûr remplacer linux-headers par linux-lts si vous utilisez un noyau linux-lts !
 
 ```
 sudo pacman -S deepin deepin-extra linux-headers system-config-printer → (pour installer le support des imprimantes)
