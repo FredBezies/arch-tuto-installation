@@ -1,7 +1,7 @@
 Sommaire
 ========
 
-   * [Petit guide d’installation d’Archlinux avec Gnome 3.28.x / Plasma 5.13.x / Xfce / Mate-Desktop / Deepin / Cinnamon](#petit-guide-dinstallation-darchlinux-avec-gnome-328x--plasma-513x--xfce--mate-desktop--deepin--cinnamon)
+   * [Petit guide d’installation d’Archlinux avec Gnome 3.30.x / Plasma 5.13.x / Xfce / Mate-Desktop / Deepin / Cinnamon](#petit-guide-dinstallation-darchlinux-avec-gnome-330x--plasma-513x--xfce--mate-desktop--deepin--cinnamon)
       * [I) Installons notre base](#i-installons-notre-base)</br>
             * [Partitionnement et attribution des partitions en mode Bios :](#partitionnement-et-attribution-des-partitions-en-mode-bios)</br>
             * [Partitionnement et attribution des partitions en mode UEFI :](#partitionnement-et-attribution-des-partitions-en-mode-uefi)</br>
@@ -20,7 +20,7 @@ Créé par [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 BEGIN
 -->
 
-Petit guide d’installation d’Archlinux avec Gnome 3.28.x / Plasma 5.13.x / Xfce / Mate-Desktop / Deepin / Cinnamon
+Petit guide d’installation d’Archlinux avec Gnome 3.30.x / Plasma 5.13.x / Xfce / Mate-Desktop / Deepin / Cinnamon
 ==================================================================================================================
 
 Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.28 et suivant, Plasma 5.13.x, Xfce, Mate-Desktop, Deepin et Cinnamon. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
@@ -582,9 +582,9 @@ Sinon, il suffit de se référer à l’addenda correspondant à l’environneme
 
 Au démarrage suivant, GDM nous accueille, et nous pouvons nous connecter.
 
-![Illustration 10: GDM 3.28.4 avec les sessions Wayland et Gnome sur Xorg](pictures/010.png)
+![Illustration 10: GDM 3.30.0 avec les sessions Wayland et Gnome sur Xorg](pictures/010.png)
 
-*Illustration 10: GDM 3.28.4 avec les sessions Wayland et Gnome sur Xorg*
+*Illustration 10: GDM 3.30.0 avec les sessions Wayland et Gnome sur Xorg*
 
 III) Finalisons l’installation de Gnome.
 ----------------------------------------
@@ -599,9 +599,9 @@ sudo pacman -S xsane unoconv
 
 Il faut penser à vérifier que le clavier est correctement configuré. Ce qui se fait dans menu système unifié, options de configuration.
 
-![Illustration 11: Gnome 3.28.2 en vue activités](pictures/011.png)
+![Illustration 11: Gnome 3.30.0 en vue activités](pictures/011.png)
 
-*Illustration 11: Gnome 3.28.2 en vue activités*
+*Illustration 11: Gnome 3.30.0 en vue activités*
 
 On va personnaliser le bureau Gnome en lui ajoutant la date complète et les boutons pour minimiser et maximiser les fenêtres avec Gnome Tweak Tool alias Ajustements.
 
@@ -611,9 +611,9 @@ On va personnaliser le bureau Gnome en lui ajoutant la date complète et les bou
 
 Pour finir une capture d’écran du mode « Gnome Shell ».
 
-![Illusration 13: Gnome Shell 3.28.2 et « LibreOffice-fresh »](pictures/013.png)
+![Illusration 13: Gnome Shell 3.30.0 et « LibreOffice-fresh »](pictures/013.png)
 
-*Illustration 13: Gnome Shell 3.28.2 et « LibreOffice-fresh »*
+*Illustration 13: Gnome Shell 3.30.0 et « LibreOffice-fresh »*
 
 Voila, le guide est maintenant fini. Cependant, je n’ai pas abordé l’installation d’un pare-feu. C’est quelque chose de plus technique.
 
@@ -631,7 +631,7 @@ Dans les précédentes versions, il y avait k3b, mais il a été intégré dans 
 L’installation se déroule ainsi :
 
 ```
-sudo pacman -S plasma kde-applications digikam elisa
+sudo pacman -S plasma kde-applications digikam elisa kdeconnect
 ```
 Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivante avant de lancer pour la première fois sddm :
 
