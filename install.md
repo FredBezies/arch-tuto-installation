@@ -198,6 +198,8 @@ Si on veut utiliser un noyau linux long terme, il faut rajouter à la deuxième 
 
 Si vous êtes sur un pc portable, l’ajout de tlp est conseillé pour améliorer l’autonomie de la batterie. Plus d’info sur cette page : <https://wiki.archlinux.org/index.php/TLP>
 
+Si vous désirez rajouter le support des microcodes pour votre processeur, il vous suffira de rajouter soit le paquet amd-ucode (pour les processeurs AMD) ou intel-ucode (pour les processeurs Intel). Grub détectera leur présence automatiquement.
+
 Maintenant que les outils de base sont installés, il faut générer le fichier /etc/fstab qui liste les partitions présentes.
 
 ```
