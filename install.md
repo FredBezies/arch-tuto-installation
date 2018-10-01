@@ -33,7 +33,7 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 **NOTE 3 :** Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1er mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [Archlinux32](https://www.archlinux32.org/).
 
-Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En septembre 2018, c’est la 2018.09.01.
+Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En octobre 2018, c’est la 2018.10.01.
 
 Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit, André Ray, Nicolas, Charles Monzat, SuperMario S, Angristan, Simon B, r33int, Mozzi, Kevin Dubrulle, Christophe Leloup et Nornort pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
 
@@ -41,7 +41,7 @@ Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, T
 I) Installons notre base
 ------------------------
 
-Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2018.09.01-x86\_64.iso, mise en ligne début septembre 2018.
+Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2018.10.01-x86\_64.iso, mise en ligne début octobre 2018.
 
 La machine virtuelle est une machine VirtualBox à laquelle j’ai rajouté un disque virtuel de 128 Go. Des points spécifiques concernant l’utilisation dans VirtualBox sont indiqués. Par défaut, le noyau proposé par Archlinux est un noyau « court terme ». Si vous voulez un noyau LTS, je vous expliquerai comment faire.
 
@@ -316,9 +316,9 @@ mkdir /boot/efi/EFI/boot
 cp /boot/efi/EFI/arch_grub/grubx64.efi /boot/efi/EFI/boot/bootx64.efi
 ```
 
-![Illustration 7 : Génération du noyau linux 4.18.5 début septembre 2018](pictures/007.png)
+![Illustration 7 : Génération du noyau linux 4.18.10 début octobre 2018](pictures/007.png)
 
-*Illustration 7 : Génération du noyau linux 4.18.5 début septembre 2018*
+*Illustration 7 : Génération du noyau linux 4.18.10 début octobre 2018*
 
 Bien entendu, aucune erreur ne doit apparaître. On donne un mot de passe au compte root :
 
@@ -584,9 +584,9 @@ Sinon, il suffit de se référer à l’addenda correspondant à l’environneme
 
 Au démarrage suivant, GDM nous accueille, et nous pouvons nous connecter.
 
-![Illustration 10: GDM 3.30.0 avec les sessions Wayland et Gnome sur Xorg](pictures/010.png)
+![Illustration 10: GDM 3.30.1 avec les sessions Wayland et Gnome sur Xorg](pictures/010.png)
 
-*Illustration 10: GDM 3.30.0 avec les sessions Wayland et Gnome sur Xorg*
+*Illustration 10: GDM 3.30.1 avec les sessions Wayland et Gnome sur Xorg*
 
 III) Finalisons l’installation de Gnome.
 ----------------------------------------
@@ -601,9 +601,9 @@ sudo pacman -S xsane unoconv
 
 Il faut penser à vérifier que le clavier est correctement configuré. Ce qui se fait dans menu système unifié, options de configuration.
 
-![Illustration 11: Gnome 3.30.0 en vue activités](pictures/011.png)
+![Illustration 11: Gnome 3.30.1 en vue activités](pictures/011.png)
 
-*Illustration 11: Gnome 3.30.0 en vue activités*
+*Illustration 11: Gnome 3.30.1 en vue activités*
 
 On va personnaliser le bureau Gnome en lui ajoutant la date complète et les boutons pour minimiser et maximiser les fenêtres avec Gnome Tweak Tool alias Ajustements.
 
@@ -613,9 +613,9 @@ On va personnaliser le bureau Gnome en lui ajoutant la date complète et les bou
 
 Pour finir une capture d’écran du mode « Gnome Shell ».
 
-![Illusration 13: Gnome Shell 3.30.0 et « LibreOffice-fresh »](pictures/013.png)
+![Illusration 13: Gnome Shell 3.30.1 et « LibreOffice-fresh »](pictures/013.png)
 
-*Illustration 13: Gnome Shell 3.30.0 et « LibreOffice-fresh »*
+*Illustration 13: Gnome Shell 3.30.1 et « LibreOffice-fresh »*
 
 Voila, le guide est maintenant fini. Cependant, je n’ai pas abordé l’installation d’un pare-feu. C’est quelque chose de plus technique.
 
@@ -844,6 +844,6 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable lightdm
 ```
 
-![Illustration 18: Cinnamon 3.8.8](pictures/018.png)
+![Illustration 18: Cinnamon 3.8.9](pictures/018.png)
 
-*Illustration 18: Cinnamon 3.8.8*
+*Illustration 18: Cinnamon 3.8.9*
