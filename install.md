@@ -628,12 +628,12 @@ IV) Addendum 1 : installer Plasma 5.13.x
 
 **Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt, trizen ou yay par exemple.
 
-Dans les précédentes versions, il y avait k3b, mais il a été intégré dans les kde-applications à partir de la version 17.04. Amarok a été remplacé par Elisa.
+Dans les précédentes versions, il y avait k3b, mais il a été intégré dans les kde-applications à partir de la version 17.04. Amarok a été remplacé par Elisa. Pour Discover, packagekit-qt5 est indispensable.
 
 L’installation se déroule ainsi :
 
 ```
-sudo pacman -S plasma kde-applications digikam elisa kdeconnect
+sudo pacman -S plasma kde-applications digikam elisa kdeconnect packagekit-qt5
 ```
 Pour avoir le bon agencement clavier dès la saisie du premier caractère du mot de passe, il faut entrer la commande suivante avant de lancer pour la première fois sddm :
 
