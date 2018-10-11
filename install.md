@@ -1,7 +1,7 @@
 Sommaire
 ========
 
-   * [Petit guide d’installation d’Archlinux avec Gnome 3.30.x / Plasma 5.13.x / Xfce / Mate-Desktop / Deepin / Cinnamon](#petit-guide-dinstallation-darchlinux-avec-gnome-330x--plasma-513x--xfce--mate-desktop--deepin--cinnamon)
+   * [Petit guide d’installation d’Archlinux avec Gnome 3.30.x / Plasma 5.14.x / Xfce / Mate-Desktop / Deepin / Cinnamon](#petit-guide-dinstallation-darchlinux-avec-gnome-330x--plasma-514x--xfce--mate-desktop--deepin--cinnamon)
       * [I) Installons notre base](#i-installons-notre-base)</br>
             * [Partitionnement et attribution des partitions en mode Bios :](#partitionnement-et-attribution-des-partitions-en-mode-bios)</br>
             * [Partitionnement et attribution des partitions en mode UEFI :](#partitionnement-et-attribution-des-partitions-en-mode-uefi)</br>
@@ -20,10 +20,10 @@ Créé par [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 BEGIN
 -->
 
-Petit guide d’installation d’Archlinux avec Gnome 3.30.x / Plasma 5.13.x / Xfce / Mate-Desktop / Deepin / Cinnamon
+Petit guide d’installation d’Archlinux avec Gnome 3.30.x / Plasma 5.14.x / Xfce / Mate-Desktop / Deepin / Cinnamon
 ==================================================================================================================
 
-Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.30 et suivant, Plasma 5.13.x, Xfce, Mate-Desktop, Deepin et Cinnamon. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
+Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.30 et suivant, Plasma 5.14.x, Xfce, Mate-Desktop, Deepin et Cinnamon. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
 
 Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme les imprimantes, les scanners, ou encore les webcams. Je vous renvoie aux wikis anglophone <https://wiki.archlinux.org/> et francophone <http://wiki.archlinux.fr/Accueil> pour ce genre de manipulations.
 
@@ -653,9 +653,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable sddm
 ```
 
-![Illustration 14: Plasma 5.13.x (vue de dossiers) avec les KDE Frameworks 5.50.0](pictures/014.png)
+![Illustration 14: Plasma 5.14.x (vue de dossiers) avec les KDE Frameworks 5.50.0](pictures/014.png)
 
-*Illustration 14: Plasma 5.13.x (vue de dossiers) avec les KDE Frameworks 5.50.0* 
+*Illustration 14: Plasma 5.14.x (vue de dossiers) avec les KDE Frameworks 5.50.0* 
 
 V) Addendum 2 : installer Xfce
 ------------------------------
