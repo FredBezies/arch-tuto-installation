@@ -511,7 +511,7 @@ passwd nom-de-l’utilisateur
 
 Avant de finir, on va configurer sudo en utilisant visudo. En effet, il nous suffit de modifier une ligne pour que l’on puisse accéder en tant qu’utilisateur classique aux droits complets sur la machine de manière temporaire.
 
-Il faut aller, en utilisant la flèche du bas jusqu’à la ligne :
+Il faut éditer le fichier "/etc/sudoers". Il est préférable d'utiliser la commande "visudo" et aller, en utilisant la flèche du bas jusqu’à la ligne :
 
 ```
 #Uncomment to allow members of group wheel to execute any command
