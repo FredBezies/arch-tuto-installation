@@ -8,7 +8,7 @@ Sommaire
             * [Installation de la base de notre Archlinux :](#installation-de-la-base-de-notre-archlinux)</br>
       * [II) Installons maintenant l’environnement graphique !](#ii-installons-maintenant-lenvironnement-graphique)
       * [III) Finalisons l’installation de Gnome.](#iii-finalisons-linstallation-de-gnome)
-      * [IV) Addendum 1 : installer Plasma 5.13.x](#iv-addendum-1-installer-plasma-513x)
+      * [IV) Addendum 1 : installer Plasma 5.14.x](#iv-addendum-1-installer-plasma-514x)
       * [V) Addendum 2 : installer Xfce](#v-addendum-2-installer-xfce)
       * [VI) Addendum 3 : installer Mate-Desktop](#vi-addendum-3-installer-mate-desktop)
       * [VII) Addendum 4 : installer Deepin-Desktop](#vii-addendum-4-installer-deepin-desktop)
@@ -623,7 +623,7 @@ J’ai surtout voulu faire un **guide rapide**, histoire de montrer qu’en une 
 
 Bonne découverte !
 
-IV) Addendum 1 : installer Plasma 5.13.x
+IV) Addendum 1 : installer Plasma 5.14.x
 ----------------------------------------
 
 **Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt, trizen ou yay par exemple.
