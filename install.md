@@ -675,7 +675,7 @@ sudo pacman -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
 Pour installer Xfce, il faut entrer :
 
 ```
-sudo pacman -S xfce4 xfce4-goodies gvfs vlc quodlibet python2-pyinotify lightdm-gtk-greeter xarchiver claws-mail galculator evince ffmpegthumbnailer xscreensaver pavucontrol pulseaudio pulseaudio-alsa pulseaudio-bluetooth blueman libcanberra-{pulse,gstreamer} system-config-printer → (pour installer le support des imprimantes)
+sudo pacman -S xfce4 xfce4-goodies gvfs vlc quodlibet python-pyinotify lightdm-gtk-greeter xarchiver claws-mail galculator evince ffmpegthumbnailer xscreensaver pavucontrol pulseaudio pulseaudio-alsa pulseaudio-bluetooth blueman libcanberra-{pulse,gstreamer} system-config-printer → (pour installer le support des imprimantes)
 ```
 
 VLC et Quodlibet ? Pour la vidéo et l’audio. Pour les périphériques amovibles, gvfs est obligatoire. Claws-mail ou Mozilla Thunderbird (avec le paquet thunderbird-i18n-fr) pour le courrier. Lightdm étant pris, car plus rapide à installer. Le paquet python2-pyinotify est nécessaire pour activer le greffon de mise à jour automatique de la musicothèque sous Quodlibet.
@@ -727,7 +727,7 @@ sudo pacman -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
 L’installation ressemble à celle de Xfce, donc pour les explications des paquets, cf l’addenda consacré à Xfce. Idem pour l’utilisation de NetworkManager si vous le voulez. Il ne faut pas oublier de rajouter un outil de gravure, comme Brasero si nécessaire. Pour le navigateur, Mozilla Firefox ou Chromium. C’est selon les goûts !
 
 ```
-sudo pacman -S mate mate-extra lightdm-gtk-greeter gnome-icon-theme vlc quodlibet python2-pyinotify accountsservice claws-mail ffmpegthumbnailer pulseaudio pulseaudio-alsa pulseaudio-bluetooth blueman libcanberra-{pulse,gstreamer} system-config-printer → (pour installer le support des imprimantes)
+sudo pacman -S mate mate-extra lightdm-gtk-greeter gnome-icon-theme vlc quodlibet python-pyinotify accountsservice claws-mail ffmpegthumbnailer pulseaudio pulseaudio-alsa pulseaudio-bluetooth blueman libcanberra-{pulse,gstreamer} system-config-printer → (pour installer le support des imprimantes)
 ```
 
 Si vous voulez personnaliser votre lightdm :
