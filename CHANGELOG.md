@@ -18,3 +18,4 @@
 - 1er août 2018 : retrait du correctif pour VirtualBox, retour de Cinnamon et Deepin Desktop, ajout de l'installation de Trizen
 - 2 septembre 2018 : remaniement de la section sur Plasma, et diverses coquilles corrigées
 - 1er octobre 2018 : arrivée de Gnome 3.30, du support des microcodes et mises à jour habituelles.
+- 5 novembre 2018 : Gnome 3.30.2, Deepin Desktop 15.8 et Cinnamon 4.0.0 
