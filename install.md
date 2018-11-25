@@ -653,9 +653,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable sddm
 ```
 
-![Illustration 14: Plasma 5.14.x (vue de dossiers) avec les KDE Frameworks 5.51.0](pictures/014.png)
+![Illustration 14: Plasma 5.14.x (vue de dossiers) avec les KDE Frameworks 5.52.0](pictures/014.png)
 
-*Illustration 14: Plasma 5.14.x (vue de dossiers) avec les KDE Frameworks 5.51.0* 
+*Illustration 14: Plasma 5.14.x (vue de dossiers) avec les KDE Frameworks 5.52.0* 
 
 V) Addendum 2 : installer Xfce
 ------------------------------
@@ -670,7 +670,7 @@ sudo pacman -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
 
 **Note 3 :** courant mars 2017, gstreamer-0.10 a été déprécié, après 4 ans sans la moindre mise à jour par les développeurs, et par conséquent, le greffon audio de Xfce est désormais celui de Pulseaudio, d’où le rajout de pavucontrol dans la liste des paquets.
 
-**Note 4 :** Midori a été enlevé, le projet semblant être au point mort depuis pas mal de temps.
+**Note 4 :** Midori étant de nouveau actif, vous pouvez l’installer à la place de Mozilla Firefox ou de Chromium.
 
 Pour installer Xfce, il faut entrer :
 
@@ -844,8 +844,8 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable lightdm
 ```
 
-Pour avoir le thème cinnamon officiel – et non le bête pied Gnome avec le thème adwaita – comme montré dans la capture d’écran ci-dessous, il faut installer les paquets AUR mint-themes, mint-x-icons et mint-y-icons puis de les sélectionner dans l’option apparence / themes des paramètres systèmes de Cinnamon.
+Pour lancer tranquillement Cinnamon dans VirtualBox, il faut dans l’écran LightDM choisir l’option "Cinnamon (Software Rendering)" qui active le rendu logiciel. Sinon, ça plantera tout le temps.
 
-![Illustration 18: Cinnamon 4.0.0](pictures/018.png)
+![Illustration 18: Cinnamon 4.0.2](pictures/018.png)
 
-*Illustration 18: Cinnamon 4.0.0*
+*Illustration 18: Cinnamon 4.0.2*
