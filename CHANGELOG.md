@@ -19,3 +19,4 @@
 - 2 septembre 2018 : remaniement de la section sur Plasma, et diverses coquilles corrigées
 - 1er octobre 2018 : arrivée de Gnome 3.30, du support des microcodes et mises à jour habituelles.
 - 5 novembre 2018 : Gnome 3.30.2, Deepin Desktop 15.8 et Cinnamon 4.0.0 
+- 1er décembre 2018 : arrivée de Cinnamon 4.0.3 et autres petites corrections.
