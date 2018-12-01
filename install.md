@@ -33,7 +33,7 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 **NOTE 3 :** Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1er mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [Archlinux32](https://www.archlinux32.org/).
 
-Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En novembre 2018, c’est la 2018.11.01.
+Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En décembre 2018, c’est la 2018.12.01.
 
 Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit, André Ray, Nicolas, Charles Monzat, SuperMario S, Angristan, Simon B, r33int, Mozzi, Kevin Dubrulle, Christophe Leloup et Nornort pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
 
@@ -41,7 +41,7 @@ Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, T
 I) Installons notre base
 ------------------------
 
-Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2018.11.01-x86\_64.iso, mise en ligne début novembre 2018.
+Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2018.12.01-x86\_64.iso, mise en ligne début décembre 2018.
 
 La machine virtuelle est une machine VirtualBox à laquelle j’ai rajouté un disque virtuel de 128 Go. Des points spécifiques concernant l’utilisation dans VirtualBox sont indiqués. Par défaut, le noyau proposé par Archlinux est un noyau « court terme ». Si vous voulez un noyau LTS, je vous expliquerai comment faire.
 
@@ -316,9 +316,9 @@ mkdir /boot/efi/EFI/boot
 cp /boot/efi/EFI/arch_grub/grubx64.efi /boot/efi/EFI/boot/bootx64.efi
 ```
 
-![Illustration 7 : Génération du noyau linux 4.18.16 début novembre 2018](pictures/007.png)
+![Illustration 7 : Génération du noyau linux 4.19.4 début décembre 2018](pictures/007.png)
 
-*Illustration 7 : Génération du noyau linux 4.18.16 début novembre 2018*
+*Illustration 7 : Génération du noyau linux 4.19.4 début décembre 2018*
 
 Bien entendu, aucune erreur ne doit apparaître. On donne un mot de passe au compte root :
 
@@ -584,9 +584,9 @@ Sinon, il suffit de se référer à l’addenda correspondant à l’environneme
 
 Au démarrage suivant, GDM nous accueille, et nous pouvons nous connecter.
 
-![Illustration 10: GDM 3.30.1 avec les sessions Wayland et Gnome sur Xorg](pictures/010.png)
+![Illustration 10: GDM 3.30.2 avec les sessions Wayland et Gnome sur Xorg](pictures/010.png)
 
-*Illustration 10: GDM 3.30.1 avec les sessions Wayland et Gnome sur Xorg*
+*Illustration 10: GDM 3.30.2 avec les sessions Wayland et Gnome sur Xorg*
 
 III) Finalisons l’installation de Gnome.
 ----------------------------------------
@@ -846,6 +846,6 @@ sudo systemctl enable lightdm
 
 Pour lancer tranquillement Cinnamon dans VirtualBox, il faut dans l’écran LightDM choisir l’option "Cinnamon (Software Rendering)" qui active le rendu logiciel. Sinon, ça plantera tout le temps.
 
-![Illustration 18: Cinnamon 4.0.2](pictures/018.png)
+![Illustration 18: Cinnamon 4.0.3](pictures/018.png)
 
-*Illustration 18: Cinnamon 4.0.2*
+*Illustration 18: Cinnamon 4.0.3*
