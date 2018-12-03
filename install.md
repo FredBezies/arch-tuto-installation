@@ -282,11 +282,10 @@ hwclock --systohc --utc
 
 **Sinon, on ne touche à rien.** MS-Windows est un goujat dans ce domaine.
 
-Étape suivante ? Générer le fichier de configuration de Grub.
+Étape suivante ? Générer l'image du noyau.
 
 ```
 mkinitcpio -p linux ou **linux-lts** si vous voulez le noyau lts.
-grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 **Note** : si vous avez une « hurlante » contenant « /run/lvm/lvmetad.socket: connect failed » ou quelque chose d’approchant, ce n’est pas un bug. C’est une alerte sans conséquence. Cf <https://wiki.archlinux.org/index.php/GRUB#Boot_freezes>
@@ -319,6 +318,13 @@ cp /boot/efi/EFI/arch_grub/grubx64.efi /boot/efi/EFI/boot/bootx64.efi
 ![Illustration 7 : Génération du noyau linux 4.19.4 début décembre 2018](pictures/007.png)
 
 *Illustration 7 : Génération du noyau linux 4.19.4 début décembre 2018*
+
+**Note :** Après avoir généré l'image noyau et installé grub, il faut passer au fichier de configuration du lanceur. C'est une modification intervenue début décembre 2018 avec grub 2:2.02-8.
+
+```
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+
 
 Bien entendu, aucune erreur ne doit apparaître. On donne un mot de passe au compte root :
 
