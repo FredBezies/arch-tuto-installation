@@ -27,7 +27,7 @@ Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnom
 
 Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme les imprimantes, les scanners, ou encore les webcams. Je vous renvoie aux wikis anglophone <https://wiki.archlinux.org/> et francophone <http://wiki.archlinux.fr/Accueil> pour ce genre de manipulations.
 
-**NOTE 1 :** Ce tutoriel est **volontairement simplifié**. Il va vous permettre de voir comment installer une ArchLinux **en solo**. **Ensuite, s’il y a des spécificités liées à votre matériel, c’est au cas par cas qu’il faut regarder et compulser frénétiquement les wikis ci-dessus.** Si vous voulez installer une Archlinux **en parallèle **d’une installation de MS-Windows, c’est en dehors du cadre de ce document.
+**NOTE 1 :** Ce tutoriel est **volontairement simplifié**. Il va vous permettre de voir comment installer une ArchLinux **en solo**. **Ensuite, s’il y a des spécificités liées à votre matériel, c’est au cas par cas qu’il faut regarder et compulser frénétiquement les wikis ci-dessus.** Si vous voulez installer une Archlinux **en parallèle** d’une installation de MS-Windows, c’est en dehors du cadre de ce document.
 
 **NOTE 2 :** Pour Lxde et LXQt, il faudra voir avec le tutoriel de mars 2016 : <http://frederic.bezies.free.fr/blog/?p=14045>
 
