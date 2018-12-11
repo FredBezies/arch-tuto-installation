@@ -659,9 +659,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable sddm
 ```
 
-![Illustration 14: Plasma 5.14.x (vue de dossiers) avec les KDE Frameworks 5.52.0](pictures/014.png)
+![Illustration 14: Plasma 5.14.x (vue de dossiers) avec les KDE Frameworks 5.53.0](pictures/014.png)
 
-*Illustration 14: Plasma 5.14.x (vue de dossiers) avec les KDE Frameworks 5.52.0* 
+*Illustration 14: Plasma 5.14.x (vue de dossiers) avec les KDE Frameworks 5.53.0* 
 
 V) Addendum 2 : installer Xfce
 ------------------------------
