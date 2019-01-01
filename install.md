@@ -33,7 +33,9 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 **NOTE 3 :** Les images ISO d’installation ne sont plus qu’en 64 bits à compter du 1er mars 2017. Si vous avez un vieux PC en 32 bits, il vous faudra la dernière image ISO disponible sur le site [Archlinux32](https://www.archlinux32.org/).
 
-Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En décembre 2018, c’est la 2018.12.01.
+**NOTE 4 :** Avec VirtualBox 6.0.0, le support du circuit graphique VBoxSVGA semble un peu frais. Mieux vaut pour le moment rester avec l'ancien circuit VBoxVGA.
+
+Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En janvier 2019, c’est la 2019.01.01.
 
 Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit, André Ray, Nicolas, Charles Monzat, SuperMario S, Angristan, Simon B, r33int, Mozzi, Kevin Dubrulle, Christophe Leloup et Nornort pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
 
@@ -41,7 +43,7 @@ Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, T
 I) Installons notre base
 ------------------------
 
-Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2018.12.01-x86\_64.iso, mise en ligne début décembre 2018.
+Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2019.01.01-x86\_64.iso, mise en ligne début janvier 2019.
 
 La machine virtuelle est une machine VirtualBox à laquelle j’ai rajouté un disque virtuel de 128 Go. Des points spécifiques concernant l’utilisation dans VirtualBox sont indiqués. Par défaut, le noyau proposé par Archlinux est un noyau « court terme ». Si vous voulez un noyau LTS, je vous expliquerai comment faire.
 
@@ -315,11 +317,11 @@ mkdir /boot/efi/EFI/boot
 cp /boot/efi/EFI/arch_grub/grubx64.efi /boot/efi/EFI/boot/bootx64.efi
 ```
 
-![Illustration 7 : Génération du noyau linux 4.19.4 début décembre 2018](pictures/007.png)
+![Illustration 7 : Génération du noyau linux 4.20.0 début janvier 2019](pictures/007.png)
 
-*Illustration 7 : Génération du noyau linux 4.19.4 début décembre 2018*
+*Illustration 7 : Génération du noyau linux 4.20.0 début janvier 2019*
 
-**Note :** Après avoir généré l'image noyau et installé grub, il faut passer au fichier de configuration du lanceur. C'est une modification intervenue début décembre 2018 avec grub 2:2.02-8.
+**Note :** Après avoir généré l'image noyau et installé grub, il faut passer au fichier de configuration du lanceur. C'est une modification intervenue début janvier 2019 avec grub 2:2.02-8.
 
 ```
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -760,9 +762,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable accounts-daemon
 sudo systemctl enable lightdm
 ```
-![Illustration 16: Mate Desktop 1.20.3](pictures/016.png)
+![Illustration 16: Mate Desktop 1.20.4](pictures/016.png)
 
-*Illustration 16: Mate Desktop 1.20.3*
+*Illustration 16: Mate Desktop 1.20.4*
 
 VII. Addendum 4 : installer Deepin-Desktop
 ------------------------------------------
@@ -852,6 +854,6 @@ sudo systemctl enable lightdm
 
 Pour lancer tranquillement Cinnamon dans VirtualBox, il faut dans l’écran LightDM choisir l’option "Cinnamon (Software Rendering)" qui active le rendu logiciel. Sinon, ça plantera tout le temps.
 
-![Illustration 18: Cinnamon 4.0.3](pictures/018.png)
+![Illustration 18: Cinnamon 4.0.8](pictures/018.png)
 
-*Illustration 18: Cinnamon 4.0.3*
+*Illustration 18: Cinnamon 4.0.8*
