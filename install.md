@@ -822,11 +822,15 @@ VIII. Addendum 5 : installer Cinnamon
 sudo pacman -S gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb}
 ```
 
-Comme pour Deepin, l’installation est assez courte.
+Comme pour Deepin, l’installation est assez courte. 
+
+Le meta-paquet gnome-extra n'est pas indispensable, mais il contient une partie non négligeable de la logithèque. Il faut juste penser à enlever nautilus pour éviter un doublon au niveau des gestionnaires de fichiers. On peut aussi enlever evolution si on n'en a pas besoin.
 
 ```
 sudo pacman -S cinnamon cinnamon-translations gnome-terminal gnome-extra lightdm-gtk-greeter shotwell rhythmbox system-config-printer → (pour installer le support des imprimantes)
 ```
+
+On peut aussi rajouter gedit, gnome-calc et evince pour avoir un éditeur de texte, une calculatrice et une visionneuse de documents basiques.
 
 Si vous voulez personnaliser votre lightdm :
 
