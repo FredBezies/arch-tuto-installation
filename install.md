@@ -830,7 +830,7 @@ Le meta-paquet gnome-extra n'est pas indispensable, mais il contient une partie 
 sudo pacman -S cinnamon cinnamon-translations gnome-terminal gnome-extra lightdm-gtk-greeter shotwell rhythmbox system-config-printer → (pour installer le support des imprimantes)
 ```
 
-On peut aussi rajouter gedit, gnome-calc et evince pour avoir un éditeur de texte, une calculatrice et une visionneuse de documents basiques.
+On peut aussi rajouter gedit, gnome-calc, evince et eog pour avoir un éditeur de texte, une calculatrice, une visionneuse de documents et une visionneuse d'images basiques.
 
 Si vous voulez personnaliser votre lightdm :
 
@@ -858,6 +858,6 @@ sudo systemctl enable lightdm
 
 Pour lancer tranquillement Cinnamon dans VirtualBox, il faut dans l’écran LightDM choisir l’option "Cinnamon (Software Rendering)" qui active le rendu logiciel. Sinon, ça plantera tout le temps.
 
-![Illustration 18: Cinnamon 4.0.8](pictures/018.png)
+![Illustration 18: Cinnamon 4.0.9](pictures/018.png)
 
-*Illustration 18: Cinnamon 4.0.8*
+*Illustration 18: Cinnamon 4.0.9*
