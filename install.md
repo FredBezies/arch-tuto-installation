@@ -200,7 +200,7 @@ Si on veut utiliser un noyau linux long terme, il faut rajouter à la deuxième 
 
 Si vous êtes sur un pc portable, l’ajout de tlp est conseillé pour améliorer l’autonomie de la batterie. Plus d’info sur cette page : <https://wiki.archlinux.org/index.php/TLP>
 
-Si vous désirez rajouter le support des microcodes pour votre processeur, il vous suffira de rajouter soit le paquet amd-ucode (pour les processeurs AMD) ou intel-ucode (pour les processeurs Intel). Grub détectera leur présence automatiquement.
+Si vous désirez rajouter le support des microcodes pour votre processeur, il vous suffira de rajouter soit le paquet amd-ucode (pour AMD) ou intel-ucode (pour Intel). Grub détectera leurs présences automatiquement.
 
 Maintenant que les outils de base sont installés, il faut générer le fichier /etc/fstab qui liste les partitions présentes.
 
@@ -321,7 +321,7 @@ cp /boot/efi/EFI/arch_grub/grubx64.efi /boot/efi/EFI/boot/bootx64.efi
 
 *Illustration 7 : Génération du noyau linux 4.20.0 début janvier 2019*
 
-**Note :** Après avoir généré l'image noyau et installé grub, il faut passer au fichier de configuration du lanceur. C'est une modification intervenue début janvier 2019 avec grub 2:2.02-8.
+**Note :** Après avoir généré l'image noyau et installé grub, il faut passer au fichier de configuration du lanceur. C'est une modification intervenue avec grub 2:2.02-8.
 
 ```
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -601,7 +601,7 @@ III) Finalisons l’installation de Gnome.
 
 **Note :** à partir de maintenant, nous sommes connectés en tant qu’utilisateur classique.
 
-Quelques outils à rajouter : xsane (pour le scanner), mais aussi unoconv (pour l’aperçu des fichiers dans Gnome Documents). On pourrait rajouter Adobe Flash, mais pourquoi rajouter cette usine à faille de sécurité ?
+Quelques outils à rajouter : xsane (pour le scanner), mais aussi unoconv (pour l’aperçu des fichiers dans Gnome Documents).
 
 ```
 sudo pacman -S xsane unoconv
@@ -661,9 +661,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable sddm
 ```
 
-![Illustration 14: Plasma 5.14.x (vue de dossiers) avec les KDE Frameworks 5.53.0](pictures/014.png)
+![Illustration 14: Plasma 5.14.x (vue de dossiers) avec les KDE Frameworks 5.54.0](pictures/014.png)
 
-*Illustration 14: Plasma 5.14.x (vue de dossiers) avec les KDE Frameworks 5.53.0* 
+*Illustration 14: Plasma 5.14.x (vue de dossiers) avec les KDE Frameworks 5.54.0* 
 
 V) Addendum 2 : installer Xfce
 ------------------------------
@@ -830,7 +830,7 @@ Le meta-paquet gnome-extra n'est pas indispensable, mais il contient une partie 
 sudo pacman -S cinnamon cinnamon-translations gnome-terminal gnome-extra lightdm-gtk-greeter shotwell rhythmbox system-config-printer → (pour installer le support des imprimantes)
 ```
 
-On peut aussi rajouter gedit, gnome-calc, evince et eog pour avoir un éditeur de texte, une calculatrice, une visionneuse de documents et une visionneuse d'images basiques.
+On peut aussi rajouter gedit, gnome-calc, evince et eog pour avoir un éditeur de texte, une calculatrice, une visionneuse de documents et une d'images basiques.
 
 Si vous voulez personnaliser votre lightdm :
 
