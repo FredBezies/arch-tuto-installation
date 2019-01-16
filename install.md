@@ -807,9 +807,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable lightdm
 ```
 
-![Illustration 17: Deepin Desktop 15.8](pictures/017.png)
+![Illustration 17: Deepin Desktop 15.9](pictures/017.png)
 
-*Illustration 17: Deepin Desktop 15.8*
+*Illustration 17: Deepin Desktop 15.9*
 
 VIII. Addendum 5 : installer Cinnamon
 -------------------------------------
