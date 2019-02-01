@@ -446,7 +446,7 @@ Dans le cas d’une machine virtuelle, j’ai utilisé le paquet **xf86-video-ve
 pacman -S ttf-{bitstream-vera,liberation,freefont,dejavu} freetype2
 ```
 
-**Note 2 :** pour les polices Microsoft, le paquet ttf-ms-fonts, elles sont sur le dépôt AUR, donc il faut utiliser yaourt pour les récupérer et les installer.
+**Note 2 :** pour les polices Microsoft, le paquet ttf-ms-fonts, elles sont sur le dépôt AUR, donc il faut utiliser un enrobeur comme yay ou trizen pour les récupérer et les installer.
 
 Si vous faites une installation dans VirtualBox, il faut deux paquets. En plus de xf86-video-vesa, il faut le paquet virtualbox-guest-utils. Cependant, il y a deux choix qui arrivent pour ce paquet.
 
@@ -634,7 +634,7 @@ Bonne découverte !
 IV) Addendum 1 : installer Plasma 5.14.x
 ----------------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt, trizen ou yay par exemple.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme trizen ou yay par exemple.
 
 Dans les précédentes versions, il y avait k3b, mais il a été intégré dans les kde-applications à partir de la version 17.04. Amarok a été remplacé par Elisa. Pour Discover, packagekit-qt5 est indispensable.
 
@@ -668,7 +668,7 @@ sudo systemctl enable sddm
 V) Addendum 2 : installer Xfce
 ------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt, trizen ou yay par exemple.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme trizen ou yay par exemple.
 
 **Note 2 :** si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
 Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
@@ -723,7 +723,7 @@ sudo systemctl enable lightdm
 VI) Addendum 3 : installer Mate-Desktop
 ---------------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt, trizen ou yay par exemple.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme trizen ou yay par exemple.
 
 **Note 2 :**  Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs.
 Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
@@ -769,7 +769,7 @@ sudo systemctl enable lightdm
 VII. Addendum 4 : installer Deepin-Desktop
 ------------------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt, trizen ou yay par exemple.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme trizen ou yay par exemple.
 
 **Note 2** : Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs. Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
 
@@ -814,7 +814,7 @@ sudo systemctl enable lightdm
 VIII. Addendum 5 : installer Cinnamon
 -------------------------------------
 
-**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme yaourt, trizen ou yay par exemple.
+**Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme trizen ou yay par exemple.
 
 **Note 2 :** Si vous avez besoin de gérer des périphériques utilisant MTP (tablettes sous android par exemple), il vous faut rajouter les deux paquets gvfs-mtp et mtpfs. Si vous voulez la totalité des greffons gvfs (merci à SuperMarioS pour la ligne de commande) :
 
