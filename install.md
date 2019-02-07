@@ -524,7 +524,7 @@ Il faut aller, en utilisant la flèche du bas jusqu’à la ligne :
 ```
 #Uncomment to allow members of group wheel to execute any command
 ```
-Et enlever le \# sur la ligne qui suit. (La séquence de touches « Échap : w et q » permet de converser la modification dans vi.)
+Et enlever le \# sur la ligne qui suit. (La séquence de touches « Échap : x » permet de converser la modification dans vi.)
 
 **À partir d’ici, c’est la section dédiée à Gnome qui commence :**
 
