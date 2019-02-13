@@ -1,14 +1,14 @@
 Sommaire
 ========
 
-   * [Petit guide d’installation d’Archlinux avec Gnome 3.30.x / Plasma 5.14.x / Xfce / Mate-Desktop / Deepin / Cinnamon](#petit-guide-dinstallation-darchlinux-avec-gnome-330x--plasma-514x--xfce--mate-desktop--deepin--cinnamon)
+   * [Petit guide d’installation d’Archlinux avec Gnome 3.30.x / Plasma 5.15.x / Xfce / Mate-Desktop / Deepin / Cinnamon](#petit-guide-dinstallation-darchlinux-avec-gnome-330x--plasma-515x--xfce--mate-desktop--deepin--cinnamon)
       * [I) Installons notre base](#i-installons-notre-base)</br>
             * [Partitionnement et attribution des partitions en mode Bios :](#partitionnement-et-attribution-des-partitions-en-mode-bios)</br>
             * [Partitionnement et attribution des partitions en mode UEFI :](#partitionnement-et-attribution-des-partitions-en-mode-uefi)</br>
             * [Installation de la base de notre Archlinux :](#installation-de-la-base-de-notre-archlinux)</br>
       * [II) Installons maintenant l’environnement graphique !](#ii-installons-maintenant-lenvironnement-graphique)
       * [III) Finalisons l’installation de Gnome.](#iii-finalisons-linstallation-de-gnome)
-      * [IV) Addendum 1 : installer Plasma 5.14.x](#iv-addendum-1-installer-plasma-514x)
+      * [IV) Addendum 1 : installer Plasma 5.15.x](#iv-addendum-1-installer-plasma-515x)
       * [V) Addendum 2 : installer Xfce](#v-addendum-2-installer-xfce)
       * [VI) Addendum 3 : installer Mate-Desktop](#vi-addendum-3-installer-mate-desktop)
       * [VII) Addendum 4 : installer Deepin-Desktop](#vii-addendum-4-installer-deepin-desktop)
@@ -20,10 +20,10 @@ Créé par [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 BEGIN
 -->
 
-Petit guide d’installation d’Archlinux avec Gnome 3.30.x / Plasma 5.14.x / Xfce / Mate-Desktop / Deepin / Cinnamon
+Petit guide d’installation d’Archlinux avec Gnome 3.30.x / Plasma 5.15.x / Xfce / Mate-Desktop / Deepin / Cinnamon
 ==================================================================================================================
 
-Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.30 et suivant, Plasma 5.14.x, Xfce, Mate-Desktop, Deepin et Cinnamon. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
+Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.30 et suivant, Plasma 5.15.x, Xfce, Mate-Desktop, Deepin et Cinnamon. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
 
 Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme les imprimantes, les scanners, ou encore les webcams. Je vous renvoie aux wikis anglophone <https://wiki.archlinux.org/> et francophone <http://wiki.archlinux.fr/Accueil> pour ce genre de manipulations.
 
@@ -37,7 +37,7 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En février 2019, c’est la 2019.02.01.
 
-Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit, André Ray, Nicolas, Charles Monzat, SuperMario S, Angristan, Simon B, r33int, Mozzi, Kevin Dubrulle, Christophe Leloup et Nornort pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
+Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Quentin Bihet, Igor Milhit, André Ray, Nicolas, Charles Monzat, SuperMario S, Angristan, Simon B, r33int, Mozzi, Kevin Dubrulle, Christophe Leloup, Nornort et Quentin Bihet pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
 
 
 I) Installons notre base
@@ -524,7 +524,7 @@ Il faut aller, en utilisant la flèche du bas jusqu’à la ligne :
 ```
 #Uncomment to allow members of group wheel to execute any command
 ```
-Et enlever le \# sur la ligne qui suit. (La séquence de touches « Échap : w et q » permet de converser la modification dans vi.)
+Et enlever le \# sur la ligne qui suit. La séquence de touches « Échap : w et q » permet de converser la modification dans vi. Une autre possibilité étant « Échap : x » proposée par Quentin Bihet.
 
 **À partir d’ici, c’est la section dédiée à Gnome qui commence :**
 
@@ -631,7 +631,7 @@ J’ai surtout voulu faire un **guide rapide**, histoire de montrer qu’en une 
 
 Bonne découverte !
 
-IV) Addendum 1 : installer Plasma 5.14.x
+IV) Addendum 1 : installer Plasma 5.15.x
 ----------------------------------------
 
 **Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme trizen ou yay par exemple.
@@ -661,9 +661,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable sddm
 ```
 
-![Illustration 14: Plasma 5.14.x (vue de dossiers) avec les KDE Frameworks 5.54.0](pictures/014.png)
+![Illustration 14: Plasma 5.15.x (vue de dossiers) avec les KDE Frameworks 5.55.0](pictures/014.png)
 
-*Illustration 14: Plasma 5.14.x (vue de dossiers) avec les KDE Frameworks 5.54.0* 
+*Illustration 14: Plasma 5.15.x (vue de dossiers) avec les KDE Frameworks 5.55.0* 
 
 V) Addendum 2 : installer Xfce
 ------------------------------
