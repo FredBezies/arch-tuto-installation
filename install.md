@@ -239,7 +239,7 @@ Nous allons par la suite créer des fichiers qui demanderont des valeurs précis
   | Canada     |  fr\_CA.UTF-8 |  cf              |
   | France     |  fr\_FR.UTF-8 |  fr-latin9       |
   | Luxembourg |  fr\_LU.UTF-8 |  fr-latin9       |
-  | Suisse     |  fr\_CH.UTF-8 |  fr\_CH          |
+  | Suisse     |  fr\_CH.UTF-8 |  fr\_CH-latin1   |
   
 Pour avoir le bon clavier en mode texte, créez le fichier /etc/vconsole.conf. Il suffira de l’adapter si le besoin s’en fait sentir.
 
