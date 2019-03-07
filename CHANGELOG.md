@@ -22,3 +22,4 @@
 - 1er décembre 2018 : arrivée de Cinnamon 4.0.3 et autres petites corrections.
 - 1er janvier 2019 : Cinnamon 4.0.8, Mate-Desktop 1.20.4, Linux 4.20.0 et une note concernant un bug de VirtualBox 6.0
 - 1er février 2019 : Cinnamon 4.0.9, Linux 4.20.6 et les habituelles corrections ici et là !
+- 7 mars 2019 : noyau linux 5.0 et mise à jour des captures d'écran.
