@@ -35,7 +35,7 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 **NOTE 4 :** Avec VirtualBox 6.0.0, le support du circuit graphique VBoxSVGA semble un peu frais. Mieux vaut pour le moment rester avec l'ancien circuit VBoxVGA.
 
-Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En février 2019, c’est la 2019.02.01.
+Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En mars 2019, c’est la 2019.03.01.
 
 Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Igor Milhit, André Ray, Nicolas, Charles Monzat, SuperMario S, Angristan, Simon B, r33int, Mozzi, Kevin Dubrulle, Christophe Leloup, Nornort et Quentin Bihet pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
 
@@ -43,7 +43,7 @@ Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, T
 I) Installons notre base
 ------------------------
 
-Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2019.02.01-x86\_64.iso, mise en ligne début février 2019.
+Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2019.03.01-x86\_64.iso, mise en ligne début mars 2019.
 
 La machine virtuelle est une machine VirtualBox à laquelle j’ai rajouté un disque virtuel de 128 Go. Des points spécifiques concernant l’utilisation dans VirtualBox sont indiqués. Par défaut, le noyau proposé par Archlinux est un noyau « court terme ». Si vous voulez un noyau LTS, je vous expliquerai comment faire.
 
@@ -317,9 +317,9 @@ mkdir /boot/efi/EFI/boot
 cp /boot/efi/EFI/arch_grub/grubx64.efi /boot/efi/EFI/boot/bootx64.efi
 ```
 
-![Illustration 7 : Génération du noyau linux 4.20.6 début février 2019](pictures/007.png)
+![Illustration 7 : Génération du noyau linux 5.0.0 début mars 2019](pictures/007.png)
 
-*Illustration 7 : Génération du noyau linux 4.20.6 début février 2019*
+*Illustration 7 : Génération du noyau linux 5.0.0 début mars 2019*
 
 **Note :** Après avoir généré l'image noyau et installé grub, il faut passer au fichier de configuration du lanceur. C'est une modification intervenue avec grub 2:2.02-8.
 
@@ -830,7 +830,7 @@ Le meta-paquet gnome-extra n'est pas indispensable, mais il contient une partie 
 sudo pacman -S cinnamon cinnamon-translations gnome-terminal gnome-extra lightdm-gtk-greeter shotwell rhythmbox system-config-printer → (pour installer le support des imprimantes)
 ```
 
-On peut aussi rajouter gedit, gnome-calc, evince et eog pour avoir un éditeur de texte, une calculatrice, une visionneuse de documents et une d'images basiques.
+On peut aussi rajouter gedit, gnome-calculator, evince et eog pour avoir un éditeur de texte, une calculatrice, une visionneuse de documents et une d'images basiques.
 
 Si vous voulez personnaliser votre lightdm :
 
