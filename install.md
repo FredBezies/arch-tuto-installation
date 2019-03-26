@@ -157,8 +157,7 @@ Et pour les points de montage :
 
 ```
 mount /dev/sda1 /mnt
-mkdir /mnt/{boot,home}
-mkdir /mnt/boot/efi
+mkdir /mnt/{boot,boot/efi,home}
 mount /dev/sda2 /mnt/boot/efi
 mount /dev/sda4 /mnt/home
 ```
@@ -858,6 +857,6 @@ sudo systemctl enable lightdm
 
 Pour lancer tranquillement Cinnamon dans VirtualBox, il faut dans l’écran LightDM choisir l’option "Cinnamon (Software Rendering)" qui active le rendu logiciel. Sinon, ça plantera tout le temps.
 
-![Illustration 18: Cinnamon 4.0.9](pictures/018.png)
+![Illustration 18: Cinnamon 4.0.10](pictures/018.png)
 
-*Illustration 18: Cinnamon 4.0.9*
+*Illustration 18: Cinnamon 4.0.10*
