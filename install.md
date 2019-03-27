@@ -497,10 +497,10 @@ Pour les utilisateurs plus **aventureux**, qui veulent la version récente :
 ```
 pacman -S libreoffice-fresh-fr hunspell-fr
 ```
-On rajoute ensuite Mozilla Firefox en français :
+On rajoute ensuite Mozilla Firefox en français avec l'indispensable bloqueur de publicités :
 
 ```
-pacman -S firefox-i18n-fr
+pacman -S firefox-i18n-fr firefox-ublock-origin
 ```
 
 Vous préférez Chromium ?
