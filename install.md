@@ -761,9 +761,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable accounts-daemon
 sudo systemctl enable lightdm
 ```
-![Illustration 16: Mate Desktop 1.20.4](pictures/016.png)
+![Illustration 16: Mate Desktop 1.22.0](pictures/016.png)
 
-*Illustration 16: Mate Desktop 1.20.4*
+*Illustration 16: Mate Desktop 1.22.0*
 
 VII. Addendum 4 : installer Deepin-Desktop
 ------------------------------------------
