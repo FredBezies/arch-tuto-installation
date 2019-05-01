@@ -32,4 +32,5 @@
 - 1er février 2019 : Cinnamon 4.0.9, Linux 4.20.6 et les habituelles corrections ici et là !
 - 7 mars 2019 : noyau linux 5.0 et mise à jour des captures d'écran.
 - 16 mars 2019 : Gnome 3.32.0 et les KDE Frameworks 5.56
-- 1er avril 2019 : Mate 1.22, Cinnamon 4.0.10 et les mises à jout habituelles
+- 1er avril 2019 : Mate 1.22, Cinnamon 4.0.10 et les mises à jour habituelles
+- 1er mai 2019 : Gnome 3.32.1, Deepin 15.10, KDE Framework 5.57 et les mises à jour habituelles
