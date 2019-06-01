@@ -35,7 +35,7 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 **NOTE 4 :** Avec VirtualBox 6.0.0, le support du circuit graphique VBoxSVGA semble un peu frais. Mieux vaut pour le moment rester avec l'ancien circuit VBoxVGA.
 
-Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En mai 2019, c’est la 2019.05.01.
+Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En juin 2019, c’est la 2019.06.01.
 
 Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Igor Milhit, André Ray, Nicolas, Charles Monzat, SuperMario S, Angristan, Simon B, r33int, Mozzi, Kevin Dubrulle, Christophe Leloup, Nornort et Quentin Bihet pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
 
@@ -43,7 +43,7 @@ Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, T
 I) Installons notre base
 ------------------------
 
-Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2019.05.01-x86\_64.iso, mise en ligne début mai 2019.
+Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2019.06.01-x86\_64.iso, mise en ligne début juin 2019.
 
 La machine virtuelle est une machine VirtualBox à laquelle j’ai rajouté un disque virtuel de 128 Go. Des points spécifiques concernant l’utilisation dans VirtualBox sont indiqués. Par défaut, le noyau proposé par Archlinux est un noyau « court terme ». Si vous voulez un noyau LTS, je vous expliquerai comment faire.
 
@@ -316,9 +316,9 @@ mkdir /boot/efi/EFI/boot
 cp /boot/efi/EFI/arch_grub/grubx64.efi /boot/efi/EFI/boot/bootx64.efi
 ```
 
-![Illustration 7 : Génération du noyau linux 5.0.10 début mai 2019](pictures/007.png)
+![Illustration 7 : Génération du noyau linux 5.1.5 début juin 2019](pictures/007.png)
 
-*Illustration 7 : Génération du noyau linux 5.0.10 début mai 2019*
+*Illustration 7 : Génération du noyau linux 5.1.5 début juin 2019*
 
 **Note :** Après avoir généré l'image noyau et installé grub, il faut passer au fichier de configuration du lanceur. C'est une modification intervenue avec grub 2:2.02-8.
 
@@ -591,9 +591,9 @@ Sinon, il suffit de se référer à l’addenda correspondant à l’environneme
 
 Au démarrage suivant, GDM nous accueille, et nous pouvons nous connecter.
 
-![Illustration 10: GDM 3.32.1 avec les sessions Wayland et Gnome sur Xorg](pictures/010.png)
+![Illustration 10: GDM 3.32.2 avec les sessions Wayland et Gnome sur Xorg](pictures/010.png)
 
-*Illustration 10: GDM 3.32.1 avec les sessions Wayland et Gnome sur Xorg*
+*Illustration 10: GDM 3.32.2 avec les sessions Wayland et Gnome sur Xorg*
 
 III) Finalisons l’installation de Gnome.
 ----------------------------------------
@@ -608,9 +608,9 @@ sudo pacman -S xsane unoconv
 
 Il faut penser à vérifier que le clavier est correctement configuré. Ce qui se fait dans menu système unifié, options de configuration.
 
-![Illustration 11: Gnome 3.32.1 en vue activités](pictures/011.png)
+![Illustration 11: Gnome 3.32.2 en vue activités](pictures/011.png)
 
-*Illustration 11: Gnome 3.32.1 en vue activités*
+*Illustration 11: Gnome 3.32.2 en vue activités*
 
 On va personnaliser le bureau Gnome en lui ajoutant la date complète et les boutons pour minimiser et maximiser les fenêtres avec Gnome Tweak Tool alias Ajustements.
 
@@ -620,9 +620,9 @@ On va personnaliser le bureau Gnome en lui ajoutant la date complète et les bou
 
 Pour finir une capture d’écran du mode « Gnome Shell ».
 
-![Illusration 13: Gnome Shell 3.32.1 et « LibreOffice-fresh »](pictures/013.png)
+![Illusration 13: Gnome Shell 3.32.2 et « LibreOffice-fresh »](pictures/013.png)
 
-*Illustration 13: Gnome Shell 3.32.1 et « LibreOffice-fresh »*
+*Illustration 13: Gnome Shell 3.32.2 et « LibreOffice-fresh »*
 
 Voila, le guide est maintenant fini. Cependant, je n’ai pas abordé l’installation d’un pare-feu. C’est quelque chose de plus technique.
 
@@ -806,9 +806,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable lightdm
 ```
 
-![Illustration 17: Deepin Desktop 15.10](pictures/017.png)
+![Illustration 17: Deepin Desktop 15.10.1](pictures/017.png)
 
-*Illustration 17: Deepin Desktop 15.10*
+*Illustration 17: Deepin Desktop 15.10.1*
 
 VIII. Addendum 5 : installer Cinnamon
 -------------------------------------
