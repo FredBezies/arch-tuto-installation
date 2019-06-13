@@ -20,10 +20,10 @@ Créé par [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 BEGIN
 -->
 
-Petit guide d’installation d’Archlinux avec Gnome 3.32.x / Plasma 5.15.x / Xfce / Mate-Desktop / Deepin / Cinnamon
+Petit guide d’installation d’Archlinux avec Gnome 3.32.x / Plasma 5.15.6 / Xfce / Mate-Desktop / Deepin / Cinnamon
 ==================================================================================================================
 
-Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.32 et suivant, Plasma 5.15.x, Xfce, Mate-Desktop, Deepin et Cinnamon. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
+Dans ce petit guide, je vais détailler l’installation d’Archlinux avec Gnome 3.32 et suivant, Plasma 5.16.x, Xfce, Mate-Desktop, Deepin et Cinnamon. L’installation terminée proposera un environnement suffisamment étoffé pour être utilisable.
 
 Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme les imprimantes, les scanners, ou encore les webcams. Je vous renvoie aux wikis anglophone <https://wiki.archlinux.org/> et francophone <http://wiki.archlinux.fr/Accueil> pour ce genre de manipulations.
 
