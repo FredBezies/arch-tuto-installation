@@ -1,14 +1,14 @@
 Sommaire
 ========
 
-   * [Petit guide d’installation d’Archlinux avec Gnome 3.32.x / Plasma 5.15.x / Xfce / Mate-Desktop / Deepin / Cinnamon](#petit-guide-dinstallation-darchlinux-avec-gnome-330x--plasma-515x--xfce--mate-desktop--deepin--cinnamon)
+   * [Petit guide d’installation d’Archlinux avec Gnome 3.32.x / Plasma 5.16.x / Xfce / Mate-Desktop / Deepin / Cinnamon](#petit-guide-dinstallation-darchlinux-avec-gnome-330x--plasma-516--xfce--mate-desktop--deepin--cinnamon)
       * [I) Installons notre base](#i-installons-notre-base)</br>
             * [Partitionnement et attribution des partitions en mode Bios :](#partitionnement-et-attribution-des-partitions-en-mode-bios)</br>
             * [Partitionnement et attribution des partitions en mode UEFI :](#partitionnement-et-attribution-des-partitions-en-mode-uefi)</br>
             * [Installation de la base de notre Archlinux :](#installation-de-la-base-de-notre-archlinux)</br>
       * [II) Installons maintenant l’environnement graphique !](#ii-installons-maintenant-lenvironnement-graphique)
       * [III) Finalisons l’installation de Gnome.](#iii-finalisons-linstallation-de-gnome)
-      * [IV) Addendum 1 : installer Plasma 5.15.x](#iv-addendum-1-installer-plasma-515x)
+      * [IV) Addendum 1 : installer Plasma 5.16.x](#iv-addendum-1-installer-plasma-516x)
       * [V) Addendum 2 : installer Xfce](#v-addendum-2-installer-xfce)
       * [VI) Addendum 3 : installer Mate-Desktop](#vi-addendum-3-installer-mate-desktop)
       * [VII) Addendum 4 : installer Deepin-Desktop](#vii-addendum-4-installer-deepin-desktop)
@@ -630,7 +630,7 @@ J’ai surtout voulu faire un **guide rapide**, histoire de montrer qu’en une 
 
 Bonne découverte !
 
-IV) Addendum 1 : installer Plasma 5.15.x
+IV) Addendum 1 : installer Plasma 5.16.x
 ----------------------------------------
 
 **Note :** commandes à entrer en tant qu’utilisateur classique. Vous pouvez utiliser un enrobeur de pacman comme trizen ou yay par exemple.
@@ -660,9 +660,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable sddm
 ```
 
-![Illustration 14: Plasma 5.15.x (vue de dossiers) avec les KDE Frameworks 5.59.0](pictures/014.png)
+![Illustration 14: Plasma 5.16.x (vue de dossiers) avec les KDE Frameworks 5.59.0](pictures/014.png)
 
-*Illustration 14: Plasma 5.15.x (vue de dossiers) avec les KDE Frameworks 5.59.0* 
+*Illustration 14: Plasma 5.16.x (vue de dossiers) avec les KDE Frameworks 5.59.0* 
 
 V) Addendum 2 : installer Xfce
 ------------------------------
