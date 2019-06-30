@@ -9,3 +9,5 @@ C'est un complément au document officiel qui m'a été demandé plusieurs fois.
 En espérant qu'il soit utile.
 
 Bonne lecture !
+
+**Note** : le tutoriel sera archivé au 15 août 2019. Avec un peu de chance, Xfce 4.14 en fera partie... Ou pas !
