@@ -35,7 +35,7 @@ Pour des raisons pratiques, je n’aborde nullement l’ajout de matériel comme
 
 **NOTE 4 :** Avec VirtualBox 6.0.0, le support du circuit graphique VBoxSVGA semble un peu frais. Mieux vaut pour le moment rester avec l'ancien circuit VBoxVGA.
 
-Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En juin 2019, c’est la 2019.06.01.
+Pour cette version du guide, je me suis basé sur la dernière ISO officielle, celle qui utilise les scripts d’installation. En juillet 2019, c’est la 2019.07.01.
 
 Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, Thomas Pawlowski, Igor Milhit, André Ray, Nicolas, Charles Monzat, SuperMario S, Angristan, Simon B, r33int, Mozzi, Kevin Dubrulle, Christophe Leloup, Nornort et Quentin Bihet pour leurs conseils et remarques. Ce document est proposé sous licence [CC-BY-SA 4.0.](http://creativecommons.org/licenses/by-sa/4.0)
 
@@ -43,7 +43,7 @@ Merci à Ewolnux, Xarkam, Frédéric Sierra, Ludovic Riand, Vincent Manillier, T
 I) Installons notre base
 ------------------------
 
-Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2019.06.01-x86\_64.iso, mise en ligne début juin 2019.
+Installer une Archlinux, c’est comme construire une maison. On commence par les fondations, et on rajoute les murs et le reste par la suite. L’image ISO utilisée est la archlinux-2019.07.01-x86\_64.iso, mise en ligne début juillet 2019.
 
 La machine virtuelle est une machine VirtualBox à laquelle j’ai rajouté un disque virtuel de 128 Go. Des points spécifiques concernant l’utilisation dans VirtualBox sont indiqués. Par défaut, le noyau proposé par Archlinux est un noyau « court terme ». Si vous voulez un noyau LTS, je vous expliquerai comment faire.
 
@@ -316,9 +316,9 @@ mkdir /boot/efi/EFI/boot
 cp /boot/efi/EFI/arch_grub/grubx64.efi /boot/efi/EFI/boot/bootx64.efi
 ```
 
-![Illustration 7 : Génération du noyau linux 5.1.5 début juin 2019](pictures/007.png)
+![Illustration 7 : Génération du noyau linux 5.1.15 début juillet 2019](pictures/007.png)
 
-*Illustration 7 : Génération du noyau linux 5.1.5 début juin 2019*
+*Illustration 7 : Génération du noyau linux 5.1.15 début juillet 2019*
 
 **Note :** Après avoir généré l'image noyau et installé grub, il faut passer au fichier de configuration du lanceur. C'est une modification intervenue avec grub 2:2.02-8.
 
@@ -715,9 +715,9 @@ sudo systemctl enable lightdm
 
 **Note 5 :** pour avoir des plus jolies icônes, on peut installer le paquet AUR elementary-xfce-icons ou encore les mint-x-icons. mais après, c’est à vous de voir !
 
-![Illustration 15: Xfce 4.12.0 en action.](pictures/015.png)
+![Illustration 15: Xfce 4.14pre2 en action.](pictures/015.png)
 
-*Illustration 15: Xfce 4.12.0 en action.*
+*Illustration 15: Xfce 4.14pre2 en action.*
 
 VI) Addendum 3 : installer Mate-Desktop
 ---------------------------------------
@@ -806,9 +806,9 @@ Si tout se passe bien, on peut utiliser :
 sudo systemctl enable lightdm
 ```
 
-![Illustration 17: Deepin Desktop 15.10.1](pictures/017.png)
+![Illustration 17: Deepin Desktop 15.10.2](pictures/017.png)
 
-*Illustration 17: Deepin Desktop 15.10.1*
+*Illustration 17: Deepin Desktop 15.10.2*
 
 VIII. Addendum 5 : installer Cinnamon
 -------------------------------------
@@ -829,9 +829,7 @@ Le meta-paquet gnome-extra n'est pas indispensable, mais il contient une partie 
 sudo pacman -S cinnamon cinnamon-translations gnome-terminal gnome-extra lightdm-gtk-greeter shotwell rhythmbox system-config-printer → (pour installer le support des imprimantes)
 ```
 
-On peut aussi rajouter gedit, gnome-calculator, evince et eog pour avoir un éditeur de texte, une calculatrice, une visionneuse de documents et une d'images basiques.
-
-Si vous voulez personnaliser votre lightdm :
+On peut aussi rajouter gedit, gnome-calculator, evince, eog et file-roller pour avoir un éditeur de texte, une calculatrice, une visionneuse de documents, un d’images et un gestionnaire d’archives. vous voulez personnaliser votre lightdm :
 
 ```
 sudo pacman -S lightdm-gtk-greeter-settings
@@ -857,6 +855,6 @@ sudo systemctl enable lightdm
 
 Pour lancer tranquillement Cinnamon dans VirtualBox, il faut dans l’écran LightDM choisir l’option "Cinnamon (Software Rendering)" qui active le rendu logiciel. Sinon, ça plantera tout le temps.
 
-![Illustration 18: Cinnamon 4.0.10](pictures/018.png)
+![Illustration 18: Cinnamon 4.2.0](pictures/018.png)
 
-*Illustration 18: Cinnamon 4.0.10*
+*Illustration 18: Cinnamon 4.2.0*
