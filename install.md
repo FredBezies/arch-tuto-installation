@@ -829,7 +829,9 @@ Le meta-paquet gnome-extra n'est pas indispensable, mais il contient une partie 
 sudo pacman -S cinnamon cinnamon-translations gnome-terminal gnome-extra lightdm-gtk-greeter shotwell rhythmbox system-config-printer → (pour installer le support des imprimantes)
 ```
 
-On peut aussi rajouter gedit, gnome-calculator, evince, eog et file-roller pour avoir un éditeur de texte, une calculatrice, une visionneuse de documents, un d’images et un gestionnaire d’archives. vous voulez personnaliser votre lightdm :
+On peut aussi rajouter gedit, gnome-calculator, evince, eog et file-roller pour avoir un éditeur de texte, une calculatrice, une visionneuse de documents, un d’images et un gestionnaire d’archives. 
+
+Si vous voulez personnaliser votre lightdm :
 
 ```
 sudo pacman -S lightdm-gtk-greeter-settings
