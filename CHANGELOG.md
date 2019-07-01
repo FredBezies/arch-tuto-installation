@@ -35,3 +35,4 @@
 - 1er avril 2019 : Mate 1.22, Cinnamon 4.0.10 et les mises à jour habituelles
 - 1er mai 2019 : Gnome 3.32.1, Deepin 15.10, KDE Framework 5.57 et les mises à jour habituelles
 - 1er juin 2019 : Gnome 3.32.2, Deepin 15.10.1, KDE Framework 5.58 et Mate-Desktop 1.21. Sans oublier les deux ans de la première version :)
+- 1er juillet 2019 : Deepin 15.10.2, Xfce 4.14pre2 (!!), Cinnamon 4.2.0 et les montées en version classiques.
